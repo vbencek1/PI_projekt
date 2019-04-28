@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C2884E6D-7083-4B65-AF52-89EB1665AF07}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FishingNet</RootNamespace>
+    <AssemblyName>FishingNet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmClanovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClanovi.Designer.cs">
+      <DependentUpon>FrmClanovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajClana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajClana.Designer.cs">
+      <DependentUpon>FrmDodajClana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajNatjecanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajNatjecanje.Designer.cs">
+      <DependentUpon>FrmDodajNatjecanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDodajSudionika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajSudionika.Designer.cs">
+      <DependentUpon>FrmDodajSudionika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInformacijeONatjecanju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformacijeONatjecanju.Designer.cs">
+      <DependentUpon>FrmInformacijeONatjecanju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPregledNatjecanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPregledNatjecanja.Designer.cs">
+      <DependentUpon>FrmPregledNatjecanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNatjecanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNatjecanja.Designer.cs">
+      <DependentUpon>FrmNatjecanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProglasiPobjednika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProglasiPobjednika.Designer.cs">
+      <DependentUpon>FrmProglasiPobjednika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRibickiKlub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRibickiKlub.Designer.cs">
+      <DependentUpon>FrmRibickiKlub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPocetna.Designer.cs">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrijava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrijava.Designer.cs">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStatistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistika.Designer.cs">
+      <DependentUpon>FrmStatistika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmClanovi.resx">
+      <DependentUpon>FrmClanovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajClana.resx">
+      <DependentUpon>FrmDodajClana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajNatjecanje.resx">
+      <DependentUpon>FrmDodajNatjecanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajSudionika.resx">
+      <DependentUpon>FrmDodajSudionika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformacijeONatjecanju.resx">
+      <DependentUpon>FrmInformacijeONatjecanju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNatjecanja.resx">
+      <DependentUpon>FrmNatjecanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPregledNatjecanja.resx">
+      <DependentUpon>FrmPregledNatjecanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProglasiPobjednika.resx">
+      <DependentUpon>FrmProglasiPobjednika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRibickiKlub.resx">
+      <DependentUpon>FrmRibickiKlub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPocetna.resx">
+      <DependentUpon>FrmPocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrijava.resx">
+      <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistika.resx">
+      <DependentUpon>FrmStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
