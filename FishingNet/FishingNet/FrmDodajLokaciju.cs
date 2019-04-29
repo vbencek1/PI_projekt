@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FishingNet
 {
-    public partial class FrmRibickiKlub : Form
+    public partial class FrmDodajLokaciju : Form
     {
-        public FrmRibickiKlub()
+        public FrmDodajLokaciju()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

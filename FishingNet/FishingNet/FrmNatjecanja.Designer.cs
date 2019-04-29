@@ -32,6 +32,7 @@
             this.BtnPregledNatjecanja = new System.Windows.Forms.Button();
             this.BtnStatistika = new System.Windows.Forms.Button();
             this.BtnProglasiPobjednika = new System.Windows.Forms.Button();
+            this.BtnDodajLokaciju = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -71,11 +72,21 @@
             this.BtnProglasiPobjednika.Text = "Proglasi pobjednika";
             this.BtnProglasiPobjednika.UseVisualStyleBackColor = true;
             // 
+            // BtnDodajLokaciju
+            // 
+            this.BtnDodajLokaciju.Location = new System.Drawing.Point(130, 197);
+            this.BtnDodajLokaciju.Name = "BtnDodajLokaciju";
+            this.BtnDodajLokaciju.Size = new System.Drawing.Size(118, 23);
+            this.BtnDodajLokaciju.TabIndex = 4;
+            this.BtnDodajLokaciju.Text = "Dodaj lokaciju";
+            this.BtnDodajLokaciju.UseVisualStyleBackColor = true;
+            // 
             // FrmNatjecanja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 270);
+            this.Controls.Add(this.BtnDodajLokaciju);
             this.Controls.Add(this.BtnProglasiPobjednika);
             this.Controls.Add(this.BtnStatistika);
             this.Controls.Add(this.BtnPregledNatjecanja);
@@ -93,5 +104,6 @@
         private System.Windows.Forms.Button BtnPregledNatjecanja;
         private System.Windows.Forms.Button BtnStatistika;
         private System.Windows.Forms.Button BtnProglasiPobjednika;
+        private System.Windows.Forms.Button BtnDodajLokaciju;
     }
 }

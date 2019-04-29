@@ -58,6 +58,12 @@
     <Compile Include="FrmDodajClana.Designer.cs">
       <DependentUpon>FrmDodajClana.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDodajLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajLokaciju.Designer.cs">
+      <DependentUpon>FrmDodajLokaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDodajNatjecanje.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="FrmDodajClana.resx">
       <DependentUpon>FrmDodajClana.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDodajLokaciju.resx">
+      <DependentUpon>FrmDodajLokaciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDodajNatjecanje.resx">
       <DependentUpon>FrmDodajNatjecanje.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +173,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +187,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo250.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fish_icon_120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members_icon_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fishing_competition_icon_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
