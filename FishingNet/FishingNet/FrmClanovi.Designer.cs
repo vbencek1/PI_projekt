@@ -38,6 +38,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnObrisiClana = new System.Windows.Forms.Button();
             this.BtnAzurirajClana = new System.Windows.Forms.Button();
+            this.BtnOsvjezi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             this.LstClanova.Name = "LstClanova";
             this.LstClanova.Size = new System.Drawing.Size(165, 225);
             this.LstClanova.TabIndex = 1;
+            this.LstClanova.SelectedIndexChanged += new System.EventHandler(this.LstClanova_SelectedIndexChanged);
             // 
             // LblPopisClanova
             // 
@@ -76,6 +78,7 @@
             this.BtnDodajClana.TabIndex = 3;
             this.BtnDodajClana.Text = "Dodaj člana";
             this.BtnDodajClana.UseVisualStyleBackColor = true;
+            this.BtnDodajClana.Click += new System.EventHandler(this.BtnDodajClana_Click);
             // 
             // LblPretraziClanove
             // 
@@ -101,6 +104,7 @@
             this.BtnPretraziClanove.TabIndex = 6;
             this.BtnPretraziClanove.Text = "Pretraži";
             this.BtnPretraziClanove.UseVisualStyleBackColor = true;
+            this.BtnPretraziClanove.Click += new System.EventHandler(this.BtnPretraziClanove_Click);
             // 
             // groupBox1
             // 
@@ -121,6 +125,7 @@
             this.BtnObrisiClana.TabIndex = 8;
             this.BtnObrisiClana.Text = "Obriši člana";
             this.BtnObrisiClana.UseVisualStyleBackColor = true;
+            this.BtnObrisiClana.Click += new System.EventHandler(this.BtnObrisiClana_Click);
             // 
             // BtnAzurirajClana
             // 
@@ -131,11 +136,22 @@
             this.BtnAzurirajClana.Text = "Ažuriraj člana";
             this.BtnAzurirajClana.UseVisualStyleBackColor = true;
             // 
+            // BtnOsvjezi
+            // 
+            this.BtnOsvjezi.Location = new System.Drawing.Point(45, 352);
+            this.BtnOsvjezi.Name = "BtnOsvjezi";
+            this.BtnOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.BtnOsvjezi.TabIndex = 7;
+            this.BtnOsvjezi.Text = "Osvježi";
+            this.BtnOsvjezi.UseVisualStyleBackColor = true;
+            this.BtnOsvjezi.Click += new System.EventHandler(this.BtnOsvjezi_Click);
+            // 
             // FrmClanovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 437);
+            this.Controls.Add(this.BtnOsvjezi);
             this.Controls.Add(this.BtnAzurirajClana);
             this.Controls.Add(this.BtnObrisiClana);
             this.Controls.Add(this.groupBox1);
@@ -164,5 +180,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnObrisiClana;
         private System.Windows.Forms.Button BtnAzurirajClana;
+        private System.Windows.Forms.Button BtnOsvjezi;
     }
 }
