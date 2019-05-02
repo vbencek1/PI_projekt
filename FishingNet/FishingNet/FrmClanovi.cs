@@ -16,5 +16,10 @@ namespace FishingNet
         {
             InitializeComponent();
         }
+
+        private void LblNaziv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

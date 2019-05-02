@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LblNatjecanjeInfo = new System.Windows.Forms.Label();
             this.LblNazivNatjecanja = new System.Windows.Forms.Label();
             this.LblNazivInfo = new System.Windows.Forms.Label();
             this.NazivNatjecanja = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.Lokacija = new System.Windows.Forms.Label();
             this.LblLokacija = new System.Windows.Forms.Label();
             this.LstSudioniciNatjecanja = new System.Windows.Forms.ListBox();
-            this.LstSudionici = new System.Windows.Forms.Label();
             this.BtnUnesiBodove = new System.Windows.Forms.Button();
             this.BtnObrisiSudionika = new System.Windows.Forms.Button();
             this.Status = new System.Windows.Forms.Label();
@@ -49,189 +47,214 @@
             this.BtnDodajSudionika = new System.Windows.Forms.Button();
             this.TxtUnosBodova = new System.Windows.Forms.TextBox();
             this.LblBodovi = new System.Windows.Forms.Label();
+            this.PanelHeader = new System.Windows.Forms.Panel();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
+            this.LblInfoONatjecanju = new System.Windows.Forms.Label();
+            this.LblSudioniciNatjecanja = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.PanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LblNatjecanjeInfo
-            // 
-            this.LblNatjecanjeInfo.AutoSize = true;
-            this.LblNatjecanjeInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNatjecanjeInfo.Location = new System.Drawing.Point(174, 31);
-            this.LblNatjecanjeInfo.Name = "LblNatjecanjeInfo";
-            this.LblNatjecanjeInfo.Size = new System.Drawing.Size(324, 31);
-            this.LblNatjecanjeInfo.TabIndex = 0;
-            this.LblNatjecanjeInfo.Text = "Informacije o natjecanju";
             // 
             // LblNazivNatjecanja
             // 
             this.LblNazivNatjecanja.AutoSize = true;
-            this.LblNazivNatjecanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNazivNatjecanja.Location = new System.Drawing.Point(251, 72);
+            this.LblNazivNatjecanja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNazivNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblNazivNatjecanja.Location = new System.Drawing.Point(294, 49);
             this.LblNazivNatjecanja.Name = "LblNazivNatjecanja";
-            this.LblNazivNatjecanja.Size = new System.Drawing.Size(153, 25);
+            this.LblNazivNatjecanja.Size = new System.Drawing.Size(166, 23);
             this.LblNazivNatjecanja.TabIndex = 1;
             this.LblNazivNatjecanja.Text = "NazivNatjecanja";
             // 
             // LblNazivInfo
             // 
             this.LblNazivInfo.AutoSize = true;
-            this.LblNazivInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNazivInfo.Location = new System.Drawing.Point(46, 140);
+            this.LblNazivInfo.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNazivInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblNazivInfo.Location = new System.Drawing.Point(111, 124);
             this.LblNazivInfo.Name = "LblNazivInfo";
-            this.LblNazivInfo.Size = new System.Drawing.Size(43, 13);
+            this.LblNazivInfo.Size = new System.Drawing.Size(45, 18);
             this.LblNazivInfo.TabIndex = 2;
             this.LblNazivInfo.Text = "Naziv:";
             // 
             // NazivNatjecanja
             // 
             this.NazivNatjecanja.AutoSize = true;
-            this.NazivNatjecanja.Location = new System.Drawing.Point(46, 162);
+            this.NazivNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NazivNatjecanja.Location = new System.Drawing.Point(111, 146);
             this.NazivNatjecanja.Name = "NazivNatjecanja";
-            this.NazivNatjecanja.Size = new System.Drawing.Size(86, 13);
+            this.NazivNatjecanja.Size = new System.Drawing.Size(99, 15);
             this.NazivNatjecanja.TabIndex = 3;
             this.NazivNatjecanja.Text = "Naziv natjecanja";
             // 
             // PocetakNatjecanja
             // 
             this.PocetakNatjecanja.AutoSize = true;
-            this.PocetakNatjecanja.Location = new System.Drawing.Point(46, 210);
+            this.PocetakNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PocetakNatjecanja.Location = new System.Drawing.Point(111, 194);
             this.PocetakNatjecanja.Name = "PocetakNatjecanja";
-            this.PocetakNatjecanja.Size = new System.Drawing.Size(64, 13);
+            this.PocetakNatjecanja.Size = new System.Drawing.Size(72, 15);
             this.PocetakNatjecanja.TabIndex = 5;
             this.PocetakNatjecanja.Text = "01.01.2019.";
             // 
             // LblPocetakNatjecanja
             // 
             this.LblPocetakNatjecanja.AutoSize = true;
-            this.LblPocetakNatjecanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPocetakNatjecanja.Location = new System.Drawing.Point(46, 188);
+            this.LblPocetakNatjecanja.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPocetakNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblPocetakNatjecanja.Location = new System.Drawing.Point(111, 172);
             this.LblPocetakNatjecanja.Name = "LblPocetakNatjecanja";
-            this.LblPocetakNatjecanja.Size = new System.Drawing.Size(121, 13);
+            this.LblPocetakNatjecanja.Size = new System.Drawing.Size(124, 18);
             this.LblPocetakNatjecanja.TabIndex = 4;
             this.LblPocetakNatjecanja.Text = "Pocetak natjecanja:";
             // 
             // KrajNatjecanja
             // 
             this.KrajNatjecanja.AutoSize = true;
-            this.KrajNatjecanja.Location = new System.Drawing.Point(46, 258);
+            this.KrajNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KrajNatjecanja.Location = new System.Drawing.Point(111, 242);
             this.KrajNatjecanja.Name = "KrajNatjecanja";
-            this.KrajNatjecanja.Size = new System.Drawing.Size(64, 13);
+            this.KrajNatjecanja.Size = new System.Drawing.Size(72, 15);
             this.KrajNatjecanja.TabIndex = 7;
             this.KrajNatjecanja.Text = "03.01.2019.";
             // 
             // LblKrajNatjecanja
             // 
             this.LblKrajNatjecanja.AutoSize = true;
-            this.LblKrajNatjecanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblKrajNatjecanja.Location = new System.Drawing.Point(46, 236);
+            this.LblKrajNatjecanja.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKrajNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblKrajNatjecanja.Location = new System.Drawing.Point(111, 220);
             this.LblKrajNatjecanja.Name = "LblKrajNatjecanja";
-            this.LblKrajNatjecanja.Size = new System.Drawing.Size(96, 13);
+            this.LblKrajNatjecanja.Size = new System.Drawing.Size(99, 18);
             this.LblKrajNatjecanja.TabIndex = 6;
             this.LblKrajNatjecanja.Text = "Kraj natjecanja:";
             // 
             // KreatorNatjecanja
             // 
             this.KreatorNatjecanja.AutoSize = true;
-            this.KreatorNatjecanja.Location = new System.Drawing.Point(46, 354);
+            this.KreatorNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KreatorNatjecanja.Location = new System.Drawing.Point(111, 338);
             this.KreatorNatjecanja.Name = "KreatorNatjecanja";
-            this.KreatorNatjecanja.Size = new System.Drawing.Size(110, 13);
+            this.KreatorNatjecanja.Size = new System.Drawing.Size(130, 15);
             this.KreatorNatjecanja.TabIndex = 11;
             this.KreatorNatjecanja.Text = "Ime i prezime kreatora";
             // 
             // LblKreatorNatjecanja
             // 
             this.LblKreatorNatjecanja.AutoSize = true;
-            this.LblKreatorNatjecanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblKreatorNatjecanja.Location = new System.Drawing.Point(46, 332);
+            this.LblKreatorNatjecanja.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKreatorNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblKreatorNatjecanja.Location = new System.Drawing.Point(111, 316);
             this.LblKreatorNatjecanja.Name = "LblKreatorNatjecanja";
-            this.LblKreatorNatjecanja.Size = new System.Drawing.Size(115, 13);
+            this.LblKreatorNatjecanja.Size = new System.Drawing.Size(121, 18);
             this.LblKreatorNatjecanja.TabIndex = 10;
             this.LblKreatorNatjecanja.Text = "Kreator natjecanja:";
             // 
             // Lokacija
             // 
             this.Lokacija.AutoSize = true;
-            this.Lokacija.Location = new System.Drawing.Point(46, 306);
+            this.Lokacija.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lokacija.Location = new System.Drawing.Point(111, 290);
             this.Lokacija.Name = "Lokacija";
-            this.Lokacija.Size = new System.Drawing.Size(99, 13);
+            this.Lokacija.Size = new System.Drawing.Size(115, 15);
             this.Lokacija.TabIndex = 9;
             this.Lokacija.Text = "Lokacija natjecanja\r\n";
             // 
             // LblLokacija
             // 
             this.LblLokacija.AutoSize = true;
-            this.LblLokacija.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblLokacija.Location = new System.Drawing.Point(46, 284);
+            this.LblLokacija.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLokacija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblLokacija.Location = new System.Drawing.Point(111, 268);
             this.LblLokacija.Name = "LblLokacija";
-            this.LblLokacija.Size = new System.Drawing.Size(59, 13);
+            this.LblLokacija.Size = new System.Drawing.Size(59, 18);
             this.LblLokacija.TabIndex = 8;
             this.LblLokacija.Text = "Lokacija:";
             // 
             // LstSudioniciNatjecanja
             // 
+            this.LstSudioniciNatjecanja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstSudioniciNatjecanja.FormattingEnabled = true;
-            this.LstSudioniciNatjecanja.Location = new System.Drawing.Point(288, 162);
+            this.LstSudioniciNatjecanja.Location = new System.Drawing.Point(494, 142);
             this.LstSudioniciNatjecanja.Name = "LstSudioniciNatjecanja";
-            this.LstSudioniciNatjecanja.Size = new System.Drawing.Size(210, 264);
+            this.LstSudioniciNatjecanja.Size = new System.Drawing.Size(210, 260);
             this.LstSudioniciNatjecanja.TabIndex = 12;
-            // 
-            // LstSudionici
-            // 
-            this.LstSudionici.AutoSize = true;
-            this.LstSudionici.Location = new System.Drawing.Point(342, 140);
-            this.LstSudionici.Name = "LstSudionici";
-            this.LstSudionici.Size = new System.Drawing.Size(105, 13);
-            this.LstSudionici.TabIndex = 13;
-            this.LstSudionici.Text = "Sudionici natjecanja:";
             // 
             // BtnUnesiBodove
             // 
-            this.BtnUnesiBodove.Location = new System.Drawing.Point(541, 207);
+            this.BtnUnesiBodove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
+            this.BtnUnesiBodove.FlatAppearance.BorderSize = 0;
+            this.BtnUnesiBodove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUnesiBodove.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUnesiBodove.ForeColor = System.Drawing.Color.White;
+            this.BtnUnesiBodove.Location = new System.Drawing.Point(11, 61);
             this.BtnUnesiBodove.Name = "BtnUnesiBodove";
             this.BtnUnesiBodove.Size = new System.Drawing.Size(102, 23);
             this.BtnUnesiBodove.TabIndex = 14;
             this.BtnUnesiBodove.Text = "Unesi bodove";
-            this.BtnUnesiBodove.UseVisualStyleBackColor = true;
+            this.BtnUnesiBodove.UseVisualStyleBackColor = false;
             // 
             // BtnObrisiSudionika
             // 
-            this.BtnObrisiSudionika.Location = new System.Drawing.Point(396, 432);
+            this.BtnObrisiSudionika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
+            this.BtnObrisiSudionika.FlatAppearance.BorderSize = 0;
+            this.BtnObrisiSudionika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnObrisiSudionika.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnObrisiSudionika.ForeColor = System.Drawing.Color.White;
+            this.BtnObrisiSudionika.Location = new System.Drawing.Point(602, 402);
             this.BtnObrisiSudionika.Name = "BtnObrisiSudionika";
             this.BtnObrisiSudionika.Size = new System.Drawing.Size(102, 23);
             this.BtnObrisiSudionika.TabIndex = 15;
             this.BtnObrisiSudionika.Text = "Obriši sudionika";
-            this.BtnObrisiSudionika.UseVisualStyleBackColor = true;
+            this.BtnObrisiSudionika.UseVisualStyleBackColor = false;
             // 
             // Status
             // 
             this.Status.AutoSize = true;
-            this.Status.Location = new System.Drawing.Point(46, 403);
+            this.Status.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.Location = new System.Drawing.Point(111, 387);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(97, 13);
+            this.Status.Size = new System.Drawing.Size(106, 15);
             this.Status.TabIndex = 17;
             this.Status.Text = "Aktivno/Neaktivno";
             // 
             // LblStatusNatjecanja
             // 
             this.LblStatusNatjecanja.AutoSize = true;
-            this.LblStatusNatjecanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStatusNatjecanja.Location = new System.Drawing.Point(46, 381);
+            this.LblStatusNatjecanja.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatusNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblStatusNatjecanja.Location = new System.Drawing.Point(111, 365);
             this.LblStatusNatjecanja.Name = "LblStatusNatjecanja";
-            this.LblStatusNatjecanja.Size = new System.Drawing.Size(47, 13);
+            this.LblStatusNatjecanja.Size = new System.Drawing.Size(50, 18);
             this.LblStatusNatjecanja.TabIndex = 16;
             this.LblStatusNatjecanja.Text = "Status:";
             // 
             // BtnDodajSudionika
             // 
-            this.BtnDodajSudionika.Location = new System.Drawing.Point(288, 432);
+            this.BtnDodajSudionika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
+            this.BtnDodajSudionika.FlatAppearance.BorderSize = 0;
+            this.BtnDodajSudionika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDodajSudionika.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDodajSudionika.ForeColor = System.Drawing.Color.White;
+            this.BtnDodajSudionika.Location = new System.Drawing.Point(12, 273);
             this.BtnDodajSudionika.Name = "BtnDodajSudionika";
             this.BtnDodajSudionika.Size = new System.Drawing.Size(102, 23);
             this.BtnDodajSudionika.TabIndex = 18;
             this.BtnDodajSudionika.Text = "Dodaj sudionika";
-            this.BtnDodajSudionika.UseVisualStyleBackColor = true;
+            this.BtnDodajSudionika.UseVisualStyleBackColor = false;
             // 
             // TxtUnosBodova
             // 
-            this.TxtUnosBodova.Location = new System.Drawing.Point(541, 181);
+            this.TxtUnosBodova.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.TxtUnosBodova.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtUnosBodova.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUnosBodova.Location = new System.Drawing.Point(11, 29);
             this.TxtUnosBodova.Name = "TxtUnosBodova";
             this.TxtUnosBodova.Size = new System.Drawing.Size(100, 20);
             this.TxtUnosBodova.TabIndex = 19;
@@ -239,25 +262,114 @@
             // LblBodovi
             // 
             this.LblBodovi.AutoSize = true;
-            this.LblBodovi.Location = new System.Drawing.Point(538, 165);
+            this.LblBodovi.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBodovi.ForeColor = System.Drawing.Color.White;
+            this.LblBodovi.Location = new System.Drawing.Point(8, 13);
             this.LblBodovi.Name = "LblBodovi";
-            this.LblBodovi.Size = new System.Drawing.Size(96, 13);
+            this.LblBodovi.Size = new System.Drawing.Size(107, 15);
             this.LblBodovi.TabIndex = 20;
             this.LblBodovi.Text = "Unesi broj bodova:";
+            // 
+            // PanelHeader
+            // 
+            this.PanelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelHeader.Controls.Add(this.BtnBack);
+            this.PanelHeader.Controls.Add(this.PicMaliLogo);
+            this.PanelHeader.Controls.Add(this.LblInfoONatjecanju);
+            this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeader.Name = "PanelHeader";
+            this.PanelHeader.Size = new System.Drawing.Size(784, 34);
+            this.PanelHeader.TabIndex = 32;
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
+            this.BtnBack.TabIndex = 16;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            // 
+            // PicMaliLogo
+            // 
+            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
+            this.PicMaliLogo.Name = "PicMaliLogo";
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
+            this.PicMaliLogo.TabIndex = 0;
+            this.PicMaliLogo.TabStop = false;
+            // 
+            // LblInfoONatjecanju
+            // 
+            this.LblInfoONatjecanju.AutoSize = true;
+            this.LblInfoONatjecanju.BackColor = System.Drawing.Color.Transparent;
+            this.LblInfoONatjecanju.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInfoONatjecanju.ForeColor = System.Drawing.Color.White;
+            this.LblInfoONatjecanju.Location = new System.Drawing.Point(245, 5);
+            this.LblInfoONatjecanju.Name = "LblInfoONatjecanju";
+            this.LblInfoONatjecanju.Size = new System.Drawing.Size(281, 23);
+            this.LblInfoONatjecanju.TabIndex = 12;
+            this.LblInfoONatjecanju.Text = "INFORMACIJE O NATJECANJU";
+            // 
+            // LblSudioniciNatjecanja
+            // 
+            this.LblSudioniciNatjecanja.AutoSize = true;
+            this.LblSudioniciNatjecanja.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSudioniciNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.LblSudioniciNatjecanja.Location = new System.Drawing.Point(517, 105);
+            this.LblSudioniciNatjecanja.Name = "LblSudioniciNatjecanja";
+            this.LblSudioniciNatjecanja.Size = new System.Drawing.Size(168, 23);
+            this.LblSudioniciNatjecanja.TabIndex = 33;
+            this.LblSudioniciNatjecanja.Text = "Sudionici natjecanja";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.panel1.Controls.Add(this.BtnDodajSudionika);
+            this.panel1.Location = new System.Drawing.Point(482, 129);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(235, 309);
+            this.panel1.TabIndex = 34;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.BtnUnesiBodove);
+            this.panel2.Controls.Add(this.LblBodovi);
+            this.panel2.Controls.Add(this.TxtUnosBodova);
+            this.panel2.Location = new System.Drawing.Point(360, 129);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(123, 95);
+            this.panel2.TabIndex = 35;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(11, 55);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 1);
+            this.panel3.TabIndex = 37;
             // 
             // FrmInformacijeONatjecanju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 495);
-            this.Controls.Add(this.LblBodovi);
-            this.Controls.Add(this.TxtUnosBodova);
-            this.Controls.Add(this.BtnDodajSudionika);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.LblSudioniciNatjecanja);
+            this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.LblStatusNatjecanja);
             this.Controls.Add(this.BtnObrisiSudionika);
-            this.Controls.Add(this.BtnUnesiBodove);
-            this.Controls.Add(this.LstSudionici);
             this.Controls.Add(this.LstSudioniciNatjecanja);
             this.Controls.Add(this.KreatorNatjecanja);
             this.Controls.Add(this.LblKreatorNatjecanja);
@@ -270,17 +382,21 @@
             this.Controls.Add(this.NazivNatjecanja);
             this.Controls.Add(this.LblNazivInfo);
             this.Controls.Add(this.LblNazivNatjecanja);
-            this.Controls.Add(this.LblNatjecanjeInfo);
+            this.Controls.Add(this.panel1);
             this.Name = "FrmInformacijeONatjecanju";
             this.Text = "Informacije o natjecanju";
+            this.PanelHeader.ResumeLayout(false);
+            this.PanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LblNatjecanjeInfo;
         private System.Windows.Forms.Label LblNazivNatjecanja;
         private System.Windows.Forms.Label LblNazivInfo;
         private System.Windows.Forms.Label NazivNatjecanja;
@@ -293,7 +409,6 @@
         private System.Windows.Forms.Label Lokacija;
         private System.Windows.Forms.Label LblLokacija;
         private System.Windows.Forms.ListBox LstSudioniciNatjecanja;
-        private System.Windows.Forms.Label LstSudionici;
         private System.Windows.Forms.Button BtnUnesiBodove;
         private System.Windows.Forms.Button BtnObrisiSudionika;
         private System.Windows.Forms.Label Status;
@@ -301,5 +416,13 @@
         private System.Windows.Forms.Button BtnDodajSudionika;
         private System.Windows.Forms.TextBox TxtUnosBodova;
         private System.Windows.Forms.Label LblBodovi;
+        private System.Windows.Forms.Panel PanelHeader;
+        private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.PictureBox PicMaliLogo;
+        private System.Windows.Forms.Label LblInfoONatjecanju;
+        private System.Windows.Forms.Label LblSudioniciNatjecanja;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

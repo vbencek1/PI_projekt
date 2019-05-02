@@ -209,5 +209,32 @@
   <ItemGroup>
     <None Include="Resources\background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small_fish_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members_small_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\competition_small_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistic_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winner_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

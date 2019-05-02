@@ -19,3 +19,4 @@ C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CoreCompileInputs.cache
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.exe
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
+C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajLokaciju.resources
