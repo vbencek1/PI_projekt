@@ -113,7 +113,7 @@ namespace FishingNet
         }
 
 
-        private void BtnOsvjezi_Click(object sender, EventArgs e)
+        private void BtnOsvjeziListu_Click(object sender, EventArgs e)
         {
             OsvjeziFormu();
         }
