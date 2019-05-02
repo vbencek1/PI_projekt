@@ -41,6 +41,7 @@
             this.TxtTelefonClana = new System.Windows.Forms.TextBox();
             this.TxtAdresaClana = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -50,22 +51,51 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+=======
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             this.TxtMjestoRodenjaClana = new System.Windows.Forms.TextBox();
             this.LblMjestoRodenjaClana = new System.Windows.Forms.Label();
             this.TxtDrzavljanstvoClana = new System.Windows.Forms.TextBox();
             this.LblDrzavljanstvo = new System.Windows.Forms.Label();
             this.TxtOIBClana = new System.Windows.Forms.TextBox();
             this.LblOIBClana = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnBack = new System.Windows.Forms.Button();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblDodavanjeNovogClana = new System.Windows.Forms.Label();
             this.BtnDodajClana = new System.Windows.Forms.Button();
+=======
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             this.groupBox1.SuspendLayout();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
+=======
+            // LblNoviClan
+            // 
+            this.LblNoviClan.AutoSize = true;
+            this.LblNoviClan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNoviClan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LblNoviClan.Location = new System.Drawing.Point(278, 41);
+            this.LblNoviClan.Name = "LblNoviClan";
+            this.LblNoviClan.Size = new System.Drawing.Size(262, 31);
+            this.LblNoviClan.TabIndex = 14;
+            this.LblNoviClan.Text = "Dodavanje članova";
+            // 
+            // BtnDodajClana
+            // 
+            this.BtnDodajClana.Location = new System.Drawing.Point(354, 344);
+            this.BtnDodajClana.Name = "BtnDodajClana";
+            this.BtnDodajClana.Size = new System.Drawing.Size(124, 23);
+            this.BtnDodajClana.TabIndex = 30;
+            this.BtnDodajClana.Text = "Dodaj novog člana";
+            this.BtnDodajClana.UseVisualStyleBackColor = true;
+            this.BtnDodajClana.Click += new System.EventHandler(this.BtnDodajClana_Click);
+            // 
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // LblImeClana
             // 
             this.LblImeClana.AutoSize = true;
@@ -219,6 +249,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodavanje novog člana";
             // 
+<<<<<<< HEAD
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
@@ -234,6 +265,23 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(200, 1);
             this.panel8.TabIndex = 37;
+=======
+            // TxtMjestoRodenjaClana
+            // 
+            this.TxtMjestoRodenjaClana.Location = new System.Drawing.Point(255, 87);
+            this.TxtMjestoRodenjaClana.Name = "TxtMjestoRodenjaClana";
+            this.TxtMjestoRodenjaClana.Size = new System.Drawing.Size(200, 20);
+            this.TxtMjestoRodenjaClana.TabIndex = 35;
+            // 
+            // LblMjestoRodenjaClana
+            // 
+            this.LblMjestoRodenjaClana.AutoSize = true;
+            this.LblMjestoRodenjaClana.Location = new System.Drawing.Point(252, 71);
+            this.LblMjestoRodenjaClana.Name = "LblMjestoRodenjaClana";
+            this.LblMjestoRodenjaClana.Size = new System.Drawing.Size(80, 13);
+            this.LblMjestoRodenjaClana.TabIndex = 33;
+            this.LblMjestoRodenjaClana.Text = "Mjesto rođenja:";
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
             // panel7
             // 
@@ -291,17 +339,25 @@
             this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 36;
             // 
-            // TxtMjestoRodenjaClana
+            // TxtOIBClana
             // 
+<<<<<<< HEAD
             this.TxtMjestoRodenjaClana.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtMjestoRodenjaClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtMjestoRodenjaClana.Location = new System.Drawing.Point(255, 133);
             this.TxtMjestoRodenjaClana.Name = "TxtMjestoRodenjaClana";
             this.TxtMjestoRodenjaClana.Size = new System.Drawing.Size(200, 20);
             this.TxtMjestoRodenjaClana.TabIndex = 35;
+=======
+            this.TxtOIBClana.Location = new System.Drawing.Point(19, 133);
+            this.TxtOIBClana.Name = "TxtOIBClana";
+            this.TxtOIBClana.Size = new System.Drawing.Size(200, 20);
+            this.TxtOIBClana.TabIndex = 30;
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
-            // LblMjestoRodenjaClana
+            // LblOIBClana
             // 
+<<<<<<< HEAD
             this.LblMjestoRodenjaClana.AutoSize = true;
             this.LblMjestoRodenjaClana.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblMjestoRodenjaClana.Location = new System.Drawing.Point(252, 120);
@@ -309,6 +365,14 @@
             this.LblMjestoRodenjaClana.Size = new System.Drawing.Size(90, 15);
             this.LblMjestoRodenjaClana.TabIndex = 33;
             this.LblMjestoRodenjaClana.Text = "Mjesto rođenja:";
+=======
+            this.LblOIBClana.AutoSize = true;
+            this.LblOIBClana.Location = new System.Drawing.Point(16, 117);
+            this.LblOIBClana.Name = "LblOIBClana";
+            this.LblOIBClana.Size = new System.Drawing.Size(28, 13);
+            this.LblOIBClana.TabIndex = 29;
+            this.LblOIBClana.Text = "OIB:";
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
             // TxtDrzavljanstvoClana
             // 

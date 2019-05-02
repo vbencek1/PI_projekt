@@ -40,10 +40,15 @@
             this.BtnPretraziClanove = new System.Windows.Forms.Button();
             this.BtnDodajClana = new System.Windows.Forms.Button();
             this.BtnAzurirajClana = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.BtnObrisiClana = new System.Windows.Forms.Button();
             this.BtnOsvjeziListu = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+=======
+            this.BtnOsvjezi = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             this.SuspendLayout();
             // 
             // LstClanova
@@ -56,6 +61,7 @@
             this.LstClanova.Name = "LstClanova";
             this.LstClanova.Size = new System.Drawing.Size(197, 197);
             this.LstClanova.TabIndex = 1;
+            this.LstClanova.SelectedIndexChanged += new System.EventHandler(this.LstClanova_SelectedIndexChanged);
             // 
             // LblPopisClanova
             // 
@@ -70,6 +76,7 @@
             // 
             // PanelHeader
             // 
+<<<<<<< HEAD
             this.PanelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PanelHeader.Controls.Add(this.BtnBack);
             this.PanelHeader.Controls.Add(this.PicMaliLogo);
@@ -79,6 +86,15 @@
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 16;
+=======
+            this.BtnDodajClana.Location = new System.Drawing.Point(265, 247);
+            this.BtnDodajClana.Name = "BtnDodajClana";
+            this.BtnDodajClana.Size = new System.Drawing.Size(159, 29);
+            this.BtnDodajClana.TabIndex = 3;
+            this.BtnDodajClana.Text = "Dodaj člana";
+            this.BtnDodajClana.UseVisualStyleBackColor = true;
+            this.BtnDodajClana.Click += new System.EventHandler(this.BtnDodajClana_Click);
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
             // BtnBack
             // 
@@ -162,9 +178,14 @@
             this.BtnPretraziClanove.Size = new System.Drawing.Size(100, 30);
             this.BtnPretraziClanove.TabIndex = 20;
             this.BtnPretraziClanove.Text = "Pretraži";
+<<<<<<< HEAD
             this.BtnPretraziClanove.UseVisualStyleBackColor = false;
             // 
             // BtnDodajClana
+=======
+            this.BtnPretraziClanove.UseVisualStyleBackColor = true;
+            this.BtnPretraziClanove.Click += new System.EventHandler(this.BtnPretraziClanove_Click);
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
             this.BtnDodajClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.BtnDodajClana.FlatAppearance.BorderSize = 0;
@@ -204,7 +225,12 @@
             this.BtnObrisiClana.Size = new System.Drawing.Size(150, 30);
             this.BtnObrisiClana.TabIndex = 23;
             this.BtnObrisiClana.Text = "Obriši člana";
+<<<<<<< HEAD
             this.BtnObrisiClana.UseVisualStyleBackColor = false;
+=======
+            this.BtnObrisiClana.UseVisualStyleBackColor = true;
+            this.BtnObrisiClana.Click += new System.EventHandler(this.BtnObrisiClana_Click);
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             // 
             // BtnOsvjeziListu
             // 
@@ -220,13 +246,32 @@
             this.BtnOsvjeziListu.Text = "Osvježi";
             this.BtnOsvjeziListu.UseVisualStyleBackColor = false;
             // 
+            // BtnOsvjezi
+            // 
+            this.BtnOsvjezi.Location = new System.Drawing.Point(45, 352);
+            this.BtnOsvjezi.Name = "BtnOsvjezi";
+            this.BtnOsvjezi.Size = new System.Drawing.Size(75, 23);
+            this.BtnOsvjezi.TabIndex = 7;
+            this.BtnOsvjezi.Text = "Osvježi";
+            this.BtnOsvjezi.UseVisualStyleBackColor = true;
+            this.BtnOsvjezi.Click += new System.EventHandler(this.BtnOsvjezi_Click);
+            // 
             // FrmClanovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.BtnOsvjeziListu);
+=======
+            this.ClientSize = new System.Drawing.Size(525, 437);
+            this.Controls.Add(this.BtnOsvjezi);
+            this.Controls.Add(this.BtnAzurirajClana);
+            this.Controls.Add(this.BtnObrisiClana);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.BtnDodajClana);
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
             this.Controls.Add(this.LblPopisClanova);
             this.Controls.Add(this.LstClanova);
             this.Controls.Add(this.BtnObrisiClana);
@@ -260,7 +305,11 @@
         private System.Windows.Forms.Button BtnPretraziClanove;
         private System.Windows.Forms.Button BtnDodajClana;
         private System.Windows.Forms.Button BtnAzurirajClana;
+<<<<<<< HEAD
         private System.Windows.Forms.Button BtnObrisiClana;
         private System.Windows.Forms.Button BtnOsvjeziListu;
+=======
+        private System.Windows.Forms.Button BtnOsvjezi;
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6
     }
 }
