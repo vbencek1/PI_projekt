@@ -56,5 +56,10 @@ namespace FishingNet
             
             Hide();
         }
+
+        private void BtnDodajClana_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

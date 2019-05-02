@@ -19,6 +19,9 @@ C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CoreCompileInputs.cache
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.exe
 C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
+<<<<<<< HEAD
+C:\Users\Sara\Documents\uni shit\3 god\PI\PI_ProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajLokaciju.resources
+=======
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\bin\Debug\FishingNet.exe.config
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\bin\Debug\FishingNet.exe
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\bin\Debug\FishingNet.pdb
@@ -41,3 +44,4 @@ C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CoreCompileInputs.cache
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\obj\Debug\FishingNet.exe
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Lokalni_repozitorij_27\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
+>>>>>>> 1fcc1adb3bd29926b945c9ed4cfd080a969a1df6

@@ -21,5 +21,10 @@ namespace FishingNet
         {
 
         }
+
+        private void LblKlubInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
