@@ -49,17 +49,14 @@ namespace FishingNet
                 );
         }
 
-        private void BtnDodajClana_Click(object sender, EventArgs e)
-        {
-            UnesiClana();
-            OsvjeziFormu();
-            
-            Hide();
-        }
+        
 
         private void BtnDodajClana_Click_1(object sender, EventArgs e)
         {
+            UnesiClana();
+            OsvjeziFormu();
 
+            Hide();
         }
     }
 }
