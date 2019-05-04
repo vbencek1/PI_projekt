@@ -373,6 +373,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 

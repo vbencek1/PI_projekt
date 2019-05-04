@@ -13,6 +13,7 @@ namespace FishingNet
     public partial class FrmClanovi : Form
     {
         FrmDodajClana formaDodaj;
+        FrmPocetna formaPocetna;
         public static List<Clan> ListaClanova;
 
         public FrmClanovi()
@@ -28,7 +29,15 @@ namespace FishingNet
             {
                 formaDodaj = new FrmDodajClana();
             }
-            formaDodaj.Show();
+            formaDodaj.ShowDialog();
+        }
+        private void PrikaziFormuPocetna()
+        {
+            if (formaPocetna == null)
+            {
+                formaPocetna = new FrmPocetna();
+            }
+            formaPocetna.ShowDialog();
         }
 
         public void DodajClana(
@@ -131,6 +140,14 @@ namespace FishingNet
 
         private void LblNaziv_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PrikaziFormuPocetna();
+            this.Close();
 
         }
     }

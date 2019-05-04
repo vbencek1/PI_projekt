@@ -56,7 +56,15 @@ namespace FishingNet
             UnesiClana();
             OsvjeziFormu();
 
-            Hide();
+            this.Close();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formaClanovi.ShowDialog();
+            this.Close();
+
         }
     }
 }

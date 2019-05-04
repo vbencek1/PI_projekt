@@ -39,8 +39,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.PanelHeader = new System.Windows.Forms.Panel();
-            this.LblPocetnaStranica = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
+            this.LblPocetnaStranica = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicRibickiKlubIkona)).BeginInit();
             this.panel3.SuspendLayout();
@@ -64,6 +64,7 @@
             this.BtnClanovi.TabIndex = 1;
             this.BtnClanovi.Text = "Članovi";
             this.BtnClanovi.UseVisualStyleBackColor = false;
+            this.BtnClanovi.Click += new System.EventHandler(this.BtnClanovi_Click);
             // 
             // BtnNatjecanja
             // 
@@ -172,18 +173,6 @@
             this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 6;
             // 
-            // LblPocetnaStranica
-            // 
-            this.LblPocetnaStranica.AutoSize = true;
-            this.LblPocetnaStranica.BackColor = System.Drawing.Color.Transparent;
-            this.LblPocetnaStranica.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPocetnaStranica.ForeColor = System.Drawing.Color.White;
-            this.LblPocetnaStranica.Location = new System.Drawing.Point(275, 5);
-            this.LblPocetnaStranica.Name = "LblPocetnaStranica";
-            this.LblPocetnaStranica.Size = new System.Drawing.Size(194, 23);
-            this.LblPocetnaStranica.TabIndex = 13;
-            this.LblPocetnaStranica.Text = "POČETNA STRANICA\r\n";
-            // 
             // BtnBack
             // 
             this.BtnBack.BackColor = System.Drawing.Color.Transparent;
@@ -197,6 +186,19 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 17;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // LblPocetnaStranica
+            // 
+            this.LblPocetnaStranica.AutoSize = true;
+            this.LblPocetnaStranica.BackColor = System.Drawing.Color.Transparent;
+            this.LblPocetnaStranica.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPocetnaStranica.ForeColor = System.Drawing.Color.White;
+            this.LblPocetnaStranica.Location = new System.Drawing.Point(275, 5);
+            this.LblPocetnaStranica.Name = "LblPocetnaStranica";
+            this.LblPocetnaStranica.Size = new System.Drawing.Size(194, 23);
+            this.LblPocetnaStranica.TabIndex = 13;
+            this.LblPocetnaStranica.Text = "POČETNA STRANICA\r\n";
             // 
             // FrmPocetna
             // 
