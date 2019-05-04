@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
     <Compile Include="Clan.cs" />
     <Compile Include="FrmClanovi.cs">
       <SubType>Form</SubType>
@@ -125,8 +126,10 @@
     <Compile Include="FrmStatistika.Designer.cs">
       <DependentUpon>FrmStatistika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Moderator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Uloge.cs" />
     <EmbeddedResource Include="FrmClanovi.resx">
       <DependentUpon>FrmClanovi.cs</DependentUpon>
     </EmbeddedResource>
