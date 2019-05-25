@@ -341,7 +341,7 @@
             this.groupBox1.Size = new System.Drawing.Size(690, 279);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Dodaj novog sudionika natjecanja";
+            this.groupBox1.Text = "Unesi podatke o sudioniku natjecanja";
             // 
             // panel5
             // 
@@ -457,18 +457,18 @@
             this.LblInfoONatjecanju.BackColor = System.Drawing.Color.Transparent;
             this.LblInfoONatjecanju.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoONatjecanju.ForeColor = System.Drawing.Color.White;
-            this.LblInfoONatjecanju.Location = new System.Drawing.Point(301, 5);
+            this.LblInfoONatjecanju.Location = new System.Drawing.Point(252, 5);
             this.LblInfoONatjecanju.Name = "LblInfoONatjecanju";
-            this.LblInfoONatjecanju.Size = new System.Drawing.Size(182, 23);
+            this.LblInfoONatjecanju.Size = new System.Drawing.Size(278, 23);
             this.LblInfoONatjecanju.TabIndex = 12;
-            this.LblInfoONatjecanju.Text = "DODAJ SUDIONIKA";
+            this.LblInfoONatjecanju.Text = "DODAJ/AŽURIRAJ SUDIONIKA";
             // 
             // LblNazivNatjecanja
             // 
             this.LblNazivNatjecanja.AutoSize = true;
             this.LblNazivNatjecanja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNazivNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.LblNazivNatjecanja.Location = new System.Drawing.Point(304, 48);
+            this.LblNazivNatjecanja.Location = new System.Drawing.Point(308, 48);
             this.LblNazivNatjecanja.Name = "LblNazivNatjecanja";
             this.LblNazivNatjecanja.Size = new System.Drawing.Size(166, 23);
             this.LblNazivNatjecanja.TabIndex = 33;

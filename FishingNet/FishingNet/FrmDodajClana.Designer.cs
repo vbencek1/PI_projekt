@@ -391,11 +391,11 @@
             this.LblDodavanjeNovogClana.BackColor = System.Drawing.Color.Transparent;
             this.LblDodavanjeNovogClana.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDodavanjeNovogClana.ForeColor = System.Drawing.Color.White;
-            this.LblDodavanjeNovogClana.Location = new System.Drawing.Point(245, 5);
+            this.LblDodavanjeNovogClana.Location = new System.Drawing.Point(273, 5);
             this.LblDodavanjeNovogClana.Name = "LblDodavanjeNovogClana";
-            this.LblDodavanjeNovogClana.Size = new System.Drawing.Size(276, 23);
+            this.LblDodavanjeNovogClana.Size = new System.Drawing.Size(241, 23);
             this.LblDodavanjeNovogClana.TabIndex = 12;
-            this.LblDodavanjeNovogClana.Text = "DODAVANJE NOVOG ČLANA\n";
+            this.LblDodavanjeNovogClana.Text = "DODAJ/AŽURIRAJ ČLANA";
             // 
             // BtnDodajClana
             // 
@@ -408,7 +408,7 @@
             this.BtnDodajClana.Name = "BtnDodajClana";
             this.BtnDodajClana.Size = new System.Drawing.Size(150, 30);
             this.BtnDodajClana.TabIndex = 32;
-            this.BtnDodajClana.Text = "Dodaj novog člana";
+            this.BtnDodajClana.Text = "Unesi";
             this.BtnDodajClana.UseVisualStyleBackColor = false;
             this.BtnDodajClana.Click += new System.EventHandler(this.BtnDodajClana_Click_1);
             // 

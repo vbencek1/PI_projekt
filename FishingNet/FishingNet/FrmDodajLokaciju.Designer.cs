@@ -40,20 +40,21 @@
             this.LblDodajLokaciju = new System.Windows.Forms.Label();
             this.BtnObrisiLokaciju = new System.Windows.Forms.Button();
             this.LblPopisLokacija = new System.Windows.Forms.Label();
-            this.LstLokacija = new System.Windows.Forms.ListBox();
             this.BtnDodajLokaciju = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvLokacije = new System.Windows.Forms.DataGridView();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLokacije)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(402, 198);
+            this.textBox1.Location = new System.Drawing.Point(473, 204);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(160, 20);
             this.textBox1.TabIndex = 4;
@@ -62,7 +63,7 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(402, 149);
+            this.textBox2.Location = new System.Drawing.Point(473, 155);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(160, 20);
             this.textBox2.TabIndex = 5;
@@ -71,7 +72,7 @@
             // 
             this.TxtNazivRijeke.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtNazivRijeke.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNazivRijeke.Location = new System.Drawing.Point(402, 100);
+            this.TxtNazivRijeke.Location = new System.Drawing.Point(473, 106);
             this.TxtNazivRijeke.Name = "TxtNazivRijeke";
             this.TxtNazivRijeke.Size = new System.Drawing.Size(160, 20);
             this.TxtNazivRijeke.TabIndex = 6;
@@ -80,7 +81,7 @@
             // 
             this.LblNazivRijeke.AutoSize = true;
             this.LblNazivRijeke.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNazivRijeke.Location = new System.Drawing.Point(399, 84);
+            this.LblNazivRijeke.Location = new System.Drawing.Point(470, 90);
             this.LblNazivRijeke.Name = "LblNazivRijeke";
             this.LblNazivRijeke.Size = new System.Drawing.Size(70, 15);
             this.LblNazivRijeke.TabIndex = 7;
@@ -90,7 +91,7 @@
             // 
             this.LblDuljinaRijeke.AutoSize = true;
             this.LblDuljinaRijeke.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDuljinaRijeke.Location = new System.Drawing.Point(399, 133);
+            this.LblDuljinaRijeke.Location = new System.Drawing.Point(470, 139);
             this.LblDuljinaRijeke.Name = "LblDuljinaRijeke";
             this.LblDuljinaRijeke.Size = new System.Drawing.Size(79, 15);
             this.LblDuljinaRijeke.TabIndex = 8;
@@ -100,7 +101,7 @@
             // 
             this.LblGradLokacija.AutoSize = true;
             this.LblGradLokacija.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGradLokacija.Location = new System.Drawing.Point(399, 182);
+            this.LblGradLokacija.Location = new System.Drawing.Point(470, 188);
             this.LblGradLokacija.Name = "LblGradLokacija";
             this.LblGradLokacija.Size = new System.Drawing.Size(36, 15);
             this.LblGradLokacija.TabIndex = 9;
@@ -148,11 +149,11 @@
             this.LblDodajLokaciju.BackColor = System.Drawing.Color.Transparent;
             this.LblDodajLokaciju.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDodajLokaciju.ForeColor = System.Drawing.Color.White;
-            this.LblDodajLokaciju.Location = new System.Drawing.Point(277, 5);
+            this.LblDodajLokaciju.Location = new System.Drawing.Point(253, 5);
             this.LblDodajLokaciju.Name = "LblDodajLokaciju";
-            this.LblDodajLokaciju.Size = new System.Drawing.Size(172, 23);
+            this.LblDodajLokaciju.Size = new System.Drawing.Size(268, 23);
             this.LblDodajLokaciju.TabIndex = 12;
-            this.LblDodajLokaciju.Text = "DODAJ LOKACIJU";
+            this.LblDodajLokaciju.Text = "DODAJ/AŽURIRAJ LOKACIJU";
             // 
             // BtnObrisiLokaciju
             // 
@@ -161,7 +162,7 @@
             this.BtnObrisiLokaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObrisiLokaciju.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObrisiLokaciju.ForeColor = System.Drawing.Color.White;
-            this.BtnObrisiLokaciju.Location = new System.Drawing.Point(277, 342);
+            this.BtnObrisiLokaciju.Location = new System.Drawing.Point(348, 348);
             this.BtnObrisiLokaciju.Name = "BtnObrisiLokaciju";
             this.BtnObrisiLokaciju.Size = new System.Drawing.Size(101, 25);
             this.BtnObrisiLokaciju.TabIndex = 36;
@@ -173,22 +174,11 @@
             this.LblPopisLokacija.AutoSize = true;
             this.LblPopisLokacija.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPopisLokacija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
-            this.LblPopisLokacija.Location = new System.Drawing.Point(177, 74);
+            this.LblPopisLokacija.Location = new System.Drawing.Point(140, 80);
             this.LblPopisLokacija.Name = "LblPopisLokacija";
             this.LblPopisLokacija.Size = new System.Drawing.Size(117, 23);
             this.LblPopisLokacija.TabIndex = 35;
             this.LblPopisLokacija.Text = "Popis lokacija";
-            // 
-            // LstLokacija
-            // 
-            this.LstLokacija.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LstLokacija.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LstLokacija.FormattingEnabled = true;
-            this.LstLokacija.ItemHeight = 15;
-            this.LstLokacija.Location = new System.Drawing.Point(181, 100);
-            this.LstLokacija.Name = "LstLokacija";
-            this.LstLokacija.Size = new System.Drawing.Size(197, 242);
-            this.LstLokacija.TabIndex = 34;
             // 
             // BtnDodajLokaciju
             // 
@@ -197,17 +187,17 @@
             this.BtnDodajLokaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDodajLokaciju.Font = new System.Drawing.Font("Calibri", 11F);
             this.BtnDodajLokaciju.ForeColor = System.Drawing.Color.White;
-            this.BtnDodajLokaciju.Location = new System.Drawing.Point(439, 239);
+            this.BtnDodajLokaciju.Location = new System.Drawing.Point(510, 245);
             this.BtnDodajLokaciju.Name = "BtnDodajLokaciju";
             this.BtnDodajLokaciju.Size = new System.Drawing.Size(123, 30);
             this.BtnDodajLokaciju.TabIndex = 37;
-            this.BtnDodajLokaciju.Text = "Dodaj lokaciju";
+            this.BtnDodajLokaciju.Text = "Unesi";
             this.BtnDodajLokaciju.UseVisualStyleBackColor = false;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel9.Location = new System.Drawing.Point(402, 126);
+            this.panel9.Location = new System.Drawing.Point(473, 132);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(160, 1);
             this.panel9.TabIndex = 40;
@@ -215,7 +205,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel1.Location = new System.Drawing.Point(402, 175);
+            this.panel1.Location = new System.Drawing.Point(473, 181);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 1);
             this.panel1.TabIndex = 41;
@@ -223,10 +213,23 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel2.Location = new System.Drawing.Point(402, 224);
+            this.panel2.Location = new System.Drawing.Point(473, 230);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 1);
             this.panel2.TabIndex = 41;
+            // 
+            // dgvLokacije
+            // 
+            this.dgvLokacije.AllowUserToAddRows = false;
+            this.dgvLokacije.AllowUserToDeleteRows = false;
+            this.dgvLokacije.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvLokacije.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvLokacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLokacije.Location = new System.Drawing.Point(144, 106);
+            this.dgvLokacije.Name = "dgvLokacije";
+            this.dgvLokacije.ReadOnly = true;
+            this.dgvLokacije.Size = new System.Drawing.Size(305, 242);
+            this.dgvLokacije.TabIndex = 42;
             // 
             // FrmDodajLokaciju
             // 
@@ -234,13 +237,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.dgvLokacije);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.BtnDodajLokaciju);
             this.Controls.Add(this.BtnObrisiLokaciju);
             this.Controls.Add(this.LblPopisLokacija);
-            this.Controls.Add(this.LstLokacija);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.LblGradLokacija);
             this.Controls.Add(this.LblDuljinaRijeke);
@@ -253,6 +256,7 @@
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLokacije)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,10 +275,10 @@
         private System.Windows.Forms.Label LblDodajLokaciju;
         private System.Windows.Forms.Button BtnObrisiLokaciju;
         private System.Windows.Forms.Label LblPopisLokacija;
-        private System.Windows.Forms.ListBox LstLokacija;
         private System.Windows.Forms.Button BtnDodajLokaciju;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvLokacije;
     }
 }

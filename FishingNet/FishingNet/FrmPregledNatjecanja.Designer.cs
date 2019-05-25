@@ -30,7 +30,6 @@
         {
             this.BtnPregledajNatjecanje = new System.Windows.Forms.Button();
             this.LbListaNatjecanja = new System.Windows.Forms.Label();
-            this.LstNatjecanja = new System.Windows.Forms.ListBox();
             this.BtnObrisiClana = new System.Windows.Forms.Button();
             this.BtnAzurirajClana = new System.Windows.Forms.Button();
             this.BtnDodajNatjecanje = new System.Windows.Forms.Button();
@@ -38,8 +37,10 @@
             this.BtnBack = new System.Windows.Forms.Button();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblPregledNatjecanja = new System.Windows.Forms.Label();
+            this.dgvNatjecanja = new System.Windows.Forms.DataGridView();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNatjecanja)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnPregledajNatjecanje
@@ -49,7 +50,7 @@
             this.BtnPregledajNatjecanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPregledajNatjecanje.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPregledajNatjecanje.ForeColor = System.Drawing.Color.White;
-            this.BtnPregledajNatjecanje.Location = new System.Drawing.Point(259, 387);
+            this.BtnPregledajNatjecanje.Location = new System.Drawing.Point(448, 388);
             this.BtnPregledajNatjecanje.Name = "BtnPregledajNatjecanje";
             this.BtnPregledajNatjecanje.Size = new System.Drawing.Size(130, 25);
             this.BtnPregledajNatjecanje.TabIndex = 27;
@@ -61,22 +62,11 @@
             this.LbListaNatjecanja.AutoSize = true;
             this.LbListaNatjecanja.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbListaNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
-            this.LbListaNatjecanja.Location = new System.Drawing.Point(188, 119);
+            this.LbListaNatjecanja.Location = new System.Drawing.Point(34, 95);
             this.LbListaNatjecanja.Name = "LbListaNatjecanja";
             this.LbListaNatjecanja.Size = new System.Drawing.Size(133, 23);
             this.LbListaNatjecanja.TabIndex = 26;
             this.LbListaNatjecanja.Text = "Lista natjecanja";
-            // 
-            // LstNatjecanja
-            // 
-            this.LstNatjecanja.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LstNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LstNatjecanja.FormattingEnabled = true;
-            this.LstNatjecanja.ItemHeight = 15;
-            this.LstNatjecanja.Location = new System.Drawing.Point(192, 145);
-            this.LstNatjecanja.Name = "LstNatjecanja";
-            this.LstNatjecanja.Size = new System.Drawing.Size(197, 242);
-            this.LstNatjecanja.TabIndex = 25;
             // 
             // BtnObrisiClana
             // 
@@ -85,7 +75,7 @@
             this.BtnObrisiClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObrisiClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObrisiClana.ForeColor = System.Drawing.Color.White;
-            this.BtnObrisiClana.Location = new System.Drawing.Point(414, 218);
+            this.BtnObrisiClana.Location = new System.Drawing.Point(597, 193);
             this.BtnObrisiClana.Name = "BtnObrisiClana";
             this.BtnObrisiClana.Size = new System.Drawing.Size(150, 30);
             this.BtnObrisiClana.TabIndex = 30;
@@ -99,7 +89,7 @@
             this.BtnAzurirajClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAzurirajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAzurirajClana.ForeColor = System.Drawing.Color.White;
-            this.BtnAzurirajClana.Location = new System.Drawing.Point(414, 182);
+            this.BtnAzurirajClana.Location = new System.Drawing.Point(597, 157);
             this.BtnAzurirajClana.Name = "BtnAzurirajClana";
             this.BtnAzurirajClana.Size = new System.Drawing.Size(150, 30);
             this.BtnAzurirajClana.TabIndex = 29;
@@ -113,7 +103,7 @@
             this.BtnDodajNatjecanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDodajNatjecanje.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDodajNatjecanje.ForeColor = System.Drawing.Color.White;
-            this.BtnDodajNatjecanje.Location = new System.Drawing.Point(414, 146);
+            this.BtnDodajNatjecanje.Location = new System.Drawing.Point(597, 121);
             this.BtnDodajNatjecanje.Name = "BtnDodajNatjecanje";
             this.BtnDodajNatjecanje.Size = new System.Drawing.Size(150, 30);
             this.BtnDodajNatjecanje.TabIndex = 28;
@@ -169,24 +159,38 @@
             this.LblPregledNatjecanja.Text = "PREGLED NATJECANJA";
             this.LblPregledNatjecanja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvNatjecanja
+            // 
+            this.dgvNatjecanja.AllowUserToAddRows = false;
+            this.dgvNatjecanja.AllowUserToDeleteRows = false;
+            this.dgvNatjecanja.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvNatjecanja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvNatjecanja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNatjecanja.Location = new System.Drawing.Point(38, 121);
+            this.dgvNatjecanja.Name = "dgvNatjecanja";
+            this.dgvNatjecanja.ReadOnly = true;
+            this.dgvNatjecanja.Size = new System.Drawing.Size(540, 265);
+            this.dgvNatjecanja.TabIndex = 32;
+            // 
             // FrmPregledNatjecanja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.dgvNatjecanja);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.BtnObrisiClana);
             this.Controls.Add(this.BtnAzurirajClana);
             this.Controls.Add(this.BtnDodajNatjecanje);
             this.Controls.Add(this.BtnPregledajNatjecanje);
             this.Controls.Add(this.LbListaNatjecanja);
-            this.Controls.Add(this.LstNatjecanja);
             this.Name = "FrmPregledNatjecanja";
             this.Text = "Pregled natjecanja";
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNatjecanja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +199,6 @@
         #endregion
         private System.Windows.Forms.Button BtnPregledajNatjecanje;
         private System.Windows.Forms.Label LbListaNatjecanja;
-        private System.Windows.Forms.ListBox LstNatjecanja;
         private System.Windows.Forms.Button BtnObrisiClana;
         private System.Windows.Forms.Button BtnAzurirajClana;
         private System.Windows.Forms.Button BtnDodajNatjecanje;
@@ -203,5 +206,6 @@
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblPregledNatjecanja;
+        private System.Windows.Forms.DataGridView dgvNatjecanja;
     }
 }

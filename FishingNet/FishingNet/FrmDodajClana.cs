@@ -12,14 +12,10 @@ namespace FishingNet
 {
     public partial class FrmDodajClana : Form
     {
-
-        
-        FrmClanovi formaClanovi;
         public FrmDodajClana()
         {
             InitializeComponent();
-            if (formaClanovi == null)
-                formaClanovi = new FrmClanovi();
+            
         }
 
 
@@ -36,35 +32,19 @@ namespace FishingNet
         }
         private void UnesiClana()
         {
-            formaClanovi.DodajClana(
-                TxtImeClana.Text,
-                TxtPrezimeClana.Text,
-                int.Parse(TxtOIBClana.Text),
-                DatumRodenjaClana.Text,
-                TxtDrzavljanstvoClana.Text,
-                TxtMjestoRodenjaClana.Text,
-                TxtAdresaClana.Text,
-                TxtTelefonClana.Text,
-                txtEmailClana.Text
-                );
+            
         }
 
         
 
         private void BtnDodajClana_Click_1(object sender, EventArgs e)
         {
-            UnesiClana();
-            OsvjeziFormu();
-
-            this.Close();
+            
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            formaClanovi.ShowDialog();
-            this.Close();
-
+            
         }
     }
 }

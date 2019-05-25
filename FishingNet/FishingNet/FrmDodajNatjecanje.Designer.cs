@@ -163,7 +163,7 @@
             this.groupBox1.Size = new System.Drawing.Size(474, 227);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unesi novo natjecanje";
+            this.groupBox1.Text = "Podaci o natjecanju";
             // 
             // ComboLokacija
             // 
@@ -268,11 +268,11 @@
             this.LblUnosNatjecanja.BackColor = System.Drawing.Color.Transparent;
             this.LblUnosNatjecanja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUnosNatjecanja.ForeColor = System.Drawing.Color.White;
-            this.LblUnosNatjecanja.Location = new System.Drawing.Point(280, 5);
+            this.LblUnosNatjecanja.Location = new System.Drawing.Point(243, 5);
             this.LblUnosNatjecanja.Name = "LblUnosNatjecanja";
-            this.LblUnosNatjecanja.Size = new System.Drawing.Size(189, 23);
+            this.LblUnosNatjecanja.Size = new System.Drawing.Size(293, 23);
             this.LblUnosNatjecanja.TabIndex = 12;
-            this.LblUnosNatjecanja.Text = "UNOS NATJECANJA";
+            this.LblUnosNatjecanja.Text = "DODAJ/AŽURIRAJ NATJECANJE";
             this.LblUnosNatjecanja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnUnesiNatjecanje

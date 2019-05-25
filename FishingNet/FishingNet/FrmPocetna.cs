@@ -12,8 +12,7 @@ namespace FishingNet
 {
     public partial class FrmPocetna : Form
     {
-        FrmClanovi formaClanovi;
-        FrmPrijava formaPrijava;
+        
         public FrmPocetna()
         {
             InitializeComponent();
@@ -25,33 +24,21 @@ namespace FishingNet
         }
         private void PrikaziFormu()
         {
-            if (formaClanovi == null)
-            {
-                formaClanovi = new FrmClanovi();
-            }
-            formaClanovi.ShowDialog();
+            
         }
         private void PrikaziFormuPrijave()
         {
-            if (formaPrijava == null)
-            {
-                formaPrijava = new FrmPrijava();
-            }
-            formaPrijava.ShowDialog();
+            
         }
 
         private void BtnClanovi_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PrikaziFormu();
-            this.Close();
+            
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PrikaziFormuPrijave();
-            this.Close();
+            
         }
     }
 }

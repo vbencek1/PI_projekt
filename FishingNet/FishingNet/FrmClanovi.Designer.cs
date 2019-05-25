@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LstClanova = new System.Windows.Forms.ListBox();
             this.LblPopisClanova = new System.Windows.Forms.Label();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnBack = new System.Windows.Forms.Button();
@@ -42,28 +41,18 @@
             this.BtnAzurirajClana = new System.Windows.Forms.Button();
             this.BtnObrisiClana = new System.Windows.Forms.Button();
             this.BtnOsvjeziListu = new System.Windows.Forms.Button();
+            this.dgvPopisClanova = new System.Windows.Forms.DataGridView();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanova)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LstClanova
-            // 
-            this.LstClanova.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LstClanova.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LstClanova.FormattingEnabled = true;
-            this.LstClanova.ItemHeight = 15;
-            this.LstClanova.Location = new System.Drawing.Point(163, 144);
-            this.LstClanova.Name = "LstClanova";
-            this.LstClanova.Size = new System.Drawing.Size(197, 197);
-            this.LstClanova.TabIndex = 1;
-            this.LstClanova.SelectedIndexChanged += new System.EventHandler(this.LstClanova_SelectedIndexChanged);
             // 
             // LblPopisClanova
             // 
             this.LblPopisClanova.AutoSize = true;
             this.LblPopisClanova.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPopisClanova.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
-            this.LblPopisClanova.Location = new System.Drawing.Point(159, 118);
+            this.LblPopisClanova.Location = new System.Drawing.Point(29, 76);
             this.LblPopisClanova.Name = "LblPopisClanova";
             this.LblPopisClanova.Size = new System.Drawing.Size(117, 23);
             this.LblPopisClanova.TabIndex = 2;
@@ -122,7 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
-            this.panel1.Location = new System.Drawing.Point(395, 186);
+            this.panel1.Location = new System.Drawing.Point(541, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(217, 1);
             this.panel1.TabIndex = 19;
@@ -134,7 +123,7 @@
             this.TxtPretraziClanove.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TxtPretraziClanove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtPretraziClanove.ForeColor = System.Drawing.Color.Black;
-            this.TxtPretraziClanove.Location = new System.Drawing.Point(394, 162);
+            this.TxtPretraziClanove.Location = new System.Drawing.Point(540, 102);
             this.TxtPretraziClanove.Name = "TxtPretraziClanove";
             this.TxtPretraziClanove.Size = new System.Drawing.Size(217, 20);
             this.TxtPretraziClanove.TabIndex = 18;
@@ -144,7 +133,7 @@
             this.LblPretraziClanove.AutoSize = true;
             this.LblPretraziClanove.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPretraziClanove.ForeColor = System.Drawing.Color.Black;
-            this.LblPretraziClanove.Location = new System.Drawing.Point(392, 144);
+            this.LblPretraziClanove.Location = new System.Drawing.Point(538, 84);
             this.LblPretraziClanove.Name = "LblPretraziClanove";
             this.LblPretraziClanove.Size = new System.Drawing.Size(144, 15);
             this.LblPretraziClanove.TabIndex = 17;
@@ -157,9 +146,9 @@
             this.BtnPretraziClanove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnPretraziClanove.FlatAppearance.BorderSize = 0;
             this.BtnPretraziClanove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPretraziClanove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPretraziClanove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPretraziClanove.ForeColor = System.Drawing.Color.White;
-            this.BtnPretraziClanove.Location = new System.Drawing.Point(511, 193);
+            this.BtnPretraziClanove.Location = new System.Drawing.Point(657, 133);
             this.BtnPretraziClanove.Name = "BtnPretraziClanove";
             this.BtnPretraziClanove.Size = new System.Drawing.Size(100, 30);
             this.BtnPretraziClanove.TabIndex = 20;
@@ -172,9 +161,9 @@
             this.BtnDodajClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.BtnDodajClana.FlatAppearance.BorderSize = 0;
             this.BtnDodajClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDodajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDodajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDodajClana.ForeColor = System.Drawing.Color.White;
-            this.BtnDodajClana.Location = new System.Drawing.Point(461, 252);
+            this.BtnDodajClana.Location = new System.Drawing.Point(607, 192);
             this.BtnDodajClana.Name = "BtnDodajClana";
             this.BtnDodajClana.Size = new System.Drawing.Size(150, 30);
             this.BtnDodajClana.TabIndex = 21;
@@ -187,9 +176,9 @@
             this.BtnAzurirajClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.BtnAzurirajClana.FlatAppearance.BorderSize = 0;
             this.BtnAzurirajClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAzurirajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAzurirajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAzurirajClana.ForeColor = System.Drawing.Color.White;
-            this.BtnAzurirajClana.Location = new System.Drawing.Point(461, 288);
+            this.BtnAzurirajClana.Location = new System.Drawing.Point(607, 228);
             this.BtnAzurirajClana.Name = "BtnAzurirajClana";
             this.BtnAzurirajClana.Size = new System.Drawing.Size(150, 30);
             this.BtnAzurirajClana.TabIndex = 22;
@@ -201,9 +190,9 @@
             this.BtnObrisiClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.BtnObrisiClana.FlatAppearance.BorderSize = 0;
             this.BtnObrisiClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnObrisiClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnObrisiClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObrisiClana.ForeColor = System.Drawing.Color.White;
-            this.BtnObrisiClana.Location = new System.Drawing.Point(461, 324);
+            this.BtnObrisiClana.Location = new System.Drawing.Point(607, 264);
             this.BtnObrisiClana.Name = "BtnObrisiClana";
             this.BtnObrisiClana.Size = new System.Drawing.Size(150, 30);
             this.BtnObrisiClana.TabIndex = 23;
@@ -218,7 +207,7 @@
             this.BtnOsvjeziListu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOsvjeziListu.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOsvjeziListu.ForeColor = System.Drawing.Color.White;
-            this.BtnOsvjeziListu.Location = new System.Drawing.Point(285, 341);
+            this.BtnOsvjeziListu.Location = new System.Drawing.Point(457, 381);
             this.BtnOsvjeziListu.Name = "BtnOsvjeziListu";
             this.BtnOsvjeziListu.Size = new System.Drawing.Size(75, 23);
             this.BtnOsvjeziListu.TabIndex = 7;
@@ -226,15 +215,28 @@
             this.BtnOsvjeziListu.UseVisualStyleBackColor = true;
             this.BtnOsvjeziListu.Click += new System.EventHandler(this.BtnOsvjeziListu_Click);
             // 
+            // dgvPopisClanova
+            // 
+            this.dgvPopisClanova.AllowUserToAddRows = false;
+            this.dgvPopisClanova.AllowUserToDeleteRows = false;
+            this.dgvPopisClanova.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvPopisClanova.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPopisClanova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPopisClanova.Location = new System.Drawing.Point(24, 102);
+            this.dgvPopisClanova.Name = "dgvPopisClanova";
+            this.dgvPopisClanova.ReadOnly = true;
+            this.dgvPopisClanova.Size = new System.Drawing.Size(508, 278);
+            this.dgvPopisClanova.TabIndex = 24;
+            // 
             // FrmClanovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.dgvPopisClanova);
             this.Controls.Add(this.BtnOsvjeziListu);
             this.Controls.Add(this.LblPopisClanova);
-            this.Controls.Add(this.LstClanova);
             this.Controls.Add(this.BtnObrisiClana);
             this.Controls.Add(this.BtnAzurirajClana);
             this.Controls.Add(this.BtnDodajClana);
@@ -248,13 +250,13 @@
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPopisClanova)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox LstClanova;
         private System.Windows.Forms.Label LblPopisClanova;
         private System.Windows.Forms.Panel PanelHeader;
         private System.Windows.Forms.Button BtnBack;
@@ -269,5 +271,6 @@
         private System.Windows.Forms.Button BtnObrisiClana;
         private System.Windows.Forms.Button BtnOsvjeziListu;
         private System.Windows.Forms.Button BtnOsvjezi;
+        private System.Windows.Forms.DataGridView dgvPopisClanova;
     }
 }

@@ -334,7 +334,7 @@
             this.groupBox1.Size = new System.Drawing.Size(503, 224);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Unos podataka o klubu";
+            this.groupBox1.Text = "Unesi podatke o klubu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // FrmRibickiKlub
