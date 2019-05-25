@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ClanRibickogKluba">
+    <Key>
+      <PropertyRef Name="id_clana" />
+    </Key>
+    <Property Name="id_clana" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OIB" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mjesto_rodenja" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_rodenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="datum_upisa" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="drzavljanstvo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefon" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ribicki_klub" Type="Int32" Nullable="false" />
+    <Property Name="administrator" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Korisnik" Relationship="Self.fk_clan_ribickog_kluba_korisnik1" FromRole="ClanRibickogKlubas" ToRole="Korisniks" />
+    <NavigationProperty Name="RibickiKlub" Relationship="Self.fk_clan_ribickog_kluba_ribicki_klub1" FromRole="ClanRibickogKlubas" ToRole="RibickiKlubs" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaClanas" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1" FromRole="ClanRibickogKlubas" ToRole="ZahtjevZaPrijavuNatjecanjaClanas" />
+  </EntityType>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="id_korisnika" />
+    </Key>
+    <Property Name="id_korisnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="korisnicko_ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lozinka" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_vrijeme_registracije" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="uloga_id_uloga" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ClanRibickogKlubas" Relationship="Self.fk_clan_ribickog_kluba_korisnik1" FromRole="Korisniks" ToRole="ClanRibickogKlubas" />
+    <NavigationProperty Name="Uloga" Relationship="Self.fk_korisnik_uloga" FromRole="Korisniks" ToRole="Ulogas" />
+    <NavigationProperty Name="Lokacijas" Relationship="Self.fk_Lokacija_korisnik1" FromRole="Korisniks" ToRole="Lokacijas" />
+    <NavigationProperty Name="Natjecanjes" Relationship="Self.fk_natjecanje_korisnik1" FromRole="Korisniks" ToRole="Natjecanjes" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaExternis" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1" FromRole="Korisniks" ToRole="ZahtjevZaPrijavuNatjecanjaExternis" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaClanas" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_korisnik2" FromRole="Korisniks" ToRole="ZahtjevZaPrijavuNatjecanjaClanas" />
+  </EntityType>
+  <EntityType Name="Lokacija">
+    <Key>
+      <PropertyRef Name="id_lokacija" />
+    </Key>
+    <Property Name="id_lokacija" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv_rijeke" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="duljina" Type="Double" Nullable="false" />
+    <Property Name="grad" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="administrator" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Korisnik" Relationship="Self.fk_Lokacija_korisnik1" FromRole="Lokacijas" ToRole="Korisniks" />
+    <NavigationProperty Name="Natjecanjes" Relationship="Self.fk_Natjecanje_Lokacija1" FromRole="Lokacijas" ToRole="Natjecanjes" />
+  </EntityType>
+  <EntityType Name="Natjecanje">
+    <Key>
+      <PropertyRef Name="id_natjecanje" />
+    </Key>
+    <Property Name="id_natjecanje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="opis" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_pocetka" Type="DateTime" Precision="0" />
+    <Property Name="datum_zavrsetka" Type="DateTime" Precision="0" />
+    <Property Name="lokacija" Type="Int32" Nullable="false" />
+    <Property Name="moderator" Type="Int32" Nullable="false" />
+    <Property Name="pobjednik" Type="Int32" />
+    <NavigationProperty Name="Korisnik" Relationship="Self.fk_natjecanje_korisnik1" FromRole="Natjecanjes" ToRole="Korisniks" />
+    <NavigationProperty Name="Lokacija1" Relationship="Self.fk_Natjecanje_Lokacija1" FromRole="Natjecanjes" ToRole="Lokacijas" />
+    <NavigationProperty Name="SudionikNatjecanja" Relationship="Self.fk_natjecanje_sudionici_natjecanja1" FromRole="Natjecanjes" ToRole="SudionikNatjecanjas" />
+    <NavigationProperty Name="SudionikNatjecanjas" Relationship="Self.fk_sudionici_natjecanja_natjecanje1" FromRole="Natjecanjes" ToRole="SudionikNatjecanjas" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaExternis" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1" FromRole="Natjecanjes" ToRole="ZahtjevZaPrijavuNatjecanjaExternis" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaClanas" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1" FromRole="Natjecanjes" ToRole="ZahtjevZaPrijavuNatjecanjaClanas" />
+  </EntityType>
+  <EntityType Name="RibickiKlub">
+    <Key>
+      <PropertyRef Name="id_ribicki_klub" />
+    </Key>
+    <Property Name="id_ribicki_klub" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adresa" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="predsjednik" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="web_adresa" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="datum_kreiranja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="telefon" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ClanRibickogKlubas" Relationship="Self.fk_clan_ribickog_kluba_ribicki_klub1" FromRole="RibickiKlubs" ToRole="ClanRibickogKlubas" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="id_odobreno_odbijeno" />
+    </Key>
+    <Property Name="id_odobreno_odbijeno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaExternis" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1" FromRole="Statuses" ToRole="ZahtjevZaPrijavuNatjecanjaExternis" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaClanas" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1" FromRole="Statuses" ToRole="ZahtjevZaPrijavuNatjecanjaClanas" />
+  </EntityType>
+  <EntityType Name="SudionikNatjecanja">
+    <Key>
+      <PropertyRef Name="id_sudionika" />
+    </Key>
+    <Property Name="id_sudionika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="natjecanje" Type="Int32" Nullable="false" />
+    <Property Name="prijava_clan" Type="Int32" />
+    <Property Name="prijava_eksterni" Type="Int32" />
+    <Property Name="bodovi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Natjecanjes" Relationship="Self.fk_natjecanje_sudionici_natjecanja1" FromRole="SudionikNatjecanjas" ToRole="Natjecanjes" />
+    <NavigationProperty Name="Natjecanje1" Relationship="Self.fk_sudionici_natjecanja_natjecanje1" FromRole="SudionikNatjecanjas" ToRole="Natjecanjes" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaClana" Relationship="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1" FromRole="SudionikNatjecanjas" ToRole="ZahtjevZaPrijavuNatjecanjaClanas" />
+    <NavigationProperty Name="ZahtjevZaPrijavuNatjecanjaExterni" Relationship="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1" FromRole="SudionikNatjecanjas" ToRole="ZahtjevZaPrijavuNatjecanjaExternis" />
+  </EntityType>
+  <EntityType Name="Uloga">
+    <Key>
+      <PropertyRef Name="id_uloga" />
+    </Key>
+    <Property Name="id_uloga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="naziv" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Korisniks" Relationship="Self.fk_korisnik_uloga" FromRole="Ulogas" ToRole="Korisniks" />
+  </EntityType>
+  <EntityType Name="ZahtjevZaPrijavuNatjecanjaClana">
+    <Key>
+      <PropertyRef Name="id_zahtjev_za_prijavu_na_natjecanje" />
+    </Key>
+    <Property Name="id_zahtjev_za_prijavu_na_natjecanje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="opis_prijave" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_prijave" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="clan" Type="Int32" Nullable="false" />
+    <Property Name="odobreno" Type="Int32" />
+    <Property Name="natjecanje" Type="Int32" Nullable="false" />
+    <Property Name="moderator" Type="Int32" />
+    <NavigationProperty Name="ClanRibickogKluba" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1" FromRole="ZahtjevZaPrijavuNatjecanjaClanas" ToRole="ClanRibickogKlubas" />
+    <NavigationProperty Name="Korisnik" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_korisnik2" FromRole="ZahtjevZaPrijavuNatjecanjaClanas" ToRole="Korisniks" />
+    <NavigationProperty Name="Natjecanje1" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1" FromRole="ZahtjevZaPrijavuNatjecanjaClanas" ToRole="Natjecanjes" />
+    <NavigationProperty Name="Status" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1" FromRole="ZahtjevZaPrijavuNatjecanjaClanas" ToRole="Statuses" />
+    <NavigationProperty Name="SudionikNatjecanjas" Relationship="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1" FromRole="ZahtjevZaPrijavuNatjecanjaClanas" ToRole="SudionikNatjecanjas" />
+  </EntityType>
+  <EntityType Name="ZahtjevZaPrijavuNatjecanjaExterni">
+    <Key>
+      <PropertyRef Name="id_eksterni" />
+    </Key>
+    <Property Name="id_eksterni" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prezime" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OIB" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mjesto_rodenja" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_rodenja" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="drzavljanstvo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefon" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adresa" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="opis_prijave" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datum_prijave" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="odobreno" Type="Int32" />
+    <Property Name="natjecanje" Type="Int32" Nullable="false" />
+    <Property Name="moderator" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Korisnik" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1" FromRole="ZahtjevZaPrijavuNatjecanjaExternis" ToRole="Korisniks" />
+    <NavigationProperty Name="Natjecanje1" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1" FromRole="ZahtjevZaPrijavuNatjecanjaExternis" ToRole="Natjecanjes" />
+    <NavigationProperty Name="Status" Relationship="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1" FromRole="ZahtjevZaPrijavuNatjecanjaExternis" ToRole="Statuses" />
+    <NavigationProperty Name="SudionikNatjecanjas" Relationship="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1" FromRole="ZahtjevZaPrijavuNatjecanjaExternis" ToRole="SudionikNatjecanjas" />
+  </EntityType>
+  <Association Name="fk_clan_ribickog_kluba_korisnik1">
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="ClanRibickogKlubas" Type="Self.ClanRibickogKluba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisniks">
+        <PropertyRef Name="id_korisnika" />
+      </Principal>
+      <Dependent Role="ClanRibickogKlubas">
+        <PropertyRef Name="administrator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_clan_ribickog_kluba_ribicki_klub1">
+    <End Role="RibickiKlubs" Type="Self.RibickiKlub" Multiplicity="1" />
+    <End Role="ClanRibickogKlubas" Type="Self.ClanRibickogKluba" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RibickiKlubs">
+        <PropertyRef Name="id_ribicki_klub" />
+      </Principal>
+      <Dependent Role="ClanRibickogKlubas">
+        <PropertyRef Name="ribicki_klub" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1">
+    <End Role="ClanRibickogKlubas" Type="Self.ClanRibickogKluba" Multiplicity="1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaClanas" Type="Self.ZahtjevZaPrijavuNatjecanjaClana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClanRibickogKlubas">
+        <PropertyRef Name="id_clana" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaClanas">
+        <PropertyRef Name="clan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_korisnik_uloga">
+    <End Role="Ulogas" Type="Self.Uloga" Multiplicity="1" />
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ulogas">
+        <PropertyRef Name="id_uloga" />
+      </Principal>
+      <Dependent Role="Korisniks">
+        <PropertyRef Name="uloga_id_uloga" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Lokacija_korisnik1">
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="Lokacijas" Type="Self.Lokacija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisniks">
+        <PropertyRef Name="id_korisnika" />
+      </Principal>
+      <Dependent Role="Lokacijas">
+        <PropertyRef Name="administrator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_natjecanje_korisnik1">
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisniks">
+        <PropertyRef Name="id_korisnika" />
+      </Principal>
+      <Dependent Role="Natjecanjes">
+        <PropertyRef Name="moderator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1">
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaExternis" Type="Self.ZahtjevZaPrijavuNatjecanjaExterni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisniks">
+        <PropertyRef Name="id_korisnika" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaExternis">
+        <PropertyRef Name="moderator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_korisnik2">
+    <End Role="Korisniks" Type="Self.Korisnik" Multiplicity="0..1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaClanas" Type="Self.ZahtjevZaPrijavuNatjecanjaClana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisniks">
+        <PropertyRef Name="id_korisnika" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaClanas">
+        <PropertyRef Name="moderator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Natjecanje_Lokacija1">
+    <End Role="Lokacijas" Type="Self.Lokacija" Multiplicity="1" />
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lokacijas">
+        <PropertyRef Name="id_lokacija" />
+      </Principal>
+      <Dependent Role="Natjecanjes">
+        <PropertyRef Name="lokacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_natjecanje_sudionici_natjecanja1">
+    <End Role="SudionikNatjecanjas" Type="Self.SudionikNatjecanja" Multiplicity="0..1" />
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SudionikNatjecanjas">
+        <PropertyRef Name="id_sudionika" />
+      </Principal>
+      <Dependent Role="Natjecanjes">
+        <PropertyRef Name="pobjednik" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sudionici_natjecanja_natjecanje1">
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="1" />
+    <End Role="SudionikNatjecanjas" Type="Self.SudionikNatjecanja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Natjecanjes">
+        <PropertyRef Name="id_natjecanje" />
+      </Principal>
+      <Dependent Role="SudionikNatjecanjas">
+        <PropertyRef Name="natjecanje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1">
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaExternis" Type="Self.ZahtjevZaPrijavuNatjecanjaExterni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Natjecanjes">
+        <PropertyRef Name="id_natjecanje" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaExternis">
+        <PropertyRef Name="natjecanje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1">
+    <End Role="Natjecanjes" Type="Self.Natjecanje" Multiplicity="1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaClanas" Type="Self.ZahtjevZaPrijavuNatjecanjaClana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Natjecanjes">
+        <PropertyRef Name="id_natjecanje" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaClanas">
+        <PropertyRef Name="natjecanje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1">
+    <End Role="Statuses" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaExternis" Type="Self.ZahtjevZaPrijavuNatjecanjaExterni" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="id_odobreno_odbijeno" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaExternis">
+        <PropertyRef Name="odobreno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1">
+    <End Role="Statuses" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="ZahtjevZaPrijavuNatjecanjaClanas" Type="Self.ZahtjevZaPrijavuNatjecanjaClana" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Statuses">
+        <PropertyRef Name="id_odobreno_odbijeno" />
+      </Principal>
+      <Dependent Role="ZahtjevZaPrijavuNatjecanjaClanas">
+        <PropertyRef Name="odobreno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1">
+    <End Role="ZahtjevZaPrijavuNatjecanjaClanas" Type="Self.ZahtjevZaPrijavuNatjecanjaClana" Multiplicity="0..1" />
+    <End Role="SudionikNatjecanjas" Type="Self.SudionikNatjecanja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZahtjevZaPrijavuNatjecanjaClanas">
+        <PropertyRef Name="id_zahtjev_za_prijavu_na_natjecanje" />
+      </Principal>
+      <Dependent Role="SudionikNatjecanjas">
+        <PropertyRef Name="prijava_clan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1">
+    <End Role="ZahtjevZaPrijavuNatjecanjaExternis" Type="Self.ZahtjevZaPrijavuNatjecanjaExterni" Multiplicity="0..1" />
+    <End Role="SudionikNatjecanjas" Type="Self.SudionikNatjecanja" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZahtjevZaPrijavuNatjecanjaExternis">
+        <PropertyRef Name="id_eksterni" />
+      </Principal>
+      <Dependent Role="SudionikNatjecanjas">
+        <PropertyRef Name="prijava_eksterni" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FishingNetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClanRibickogKlubas" EntityType="Self.ClanRibickogKluba" />
+    <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
+    <EntitySet Name="Lokacijas" EntityType="Self.Lokacija" />
+    <EntitySet Name="Natjecanjes" EntityType="Self.Natjecanje" />
+    <EntitySet Name="RibickiKlubs" EntityType="Self.RibickiKlub" />
+    <EntitySet Name="Statuses" EntityType="Self.Status" />
+    <EntitySet Name="SudionikNatjecanjas" EntityType="Self.SudionikNatjecanja" />
+    <EntitySet Name="Ulogas" EntityType="Self.Uloga" />
+    <EntitySet Name="ZahtjevZaPrijavuNatjecanjaClanas" EntityType="Self.ZahtjevZaPrijavuNatjecanjaClana" />
+    <EntitySet Name="ZahtjevZaPrijavuNatjecanjaExternis" EntityType="Self.ZahtjevZaPrijavuNatjecanjaExterni" />
+    <AssociationSet Name="fk_clan_ribickog_kluba_korisnik1" Association="Self.fk_clan_ribickog_kluba_korisnik1">
+      <End Role="Korisniks" EntitySet="Korisniks" />
+      <End Role="ClanRibickogKlubas" EntitySet="ClanRibickogKlubas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_clan_ribickog_kluba_ribicki_klub1" Association="Self.fk_clan_ribickog_kluba_ribicki_klub1">
+      <End Role="RibickiKlubs" EntitySet="RibickiKlubs" />
+      <End Role="ClanRibickogKlubas" EntitySet="ClanRibickogKlubas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1">
+      <End Role="ClanRibickogKlubas" EntitySet="ClanRibickogKlubas" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_korisnik_uloga" Association="Self.fk_korisnik_uloga">
+      <End Role="Ulogas" EntitySet="Ulogas" />
+      <End Role="Korisniks" EntitySet="Korisniks" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Lokacija_korisnik1" Association="Self.fk_Lokacija_korisnik1">
+      <End Role="Korisniks" EntitySet="Korisniks" />
+      <End Role="Lokacijas" EntitySet="Lokacijas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_natjecanje_korisnik1" Association="Self.fk_natjecanje_korisnik1">
+      <End Role="Korisniks" EntitySet="Korisniks" />
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1">
+      <End Role="Korisniks" EntitySet="Korisniks" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaExternis" EntitySet="ZahtjevZaPrijavuNatjecanjaExternis" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_korisnik2" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_korisnik2">
+      <End Role="Korisniks" EntitySet="Korisniks" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Natjecanje_Lokacija1" Association="Self.fk_Natjecanje_Lokacija1">
+      <End Role="Lokacijas" EntitySet="Lokacijas" />
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_natjecanje_sudionici_natjecanja1" Association="Self.fk_natjecanje_sudionici_natjecanja1">
+      <End Role="SudionikNatjecanjas" EntitySet="SudionikNatjecanjas" />
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sudionici_natjecanja_natjecanje1" Association="Self.fk_sudionici_natjecanja_natjecanje1">
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+      <End Role="SudionikNatjecanjas" EntitySet="SudionikNatjecanjas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1">
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaExternis" EntitySet="ZahtjevZaPrijavuNatjecanjaExternis" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1">
+      <End Role="Natjecanjes" EntitySet="Natjecanjes" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaExternis" EntitySet="ZahtjevZaPrijavuNatjecanjaExternis" />
+    </AssociationSet>
+    <AssociationSet Name="fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1" Association="Self.fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1">
+      <End Role="Statuses" EntitySet="Statuses" />
+      <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1" Association="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1">
+      <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
+      <End Role="SudionikNatjecanjas" EntitySet="SudionikNatjecanjas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1" Association="Self.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1">
+      <End Role="ZahtjevZaPrijavuNatjecanjaExternis" EntitySet="ZahtjevZaPrijavuNatjecanjaExternis" />
+      <End Role="SudionikNatjecanjas" EntitySet="SudionikNatjecanjas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

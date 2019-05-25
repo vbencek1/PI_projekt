@@ -423,6 +423,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDodajClana";
             this.Text = "Dodavanje članova";
+            this.Load += new System.EventHandler(this.FrmDodajClana_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.PanelHeader.ResumeLayout(false);

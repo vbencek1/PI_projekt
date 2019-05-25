@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="FishingNetEntities">
+    <EntitySetMapping Name="ClanRibickogKlubas">
+      <EntityTypeMapping TypeName="DBModel.ClanRibickogKluba">
+        <MappingFragment StoreEntitySet="ClanRibickogKlubas">
+          <ScalarProperty Name="id_clana" ColumnName="id_clana" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mjesto_rodenja" ColumnName="mjesto_rodenja" />
+          <ScalarProperty Name="datum_rodenja" ColumnName="datum_rodenja" />
+          <ScalarProperty Name="datum_upisa" ColumnName="datum_upisa" />
+          <ScalarProperty Name="drzavljanstvo" ColumnName="drzavljanstvo" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="ribicki_klub" ColumnName="ribicki_klub" />
+          <ScalarProperty Name="administrator" ColumnName="administrator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisniks">
+      <EntityTypeMapping TypeName="DBModel.Korisnik">
+        <MappingFragment StoreEntitySet="Korisniks">
+          <ScalarProperty Name="id_korisnika" ColumnName="id_korisnika" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+          <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="datum_vrijeme_registracije" ColumnName="datum_vrijeme_registracije" />
+          <ScalarProperty Name="uloga_id_uloga" ColumnName="uloga_id_uloga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lokacijas">
+      <EntityTypeMapping TypeName="DBModel.Lokacija">
+        <MappingFragment StoreEntitySet="Lokacijas">
+          <ScalarProperty Name="id_lokacija" ColumnName="id_lokacija" />
+          <ScalarProperty Name="naziv_rijeke" ColumnName="naziv_rijeke" />
+          <ScalarProperty Name="duljina" ColumnName="duljina" />
+          <ScalarProperty Name="grad" ColumnName="grad" />
+          <ScalarProperty Name="administrator" ColumnName="administrator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Natjecanjes">
+      <EntityTypeMapping TypeName="DBModel.Natjecanje">
+        <MappingFragment StoreEntitySet="Natjecanjes">
+          <ScalarProperty Name="id_natjecanje" ColumnName="id_natjecanje" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+          <ScalarProperty Name="opis" ColumnName="opis" />
+          <ScalarProperty Name="datum_pocetka" ColumnName="datum_pocetka" />
+          <ScalarProperty Name="datum_zavrsetka" ColumnName="datum_zavrsetka" />
+          <ScalarProperty Name="lokacija" ColumnName="lokacija" />
+          <ScalarProperty Name="moderator" ColumnName="moderator" />
+          <ScalarProperty Name="pobjednik" ColumnName="pobjednik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RibickiKlubs">
+      <EntityTypeMapping TypeName="DBModel.RibickiKlub">
+        <MappingFragment StoreEntitySet="RibickiKlubs">
+          <ScalarProperty Name="id_ribicki_klub" ColumnName="id_ribicki_klub" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="predsjednik" ColumnName="predsjednik" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="web_adresa" ColumnName="web_adresa" />
+          <ScalarProperty Name="datum_kreiranja" ColumnName="datum_kreiranja" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statuses">
+      <EntityTypeMapping TypeName="DBModel.Status">
+        <MappingFragment StoreEntitySet="Statuses">
+          <ScalarProperty Name="id_odobreno_odbijeno" ColumnName="id_odobreno_odbijeno" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SudionikNatjecanjas">
+      <EntityTypeMapping TypeName="DBModel.SudionikNatjecanja">
+        <MappingFragment StoreEntitySet="SudionikNatjecanjas">
+          <ScalarProperty Name="id_sudionika" ColumnName="id_sudionika" />
+          <ScalarProperty Name="natjecanje" ColumnName="natjecanje" />
+          <ScalarProperty Name="prijava_clan" ColumnName="prijava_clan" />
+          <ScalarProperty Name="prijava_eksterni" ColumnName="prijava_eksterni" />
+          <ScalarProperty Name="bodovi" ColumnName="bodovi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ulogas">
+      <EntityTypeMapping TypeName="DBModel.Uloga">
+        <MappingFragment StoreEntitySet="Ulogas">
+          <ScalarProperty Name="id_uloga" ColumnName="id_uloga" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZahtjevZaPrijavuNatjecanjaClanas">
+      <EntityTypeMapping TypeName="DBModel.ZahtjevZaPrijavuNatjecanjaClana">
+        <MappingFragment StoreEntitySet="ZahtjevZaPrijavuNatjecanjaClanas">
+          <ScalarProperty Name="id_zahtjev_za_prijavu_na_natjecanje" ColumnName="id_zahtjev_za_prijavu_na_natjecanje" />
+          <ScalarProperty Name="opis_prijave" ColumnName="opis_prijave" />
+          <ScalarProperty Name="datum_prijave" ColumnName="datum_prijave" />
+          <ScalarProperty Name="clan" ColumnName="clan" />
+          <ScalarProperty Name="odobreno" ColumnName="odobreno" />
+          <ScalarProperty Name="natjecanje" ColumnName="natjecanje" />
+          <ScalarProperty Name="moderator" ColumnName="moderator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZahtjevZaPrijavuNatjecanjaExternis">
+      <EntityTypeMapping TypeName="DBModel.ZahtjevZaPrijavuNatjecanjaExterni">
+        <MappingFragment StoreEntitySet="ZahtjevZaPrijavuNatjecanjaExternis">
+          <ScalarProperty Name="id_eksterni" ColumnName="id_eksterni" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mjesto_rodenja" ColumnName="mjesto_rodenja" />
+          <ScalarProperty Name="datum_rodenja" ColumnName="datum_rodenja" />
+          <ScalarProperty Name="drzavljanstvo" ColumnName="drzavljanstvo" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="adresa" ColumnName="adresa" />
+          <ScalarProperty Name="opis_prijave" ColumnName="opis_prijave" />
+          <ScalarProperty Name="datum_prijave" ColumnName="datum_prijave" />
+          <ScalarProperty Name="odobreno" ColumnName="odobreno" />
+          <ScalarProperty Name="natjecanje" ColumnName="natjecanje" />
+          <ScalarProperty Name="moderator" ColumnName="moderator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

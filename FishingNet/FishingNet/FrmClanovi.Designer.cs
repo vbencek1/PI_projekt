@@ -184,6 +184,7 @@
             this.BtnAzurirajClana.TabIndex = 22;
             this.BtnAzurirajClana.Text = "Ažuriraj člana";
             this.BtnAzurirajClana.UseVisualStyleBackColor = false;
+            this.BtnAzurirajClana.Click += new System.EventHandler(this.BtnAzurirajClana_Click);
             // 
             // BtnObrisiClana
             // 
@@ -247,6 +248,7 @@
             this.Controls.Add(this.PanelHeader);
             this.Name = "FrmClanovi";
             this.Text = "FrmClanovi";
+            this.Load += new System.EventHandler(this.FrmClanovi_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
