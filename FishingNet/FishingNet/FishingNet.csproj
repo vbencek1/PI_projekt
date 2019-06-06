@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClanRibickogKluba.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FishingNetModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishingNetModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FishingNetModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FishingNetModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishingNetModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="FrmClanovi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,8 +151,35 @@
     <Compile Include="FrmStatistika.Designer.cs">
       <DependentUpon>FrmStatistika.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnik.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lokacija.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Natjecanje.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RibickiKlub.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Status.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SudionikNatjecanja.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uloga.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZahtjevZaPrijavuNatjecanjaClana.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ZahtjevZaPrijavuNatjecanjaExterni.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmClanovi.resx">
       <DependentUpon>FrmClanovi.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +229,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="FishingNetModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FishingNetModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FishingNetModel.edmx.diagram">
+      <DependentUpon>FishingNetModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -235,6 +297,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\location_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FishingNetModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FishingNetModel.edmx</DependentUpon>
+      <LastGenOutput>FishingNetModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="FishingNetModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FishingNetModel.edmx</DependentUpon>
+      <LastGenOutput>FishingNetModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

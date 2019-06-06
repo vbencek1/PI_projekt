@@ -22,23 +22,21 @@ namespace FishingNet
         {
 
         }
-        private void PrikaziFormu()
-        {
-            
-        }
-        private void PrikaziFormuPrijave()
-        {
-            
-        }
 
         private void BtnClanovi_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            FrmClanovi forma = new FrmClanovi();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            FrmPrijava forma = new FrmPrijava();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
         }
     }
 }

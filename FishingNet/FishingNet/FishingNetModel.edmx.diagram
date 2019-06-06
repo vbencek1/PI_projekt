@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e03987aee11b4c0bac069719d3099db8" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.ClanRibickogKluba" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Korisnik" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Lokacija" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Natjecanje" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.RibickiKlub" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Status" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.SudionikNatjecanja" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Uloga" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ZahtjevZaPrijavuNatjecanjaClana" Width="1.5" PointX="9.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.ZahtjevZaPrijavuNatjecanjaExterni" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.fk_clan_ribickog_kluba_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_clan_ribickog_kluba_ribicki_klub1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_clanovi_clan_ribickog_klu1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_korisnik_uloga" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Lokacija_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_natjecanje_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_korisnik1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_korisnik2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_Natjecanje_Lokacija1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_natjecanje_sudionici_natjecanja1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_sudionici_natjecanja_natjecanje1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_natjecanje1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_natjecanje1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_eksterni_odobreno_odbijeno1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_zahtjev_za_prijavu_na_natjecanje_odobreno_odbijeno1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_clan1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.fk_sudionici_natjecanja_zahtjev_za_prijavu_na_natjecanje_ekst1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
