@@ -35,7 +35,7 @@
             this.LblKreatorNatjecanja = new System.Windows.Forms.Label();
             this.LblLokacjia = new System.Windows.Forms.Label();
             this.PocetakNatjecanja = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.KrajNatjecanja = new System.Windows.Forms.DateTimePicker();
             this.ComboKreatorNatjecanja = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ComboLokacija = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtOpisNatjecanja = new System.Windows.Forms.TextBox();
             this.LblOpisNatjecanja = new System.Windows.Forms.Label();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnBack = new System.Windows.Forms.Button();
@@ -122,13 +122,13 @@
             this.PocetakNatjecanja.Size = new System.Drawing.Size(200, 23);
             this.PocetakNatjecanja.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // KrajNatjecanja
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 137);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 9;
+            this.KrajNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KrajNatjecanja.Location = new System.Drawing.Point(14, 137);
+            this.KrajNatjecanja.Name = "KrajNatjecanja";
+            this.KrajNatjecanja.Size = new System.Drawing.Size(200, 23);
+            this.KrajNatjecanja.TabIndex = 9;
             // 
             // ComboKreatorNatjecanja
             // 
@@ -146,10 +146,10 @@
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.panel8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtOpisNatjecanja);
             this.groupBox1.Controls.Add(this.LblOpisNatjecanja);
             this.groupBox1.Controls.Add(this.ComboKreatorNatjecanja);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.KrajNatjecanja);
             this.groupBox1.Controls.Add(this.PocetakNatjecanja);
             this.groupBox1.Controls.Add(this.LblLokacjia);
             this.groupBox1.Controls.Add(this.LblKreatorNatjecanja);
@@ -206,15 +206,15 @@
             this.panel8.Size = new System.Drawing.Size(200, 1);
             this.panel8.TabIndex = 38;
             // 
-            // textBox1
+            // TxtOpisNatjecanja
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(258, 37);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 118);
-            this.textBox1.TabIndex = 12;
+            this.TxtOpisNatjecanja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtOpisNatjecanja.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOpisNatjecanja.Location = new System.Drawing.Point(258, 37);
+            this.TxtOpisNatjecanja.Multiline = true;
+            this.TxtOpisNatjecanja.Name = "TxtOpisNatjecanja";
+            this.TxtOpisNatjecanja.Size = new System.Drawing.Size(200, 118);
+            this.TxtOpisNatjecanja.TabIndex = 12;
             // 
             // LblOpisNatjecanja
             // 
@@ -251,6 +251,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 
@@ -288,6 +289,7 @@
             this.BtnUnesiNatjecanje.TabIndex = 33;
             this.BtnUnesiNatjecanje.Text = "Unesi natjecanje";
             this.BtnUnesiNatjecanje.UseVisualStyleBackColor = false;
+            this.BtnUnesiNatjecanje.Click += new System.EventHandler(this.BtnUnesiNatjecanje_Click);
             // 
             // FrmDodajNatjecanje
             // 
@@ -300,6 +302,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDodajNatjecanje";
             this.Text = "FrmDodajNatjecanje";
+            this.Load += new System.EventHandler(this.FrmDodajNatjecanje_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.PanelHeader.ResumeLayout(false);
@@ -317,10 +320,10 @@
         private System.Windows.Forms.Label LblKreatorNatjecanja;
         private System.Windows.Forms.Label LblLokacjia;
         private System.Windows.Forms.DateTimePicker PocetakNatjecanja;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker KrajNatjecanja;
         private System.Windows.Forms.ComboBox ComboKreatorNatjecanja;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtOpisNatjecanja;
         private System.Windows.Forms.Label LblOpisNatjecanja;
         private System.Windows.Forms.Panel PanelHeader;
         private System.Windows.Forms.Button BtnBack;

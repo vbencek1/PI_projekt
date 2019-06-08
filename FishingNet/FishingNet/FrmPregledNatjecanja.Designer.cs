@@ -95,6 +95,7 @@
             this.BtnAzurirajClana.TabIndex = 29;
             this.BtnAzurirajClana.Text = "Ažuriraj natjecanje";
             this.BtnAzurirajClana.UseVisualStyleBackColor = false;
+            this.BtnAzurirajClana.Click += new System.EventHandler(this.BtnAzurirajClana_Click);
             // 
             // BtnDodajNatjecanje
             // 
@@ -109,6 +110,7 @@
             this.BtnDodajNatjecanje.TabIndex = 28;
             this.BtnDodajNatjecanje.Text = "Dodaj natjecanje";
             this.BtnDodajNatjecanje.UseVisualStyleBackColor = false;
+            this.BtnDodajNatjecanje.Click += new System.EventHandler(this.BtnDodajNatjecanje_Click);
             // 
             // PanelHeader
             // 
@@ -135,6 +137,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 
@@ -187,6 +190,7 @@
             this.Controls.Add(this.LbListaNatjecanja);
             this.Name = "FrmPregledNatjecanja";
             this.Text = "Pregled natjecanja";
+            this.Load += new System.EventHandler(this.FrmPregledNatjecanja_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();

@@ -85,6 +85,7 @@
             this.TxtLozinka.Size = new System.Drawing.Size(250, 20);
             this.TxtLozinka.TabIndex = 3;
             this.TxtLozinka.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtLozinka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtLozinka_KeyDown);
             // 
             // BtnPrijava
             // 

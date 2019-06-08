@@ -23,15 +23,23 @@ namespace FishingNet
         {
           
         }
-
-        private bool Provjera(string korisnickoIme, string lozinka)
-        {
-            return true;
-        }
+        
 
         private bool Autentifikacija()
         {
-            return true;
+            bool autentifikacija = false;
+            List<Korisnik> listaKorisnika = new List<Korisnik>();
+            using(var db = new FishingNetEntities())
+            {
+                listaKorisnika = db.Korisniks.ToList();
+            }
+
+            foreach (var item in listaKorisnika)
+            {
+                if (TxtKorisnickoIme.Text == item.korisnicko_ime && TxtLozinka.Text == item.lozinka)
+                    autentifikacija = true;
+            }
+            return autentifikacija;
         }
 
         private void PrikaziFormu()
@@ -41,7 +49,27 @@ namespace FishingNet
 
         private void BtnPrijava_Click(object sender, EventArgs e)
         {
-            
+            if (Autentifikacija())
+            {
+                Hide();
+                FrmPocetna forma = new FrmPocetna();
+                forma.Closed += (s, args) => this.Close();
+                forma.ShowDialog();
+            }
+
+            else
+            {
+                MessageBox.Show("Pogrešno uneseni korisnički podaci!");
+                TxtLozinka.Clear();
+            }
+        }
+
+        private void TxtLozinka_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnPrijava_Click(this, new EventArgs());
+            }
         }
     }
 }

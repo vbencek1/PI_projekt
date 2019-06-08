@@ -69,6 +69,7 @@
             this.BtnPregledNatjecanja.TabIndex = 1;
             this.BtnPregledNatjecanja.Text = "Pregled natjecanja";
             this.BtnPregledNatjecanja.UseVisualStyleBackColor = false;
+            this.BtnPregledNatjecanja.Click += new System.EventHandler(this.BtnPregledNatjecanja_Click);
             // 
             // PanelHeader
             // 
@@ -95,6 +96,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 

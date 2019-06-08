@@ -16,5 +16,21 @@ namespace FishingNet
         {
             InitializeComponent();
         }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmPocetna forma = new FrmPocetna();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
+
+        private void BtnPregledNatjecanja_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmPregledNatjecanja forma = new FrmPregledNatjecanja();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }

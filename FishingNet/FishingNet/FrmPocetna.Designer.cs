@@ -79,6 +79,7 @@
             this.BtnNatjecanja.TabIndex = 2;
             this.BtnNatjecanja.Text = "Natjecanja";
             this.BtnNatjecanja.UseVisualStyleBackColor = false;
+            this.BtnNatjecanja.Click += new System.EventHandler(this.BtnNatjecanja_Click);
             // 
             // BtnRibickiKlub
             // 

@@ -29,5 +29,11 @@ namespace FishingNet
         public virtual Korisnik Korisnik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Natjecanje> Natjecanjes { get; set; }
+
+        public override string ToString()
+        {
+            return naziv_rijeke + " " + grad + " " + duljina + "km ";
+        }
     }
+    
 }
