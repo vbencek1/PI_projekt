@@ -45,7 +45,7 @@
             this.TxtPrezimeSudionika = new System.Windows.Forms.TextBox();
             this.TxtDrzavljanstvoSudionika = new System.Windows.Forms.TextBox();
             this.TxtTelefonSudionika = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtOpisPrijave = new System.Windows.Forms.TextBox();
             this.TxtOIBSudionika = new System.Windows.Forms.TextBox();
             this.TxtMjestoRodenjaSudionika = new System.Windows.Forms.TextBox();
             this.TxtEmailSudionika = new System.Windows.Forms.TextBox();
@@ -68,6 +68,8 @@
             this.LblInfoONatjecanju = new System.Windows.Forms.Label();
             this.LblNazivNatjecanja = new System.Windows.Forms.Label();
             this.BtnUnosSudionika = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.ComboOdobreno = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
@@ -91,6 +93,7 @@
             this.ComboOdaberiSudionika.Name = "ComboOdaberiSudionika";
             this.ComboOdaberiSudionika.Size = new System.Drawing.Size(199, 23);
             this.ComboOdaberiSudionika.TabIndex = 1;
+            this.ComboOdaberiSudionika.SelectedIndexChanged += new System.EventHandler(this.ComboOdaberiSudionika_SelectedIndexChanged);
             // 
             // LblImeSudionika
             // 
@@ -236,15 +239,15 @@
             this.TxtTelefonSudionika.Size = new System.Drawing.Size(199, 20);
             this.TxtTelefonSudionika.TabIndex = 17;
             // 
-            // textBox5
+            // TxtOpisPrijave
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(470, 39);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 169);
-            this.textBox5.TabIndex = 18;
+            this.TxtOpisPrijave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtOpisPrijave.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtOpisPrijave.Location = new System.Drawing.Point(470, 39);
+            this.TxtOpisPrijave.Multiline = true;
+            this.TxtOpisPrijave.Name = "TxtOpisPrijave";
+            this.TxtOpisPrijave.Size = new System.Drawing.Size(200, 128);
+            this.TxtOpisPrijave.TabIndex = 18;
             // 
             // TxtOIBSudionika
             // 
@@ -302,6 +305,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ComboOdobreno);
+            this.groupBox1.Controls.Add(this.panel10);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel9);
             this.groupBox1.Controls.Add(this.panel7);
@@ -317,7 +322,7 @@
             this.groupBox1.Controls.Add(this.TxtEmailSudionika);
             this.groupBox1.Controls.Add(this.TxtMjestoRodenjaSudionika);
             this.groupBox1.Controls.Add(this.TxtOIBSudionika);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.TxtOpisPrijave);
             this.groupBox1.Controls.Add(this.TxtTelefonSudionika);
             this.groupBox1.Controls.Add(this.TxtDrzavljanstvoSudionika);
             this.groupBox1.Controls.Add(this.TxtPrezimeSudionika);
@@ -440,6 +445,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 
@@ -487,6 +493,24 @@
             this.BtnUnosSudionika.TabIndex = 17;
             this.BtnUnosSudionika.Text = "Unesi sudionika";
             this.BtnUnosSudionika.UseVisualStyleBackColor = false;
+            this.BtnUnosSudionika.Click += new System.EventHandler(this.BtnUnosSudionika_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.panel10.Location = new System.Drawing.Point(470, 166);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(200, 1);
+            this.panel10.TabIndex = 40;
+            // 
+            // ComboOdobreno
+            // 
+            this.ComboOdobreno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboOdobreno.FormattingEnabled = true;
+            this.ComboOdobreno.Location = new System.Drawing.Point(471, 185);
+            this.ComboOdobreno.Name = "ComboOdobreno";
+            this.ComboOdobreno.Size = new System.Drawing.Size(199, 23);
+            this.ComboOdobreno.TabIndex = 41;
             // 
             // FrmDodajSudionika
             // 
@@ -500,6 +524,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDodajSudionika";
             this.Text = "FrmDodajSudionika";
+            this.Load += new System.EventHandler(this.FrmDodajSudionika_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.PanelHeader.ResumeLayout(false);
@@ -529,7 +554,7 @@
         private System.Windows.Forms.TextBox TxtPrezimeSudionika;
         private System.Windows.Forms.TextBox TxtDrzavljanstvoSudionika;
         private System.Windows.Forms.TextBox TxtTelefonSudionika;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtOpisPrijave;
         private System.Windows.Forms.TextBox TxtOIBSudionika;
         private System.Windows.Forms.TextBox TxtMjestoRodenjaSudionika;
         private System.Windows.Forms.TextBox TxtEmailSudionika;
@@ -552,5 +577,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button BtnUnosSudionika;
+        private System.Windows.Forms.ComboBox ComboOdobreno;
+        private System.Windows.Forms.Panel panel10;
     }
 }

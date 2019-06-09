@@ -78,25 +78,7 @@ namespace FishingNet
 
         private void btnDodajModeratora_Click(object sender, EventArgs e)
         {
-            using(var db = new FishingNetEntities())
-            {
-                ClanRibickogKluba clan;
-                clan = (ClanRibickogKluba) comboModerator.SelectedItem;
-
-                Korisnik korisnik = new Korisnik
-                {
-                    ime = clan.ime,
-                    prezime = clan.prezime,
-                    email = clan.email,
-                    korisnicko_ime = GenerirajKorisnickoIme(clan),
-                    lozinka = GenerirajLozinku(),
-                    datum_vrijeme_registracije = DateTime.Now,
-                    uloga_id_uloga = 2
-                };
-                db.Korisniks.Add(korisnik);
-                MessageBox.Show("Uspješno ste dodali novog moderatora!");
-                db.SaveChanges();
-            }
+            DodajModeratora();
         }
 
         private string GenerirajKorisnickoIme(ClanRibickogKluba clan)
@@ -134,6 +116,29 @@ namespace FishingNet
                 lozinka += r.Next(0, 9);
             }
             return lozinka;
+        }
+
+        private void DodajModeratora()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                ClanRibickogKluba clan;
+                clan = (ClanRibickogKluba)comboModerator.SelectedItem;
+
+                Korisnik korisnik = new Korisnik
+                {
+                    ime = clan.ime,
+                    prezime = clan.prezime,
+                    email = clan.email,
+                    korisnicko_ime = GenerirajKorisnickoIme(clan),
+                    lozinka = GenerirajLozinku(),
+                    datum_vrijeme_registracije = DateTime.Now,
+                    uloga_id_uloga = 2
+                };
+                db.Korisniks.Add(korisnik);
+                MessageBox.Show("Uspješno ste dodali novog moderatora!");
+                db.SaveChanges();
+            }
         }
     
     }

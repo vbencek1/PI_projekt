@@ -30,8 +30,8 @@
         {
             this.BtnPregledajNatjecanje = new System.Windows.Forms.Button();
             this.LbListaNatjecanja = new System.Windows.Forms.Label();
-            this.BtnObrisiClana = new System.Windows.Forms.Button();
-            this.BtnAzurirajClana = new System.Windows.Forms.Button();
+            this.BtnObrisiNatjecanje = new System.Windows.Forms.Button();
+            this.BtnAzurirajNatjecanja = new System.Windows.Forms.Button();
             this.BtnDodajNatjecanje = new System.Windows.Forms.Button();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnBack = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.BtnPregledajNatjecanje.TabIndex = 27;
             this.BtnPregledajNatjecanje.Text = "Pregledaj natjecanje";
             this.BtnPregledajNatjecanje.UseVisualStyleBackColor = false;
+            this.BtnPregledajNatjecanje.Click += new System.EventHandler(this.BtnPregledajNatjecanje_Click);
             // 
             // LbListaNatjecanja
             // 
@@ -68,34 +69,35 @@
             this.LbListaNatjecanja.TabIndex = 26;
             this.LbListaNatjecanja.Text = "Lista natjecanja";
             // 
-            // BtnObrisiClana
+            // BtnObrisiNatjecanje
             // 
-            this.BtnObrisiClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.BtnObrisiClana.FlatAppearance.BorderSize = 0;
-            this.BtnObrisiClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnObrisiClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnObrisiClana.ForeColor = System.Drawing.Color.White;
-            this.BtnObrisiClana.Location = new System.Drawing.Point(597, 193);
-            this.BtnObrisiClana.Name = "BtnObrisiClana";
-            this.BtnObrisiClana.Size = new System.Drawing.Size(150, 30);
-            this.BtnObrisiClana.TabIndex = 30;
-            this.BtnObrisiClana.Text = "Obriši natjecanje";
-            this.BtnObrisiClana.UseVisualStyleBackColor = false;
+            this.BtnObrisiNatjecanje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.BtnObrisiNatjecanje.FlatAppearance.BorderSize = 0;
+            this.BtnObrisiNatjecanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnObrisiNatjecanje.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnObrisiNatjecanje.ForeColor = System.Drawing.Color.White;
+            this.BtnObrisiNatjecanje.Location = new System.Drawing.Point(597, 193);
+            this.BtnObrisiNatjecanje.Name = "BtnObrisiNatjecanje";
+            this.BtnObrisiNatjecanje.Size = new System.Drawing.Size(150, 30);
+            this.BtnObrisiNatjecanje.TabIndex = 30;
+            this.BtnObrisiNatjecanje.Text = "Obriši natjecanje";
+            this.BtnObrisiNatjecanje.UseVisualStyleBackColor = false;
+            this.BtnObrisiNatjecanje.Click += new System.EventHandler(this.BtnObrisiClana_Click);
             // 
-            // BtnAzurirajClana
+            // BtnAzurirajNatjecanja
             // 
-            this.BtnAzurirajClana.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.BtnAzurirajClana.FlatAppearance.BorderSize = 0;
-            this.BtnAzurirajClana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAzurirajClana.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAzurirajClana.ForeColor = System.Drawing.Color.White;
-            this.BtnAzurirajClana.Location = new System.Drawing.Point(597, 157);
-            this.BtnAzurirajClana.Name = "BtnAzurirajClana";
-            this.BtnAzurirajClana.Size = new System.Drawing.Size(150, 30);
-            this.BtnAzurirajClana.TabIndex = 29;
-            this.BtnAzurirajClana.Text = "Ažuriraj natjecanje";
-            this.BtnAzurirajClana.UseVisualStyleBackColor = false;
-            this.BtnAzurirajClana.Click += new System.EventHandler(this.BtnAzurirajClana_Click);
+            this.BtnAzurirajNatjecanja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.BtnAzurirajNatjecanja.FlatAppearance.BorderSize = 0;
+            this.BtnAzurirajNatjecanja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAzurirajNatjecanja.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAzurirajNatjecanja.ForeColor = System.Drawing.Color.White;
+            this.BtnAzurirajNatjecanja.Location = new System.Drawing.Point(597, 157);
+            this.BtnAzurirajNatjecanja.Name = "BtnAzurirajNatjecanja";
+            this.BtnAzurirajNatjecanja.Size = new System.Drawing.Size(150, 30);
+            this.BtnAzurirajNatjecanja.TabIndex = 29;
+            this.BtnAzurirajNatjecanja.Text = "Ažuriraj natjecanje";
+            this.BtnAzurirajNatjecanja.UseVisualStyleBackColor = false;
+            this.BtnAzurirajNatjecanja.Click += new System.EventHandler(this.BtnAzurirajClana_Click);
             // 
             // BtnDodajNatjecanje
             // 
@@ -183,8 +185,8 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.dgvNatjecanja);
             this.Controls.Add(this.PanelHeader);
-            this.Controls.Add(this.BtnObrisiClana);
-            this.Controls.Add(this.BtnAzurirajClana);
+            this.Controls.Add(this.BtnObrisiNatjecanje);
+            this.Controls.Add(this.BtnAzurirajNatjecanja);
             this.Controls.Add(this.BtnDodajNatjecanje);
             this.Controls.Add(this.BtnPregledajNatjecanje);
             this.Controls.Add(this.LbListaNatjecanja);
@@ -203,8 +205,8 @@
         #endregion
         private System.Windows.Forms.Button BtnPregledajNatjecanje;
         private System.Windows.Forms.Label LbListaNatjecanja;
-        private System.Windows.Forms.Button BtnObrisiClana;
-        private System.Windows.Forms.Button BtnAzurirajClana;
+        private System.Windows.Forms.Button BtnObrisiNatjecanje;
+        private System.Windows.Forms.Button BtnAzurirajNatjecanja;
         private System.Windows.Forms.Button BtnDodajNatjecanje;
         private System.Windows.Forms.Panel PanelHeader;
         private System.Windows.Forms.Button BtnBack;
