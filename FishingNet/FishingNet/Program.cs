@@ -16,7 +16,7 @@ namespace FishingNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrijava());
+            Application.Run(new FrmPregledNatjecanja());
         }
     }
 }

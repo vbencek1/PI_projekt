@@ -134,12 +134,28 @@ namespace FishingNet
             }
         }
 
+        private bool ProvjeriPodatke()
+        {
+            if(TxtNazivNatjecanja.Text=="" || TxtOpisNatjecanja.Text == "")
+            {
+                return false;
+            }
+            return true;
+        }
+
         private void BtnUnesiNatjecanje_Click(object sender, EventArgs e)
         {
-            Korisnik korisnik = ComboKreatorNatjecanja.SelectedItem as Korisnik;
-            Lokacija lokacija = ComboLokacija.SelectedItem as Lokacija;
-            DodajNatjecanje(korisnik, lokacija);
-            Close();
+            if (ProvjeriPodatke())
+            {
+                Korisnik korisnik = ComboKreatorNatjecanja.SelectedItem as Korisnik;
+                Lokacija lokacija = ComboLokacija.SelectedItem as Lokacija;
+                DodajNatjecanje(korisnik, lokacija);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Sva polja moraju biti ispunjena!");
+            }
 
         }
 

@@ -47,6 +47,33 @@ namespace FishingNet
             }
         }
 
+        private Natjecanje DohvatiNatjecanje(int id)
+        {
+            if (id > 0)
+            {
+                using( var db=new FishingNetEntities())
+                {
+                    foreach(Natjecanje item in db.Natjecanjes)
+                    {
+                        if (item.id_natjecanje == id)
+                        {
+                            return item;
+                        }
+                    }
+                }
+            }return null;
+        }
+
+        private void ObrisiNatjecanje(Natjecanje natjecanje)
+        {
+            using (var db = new FishingNetEntities())
+            {
+                db.Natjecanjes.Attach(natjecanje);
+                db.Natjecanjes.Remove(natjecanje);
+                db.SaveChanges();
+            }
+        }
+
         private void BtnBack_Click(object sender, EventArgs e)
         {
             Hide();
@@ -63,6 +90,22 @@ namespace FishingNet
             PrikaziNatjecanja();
         }
 
+        private bool ZastitaBrisanjaNatjecanjaSaSudionicima(Natjecanje natjecanje)
+        {
+            using (var db = new FishingNetEntities())
+            {
+                var upit = (from s in db.SudionikNatjecanjas
+                            where s.natjecanje == natjecanje.id_natjecanje
+                            select s.id_sudionika).Count();
+                if (upit == 0)
+                {
+                    return true;
+                }
+            }return false;
+
+        }
+
+
         private void BtnAzurirajClana_Click(object sender, EventArgs e)
         {
              if(dgvNatjecanja.RowCount > 0)
@@ -76,6 +119,45 @@ namespace FishingNet
                {
                MessageBox.Show("Odaberite natjecanje!");
                }
+        }
+
+        private void BtnObrisiClana_Click(object sender, EventArgs e)
+        {
+            if (dgvNatjecanja.RowCount > 0)
+            {
+               
+                int idNatjecanja = int.Parse(dgvNatjecanja.CurrentRow.Cells[0].Value.ToString());
+                if (ZastitaBrisanjaNatjecanjaSaSudionicima(DohvatiNatjecanje(idNatjecanja))){
+
+                    ObrisiNatjecanje(DohvatiNatjecanje(idNatjecanja));
+                    MessageBox.Show("Natjecanje obrisano!");
+                }
+                else
+                {
+                    MessageBox.Show("Ne mogu se brisati natjecanja koja imaju sudionike!");
+                }
+                PrikaziNatjecanja();
+            }
+            else
+            {
+                MessageBox.Show("Odaberite natjecanje!");
+            }
+        }
+
+        private void BtnPregledajNatjecanje_Click(object sender, EventArgs e)
+        {
+            if (dgvNatjecanja.RowCount > 0)
+            {
+                int idNatjecanja = int.Parse(dgvNatjecanja.CurrentRow.Cells[0].Value.ToString());
+                Hide();
+                FrmInformacijeONatjecanju forma = new FrmInformacijeONatjecanju(idNatjecanja);
+                forma.Closed += (s, args) => this.Close();
+                forma.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Odaberite natjecanje!");
+            }
         }
     }
 }
