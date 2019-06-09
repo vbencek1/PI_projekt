@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FishingNetModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FrmAzurirajLokaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAzurirajLokaciju.Designer.cs">
+      <DependentUpon>FrmAzurirajLokaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmClanovi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="FrmPrijava.Designer.cs">
       <DependentUpon>FrmPrijava.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRibickiKlubPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRibickiKlubPocetna.Designer.cs">
+      <DependentUpon>FrmRibickiKlubPocetna.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStatistika.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,9 @@
     <Compile Include="ZahtjevZaPrijavuNatjecanjaExterni.cs">
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAzurirajLokaciju.resx">
+      <DependentUpon>FrmAzurirajLokaciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmClanovi.resx">
       <DependentUpon>FrmClanovi.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrijava.resx">
       <DependentUpon>FrmPrijava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRibickiKlubPocetna.resx">
+      <DependentUpon>FrmRibickiKlubPocetna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStatistika.resx">
       <DependentUpon>FrmStatistika.cs</DependentUpon>

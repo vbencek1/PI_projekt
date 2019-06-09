@@ -39,6 +39,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.PanelHeader = new System.Windows.Forms.Panel();
+            this.lblKorisnik = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.LblPocetnaStranica = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -94,6 +95,7 @@
             this.BtnRibickiKlub.TabIndex = 0;
             this.BtnRibickiKlub.Text = "Ribički klub";
             this.BtnRibickiKlub.UseVisualStyleBackColor = false;
+            this.BtnRibickiKlub.Click += new System.EventHandler(this.BtnRibickiKlub_Click);
             // 
             // panel2
             // 
@@ -142,6 +144,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(304, 150);
             this.panel4.TabIndex = 9;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox2
             // 
@@ -165,6 +168,7 @@
             // PanelHeader
             // 
             this.PanelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelHeader.Controls.Add(this.lblKorisnik);
             this.PanelHeader.Controls.Add(this.BtnBack);
             this.PanelHeader.Controls.Add(this.LblPocetnaStranica);
             this.PanelHeader.Controls.Add(this.PicMaliLogo);
@@ -173,6 +177,16 @@
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 6;
+            // 
+            // lblKorisnik
+            // 
+            this.lblKorisnik.AutoSize = true;
+            this.lblKorisnik.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblKorisnik.Location = new System.Drawing.Point(48, 11);
+            this.lblKorisnik.Name = "lblKorisnik";
+            this.lblKorisnik.Size = new System.Drawing.Size(35, 13);
+            this.lblKorisnik.TabIndex = 10;
+            this.lblKorisnik.Text = "label1";
             // 
             // BtnBack
             // 
@@ -242,5 +256,6 @@
         private System.Windows.Forms.Panel PanelHeader;
         private System.Windows.Forms.Label LblPocetnaStranica;
         private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Label lblKorisnik;
     }
 }

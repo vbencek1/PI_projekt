@@ -237,6 +237,7 @@
             this.BtnDodajLokaciju.TabIndex = 4;
             this.BtnDodajLokaciju.Text = "Dodaj lokaciju";
             this.BtnDodajLokaciju.UseVisualStyleBackColor = false;
+            this.BtnDodajLokaciju.Click += new System.EventHandler(this.BtnDodajLokaciju_Click);
             // 
             // FrmNatjecanja
             // 

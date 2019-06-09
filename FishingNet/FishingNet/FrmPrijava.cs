@@ -12,6 +12,8 @@ namespace FishingNet
 {
     public partial class FrmPrijava : Form
     {
+        private List<Korisnik> listaKorisnika {get;set;}
+        //public Korisnik PrijavljeniKorisnik { get; set; }
 
         public FrmPrijava()
         {
@@ -23,13 +25,12 @@ namespace FishingNet
         {
           
         }
-        
 
         private bool Autentifikacija()
         {
             bool autentifikacija = false;
-            List<Korisnik> listaKorisnika = new List<Korisnik>();
-            using(var db = new FishingNetEntities())
+            listaKorisnika = new List<Korisnik>();
+            using (var db = new FishingNetEntities())
             {
                 listaKorisnika = db.Korisniks.ToList();
             }
@@ -37,7 +38,10 @@ namespace FishingNet
             foreach (var item in listaKorisnika)
             {
                 if (TxtKorisnickoIme.Text == item.korisnicko_ime && TxtLozinka.Text == item.lozinka)
+                {
                     autentifikacija = true;
+                }
+                    
             }
             return autentifikacija;
         }
@@ -49,6 +53,7 @@ namespace FishingNet
 
         private void BtnPrijava_Click(object sender, EventArgs e)
         {
+
             if (Autentifikacija())
             {
                 Hide();
@@ -71,5 +76,24 @@ namespace FishingNet
                 BtnPrijava_Click(this, new EventArgs());
             }
         }
+
+        //public void Odjava()
+        //{
+        //    if (PrijavljeniKorisnik != null)
+        //    {
+        //        PrijavljeniKorisnik = null;
+        //    }
+
+        //}
+
+        //public void PrijaviKorisnika()
+        //{
+        //    if (Autentifikacija())
+        //    {
+        //        PrijavljeniKorisnik = new Korisnik();
+        //        PrijavljeniKorisnik = listaKorisnika.First(k => k.korisnicko_ime == "admin");
+        //    }
+        //}
+
     }
 }

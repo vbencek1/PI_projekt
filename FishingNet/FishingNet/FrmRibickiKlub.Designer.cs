@@ -141,11 +141,11 @@
             this.LblKlubInfo.BackColor = System.Drawing.Color.Transparent;
             this.LblKlubInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblKlubInfo.ForeColor = System.Drawing.Color.White;
-            this.LblKlubInfo.Location = new System.Drawing.Point(297, 5);
+            this.LblKlubInfo.Location = new System.Drawing.Point(231, 5);
             this.LblKlubInfo.Name = "LblKlubInfo";
-            this.LblKlubInfo.Size = new System.Drawing.Size(167, 23);
+            this.LblKlubInfo.Size = new System.Drawing.Size(311, 23);
             this.LblKlubInfo.TabIndex = 12;
-            this.LblKlubInfo.Text = "PODACI O KLUBU\r\n";
+            this.LblKlubInfo.Text = "AŽURIRANJE PODATAKA O KLUBU\r\n";
             this.LblKlubInfo.Click += new System.EventHandler(this.LblKlubInfo_Click);
             // 
             // panel6

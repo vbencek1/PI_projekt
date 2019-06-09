@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtGrad = new System.Windows.Forms.TextBox();
+            this.txtDuljina = new System.Windows.Forms.TextBox();
             this.TxtNazivRijeke = new System.Windows.Forms.TextBox();
             this.LblNazivRijeke = new System.Windows.Forms.Label();
             this.LblDuljinaRijeke = new System.Windows.Forms.Label();
             this.LblGradLokacija = new System.Windows.Forms.Label();
             this.PanelHeader = new System.Windows.Forms.Panel();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblDodajLokaciju = new System.Windows.Forms.Label();
             this.BtnObrisiLokaciju = new System.Windows.Forms.Button();
             this.LblPopisLokacija = new System.Windows.Forms.Label();
@@ -45,28 +43,32 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvLokacije = new System.Windows.Forms.DataGridView();
+            this.btnAzurirajLokaciju = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
+            this.btnOsvjezi = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLokacije)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtGrad
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(473, 204);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtGrad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrad.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrad.Location = new System.Drawing.Point(473, 204);
+            this.txtGrad.Name = "txtGrad";
+            this.txtGrad.Size = new System.Drawing.Size(160, 20);
+            this.txtGrad.TabIndex = 4;
             // 
-            // textBox2
+            // txtDuljina
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(473, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtDuljina.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDuljina.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuljina.Location = new System.Drawing.Point(473, 155);
+            this.txtDuljina.Name = "txtDuljina";
+            this.txtDuljina.Size = new System.Drawing.Size(160, 20);
+            this.txtDuljina.TabIndex = 5;
             // 
             // TxtNazivRijeke
             // 
@@ -119,30 +121,6 @@
             this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 33;
             // 
-            // BtnBack
-            // 
-            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
-            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(9, 5);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(25, 25);
-            this.BtnBack.TabIndex = 16;
-            this.BtnBack.UseVisualStyleBackColor = false;
-            // 
-            // PicMaliLogo
-            // 
-            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
-            this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
-            this.PicMaliLogo.TabIndex = 0;
-            this.PicMaliLogo.TabStop = false;
-            // 
             // LblDodajLokaciju
             // 
             this.LblDodajLokaciju.AutoSize = true;
@@ -162,12 +140,13 @@
             this.BtnObrisiLokaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObrisiLokaciju.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObrisiLokaciju.ForeColor = System.Drawing.Color.White;
-            this.BtnObrisiLokaciju.Location = new System.Drawing.Point(348, 348);
+            this.BtnObrisiLokaciju.Location = new System.Drawing.Point(284, 348);
             this.BtnObrisiLokaciju.Name = "BtnObrisiLokaciju";
             this.BtnObrisiLokaciju.Size = new System.Drawing.Size(101, 25);
             this.BtnObrisiLokaciju.TabIndex = 36;
             this.BtnObrisiLokaciju.Text = "Obriši lokaciju";
             this.BtnObrisiLokaciju.UseVisualStyleBackColor = false;
+            this.BtnObrisiLokaciju.Click += new System.EventHandler(this.BtnObrisiLokaciju_Click);
             // 
             // LblPopisLokacija
             // 
@@ -193,6 +172,7 @@
             this.BtnDodajLokaciju.TabIndex = 37;
             this.BtnDodajLokaciju.Text = "Unesi";
             this.BtnDodajLokaciju.UseVisualStyleBackColor = false;
+            this.BtnDodajLokaciju.Click += new System.EventHandler(this.BtnDodajLokaciju_Click);
             // 
             // panel9
             // 
@@ -230,6 +210,62 @@
             this.dgvLokacije.ReadOnly = true;
             this.dgvLokacije.Size = new System.Drawing.Size(305, 242);
             this.dgvLokacije.TabIndex = 42;
+            this.dgvLokacije.SelectionChanged += new System.EventHandler(this.dgvLokacije_SelectionChanged);
+            // 
+            // btnAzurirajLokaciju
+            // 
+            this.btnAzurirajLokaciju.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.btnAzurirajLokaciju.FlatAppearance.BorderSize = 0;
+            this.btnAzurirajLokaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAzurirajLokaciju.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnAzurirajLokaciju.ForeColor = System.Drawing.Color.White;
+            this.btnAzurirajLokaciju.Location = new System.Drawing.Point(510, 281);
+            this.btnAzurirajLokaciju.Name = "btnAzurirajLokaciju";
+            this.btnAzurirajLokaciju.Size = new System.Drawing.Size(123, 30);
+            this.btnAzurirajLokaciju.TabIndex = 43;
+            this.btnAzurirajLokaciju.Text = "Ažuriraj";
+            this.btnAzurirajLokaciju.UseVisualStyleBackColor = false;
+            this.btnAzurirajLokaciju.Click += new System.EventHandler(this.btnAzurirajLokaciju_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
+            this.BtnBack.TabIndex = 16;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // PicMaliLogo
+            // 
+            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
+            this.PicMaliLogo.Name = "PicMaliLogo";
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
+            this.PicMaliLogo.TabIndex = 0;
+            this.PicMaliLogo.TabStop = false;
+            // 
+            // btnOsvjezi
+            // 
+            this.btnOsvjezi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.btnOsvjezi.FlatAppearance.BorderSize = 0;
+            this.btnOsvjezi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOsvjezi.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOsvjezi.ForeColor = System.Drawing.Color.White;
+            this.btnOsvjezi.Location = new System.Drawing.Point(391, 348);
+            this.btnOsvjezi.Name = "btnOsvjezi";
+            this.btnOsvjezi.Size = new System.Drawing.Size(58, 25);
+            this.btnOsvjezi.TabIndex = 44;
+            this.btnOsvjezi.Text = "Osvježi\r\n";
+            this.btnOsvjezi.UseVisualStyleBackColor = false;
+            this.btnOsvjezi.Click += new System.EventHandler(this.btnOsvjezi_Click);
             // 
             // FrmDodajLokaciju
             // 
@@ -237,6 +273,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.btnOsvjezi);
+            this.Controls.Add(this.btnAzurirajLokaciju);
             this.Controls.Add(this.dgvLokacije);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -249,22 +287,23 @@
             this.Controls.Add(this.LblDuljinaRijeke);
             this.Controls.Add(this.LblNazivRijeke);
             this.Controls.Add(this.TxtNazivRijeke);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDuljina);
+            this.Controls.Add(this.txtGrad);
             this.Name = "FrmDodajLokaciju";
             this.Text = "FrmDodajLokaciju";
+            this.Load += new System.EventHandler(this.FrmDodajLokaciju_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLokacije)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtGrad;
+        private System.Windows.Forms.TextBox txtDuljina;
         private System.Windows.Forms.TextBox TxtNazivRijeke;
         private System.Windows.Forms.Label LblNazivRijeke;
         private System.Windows.Forms.Label LblDuljinaRijeke;
@@ -280,5 +319,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvLokacije;
+        private System.Windows.Forms.Button btnAzurirajLokaciju;
+        private System.Windows.Forms.Button btnOsvjezi;
     }
 }
