@@ -20,7 +20,6 @@ namespace FishingNet
 
         private void FrmPocetna_Load(object sender, EventArgs e)
         {
-
         }
 
         private void BtnClanovi_Click(object sender, EventArgs e)
@@ -43,6 +42,19 @@ namespace FishingNet
         {
             Hide();
             FrmNatjecanja forma = new FrmNatjecanja();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnRibickiKlub_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmRibickiKlubPocetna forma = new FrmRibickiKlubPocetna();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }

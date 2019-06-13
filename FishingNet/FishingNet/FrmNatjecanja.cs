@@ -32,5 +32,13 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
+
+        private void BtnDodajLokaciju_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmDodajLokaciju forma = new FrmDodajLokaciju();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }

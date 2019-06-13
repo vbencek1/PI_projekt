@@ -237,6 +237,7 @@
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Size = new System.Drawing.Size(799, 34);
             this.PanelHeader.TabIndex = 32;
+            this.PanelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelHeader_Paint);
             // 
             // BtnBack
             // 

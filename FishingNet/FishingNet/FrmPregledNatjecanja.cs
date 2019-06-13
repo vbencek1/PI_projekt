@@ -15,6 +15,7 @@ namespace FishingNet
         public FrmPregledNatjecanja()
         {
             InitializeComponent();
+            PopuniComboLokacija();
         }
 
 
@@ -47,6 +48,16 @@ namespace FishingNet
             }
         }
 
+        private void PopuniComboLokacija()
+        {
+            
+            using(var db= new FishingNetEntities())
+            {
+                var upit = from l in db.Lokacijas orderby l.naziv_rijeke select l;
+                ComboLokacije.DataSource = upit.ToList();
+            }
+        }
+
         private Natjecanje DohvatiNatjecanje(int id)
         {
             if (id > 0)
@@ -71,6 +82,30 @@ namespace FishingNet
                 db.Natjecanjes.Attach(natjecanje);
                 db.Natjecanjes.Remove(natjecanje);
                 db.SaveChanges();
+            }
+        }
+
+        private void FiltrirajPoLokaciji(Lokacija lokacija)
+        {
+            using (var db = new FishingNetEntities())
+            {
+                var upit = from n in db.Natjecanjes
+                           from l in db.Lokacijas
+                           from m in db.Korisniks
+                           where n.lokacija == l.id_lokacija && n.moderator == m.id_korisnika && n.lokacija==lokacija.id_lokacija
+                           select new
+                           {
+                               ID = n.id_natjecanje,
+                               Naziv = n.naziv,
+                               Opis = n.opis,
+                               Početak = n.datum_pocetka,
+                               Završetak = n.datum_zavrsetka,
+                               Pobjednik = n.pobjednik,
+                               Lokacija = l.naziv_rijeke + " " + l.grad + " (" + l.duljina + " km)",
+                               Kreator = m.ime + " " + m.prezime
+
+                           };
+                dgvNatjecanja.DataSource = upit.ToList();
             }
         }
 
@@ -158,6 +193,17 @@ namespace FishingNet
             {
                 MessageBox.Show("Odaberite natjecanje!");
             }
+        }
+
+        private void ComboLokacije_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Lokacija lokacija = ComboLokacije.SelectedItem as Lokacija;
+            FiltrirajPoLokaciji(lokacija);
+        }
+
+        private void BtnPrikaziSve_Click(object sender, EventArgs e)
+        {
+            PrikaziNatjecanja();
         }
     }
 }

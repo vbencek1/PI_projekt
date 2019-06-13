@@ -163,5 +163,10 @@ namespace FishingNet
         {
             Close();
         }
+
+        private void PanelHeader_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

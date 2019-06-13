@@ -38,6 +38,8 @@
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblPregledNatjecanja = new System.Windows.Forms.Label();
             this.dgvNatjecanja = new System.Windows.Forms.DataGridView();
+            this.ComboLokacije = new System.Windows.Forms.ComboBox();
+            this.BtnPrikaziSve = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNatjecanja)).BeginInit();
@@ -177,12 +179,39 @@
             this.dgvNatjecanja.Size = new System.Drawing.Size(540, 265);
             this.dgvNatjecanja.TabIndex = 32;
             // 
+            // ComboLokacije
+            // 
+            this.ComboLokacije.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboLokacije.FormattingEnabled = true;
+            this.ComboLokacije.Location = new System.Drawing.Point(286, 94);
+            this.ComboLokacije.Name = "ComboLokacije";
+            this.ComboLokacije.Size = new System.Drawing.Size(199, 21);
+            this.ComboLokacije.TabIndex = 42;
+            this.ComboLokacije.SelectedIndexChanged += new System.EventHandler(this.ComboLokacije_SelectedIndexChanged);
+            // 
+            // BtnPrikaziSve
+            // 
+            this.BtnPrikaziSve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.BtnPrikaziSve.FlatAppearance.BorderSize = 0;
+            this.BtnPrikaziSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPrikaziSve.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrikaziSve.ForeColor = System.Drawing.Color.White;
+            this.BtnPrikaziSve.Location = new System.Drawing.Point(491, 94);
+            this.BtnPrikaziSve.Name = "BtnPrikaziSve";
+            this.BtnPrikaziSve.Size = new System.Drawing.Size(87, 21);
+            this.BtnPrikaziSve.TabIndex = 43;
+            this.BtnPrikaziSve.Text = "Prikaži sve";
+            this.BtnPrikaziSve.UseVisualStyleBackColor = false;
+            this.BtnPrikaziSve.Click += new System.EventHandler(this.BtnPrikaziSve_Click);
+            // 
             // FrmPregledNatjecanja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.BtnPrikaziSve);
+            this.Controls.Add(this.ComboLokacije);
             this.Controls.Add(this.dgvNatjecanja);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.BtnObrisiNatjecanje);
@@ -213,5 +242,7 @@
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblPregledNatjecanja;
         private System.Windows.Forms.DataGridView dgvNatjecanja;
+        private System.Windows.Forms.ComboBox ComboLokacije;
+        private System.Windows.Forms.Button BtnPrikaziSve;
     }
 }

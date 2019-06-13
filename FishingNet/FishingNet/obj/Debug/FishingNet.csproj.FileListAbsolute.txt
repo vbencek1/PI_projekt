@@ -1,3 +1,32 @@
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\FishingNet.exe.config
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\FishingNet.exe
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\FishingNet.pdb
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\EntityFramework.dll
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\EntityFramework.SqlServer.dll
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\EntityFramework.xml
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\bin\Debug\EntityFramework.SqlServer.xml
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csprojAssemblyReference.cache
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmAzurirajLokaciju.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmClanovi.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajClana.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajLokaciju.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajNatjecanje.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajSudionika.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmInformacijeONatjecanju.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmNatjecanja.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPregledNatjecanja.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmProglasiPobjednika.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlub.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPocetna.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPrijava.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlubPocetna.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmStatistika.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.Properties.Resources.resources
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.GenerateResource.cache
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CoreCompileInputs.cache
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CopyComplete
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.exe
+D:\uni shit\3 god\PI\PIProjektTim27\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\bin\Debug\FishingNet.exe.config
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\bin\Debug\FishingNet.exe
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\bin\Debug\FishingNet.pdb
@@ -6,6 +35,7 @@ C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\Fishin
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\bin\Debug\EntityFramework.xml
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.csprojAssemblyReference.cache
+C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmAzurirajLokaciju.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmClanovi.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajClana.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajLokaciju.resources
@@ -18,6 +48,7 @@ C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\Fishin
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlub.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPocetna.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPrijava.resources
+C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlubPocetna.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmStatistika.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.Properties.Resources.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.GenerateResource.cache
