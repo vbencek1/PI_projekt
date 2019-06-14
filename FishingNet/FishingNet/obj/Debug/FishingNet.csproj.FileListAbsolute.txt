@@ -56,3 +56,32 @@ C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\Fishin
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CopyComplete
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.exe
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\FishingNet.exe.config
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\FishingNet.exe
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\FishingNet.pdb
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\EntityFramework.dll
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\EntityFramework.xml
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.csprojAssemblyReference.cache
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmAzurirajLokaciju.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmClanovi.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajClana.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajLokaciju.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajNatjecanje.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmDodajSudionika.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmInformacijeONatjecanju.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmNatjecanja.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPregledNatjecanja.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmProglasiPobjednika.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlub.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPocetna.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPrijava.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmRibickiKlubPocetna.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.FrmStatistika.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.Properties.Resources.resources
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.GenerateResource.cache
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CoreCompileInputs.cache
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.csproj.CopyComplete
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.exe
+C:\Users\Tomislav\Documents\vjezbaprojekt\FishingNet\FishingNet\obj\Debug\FishingNet.pdb

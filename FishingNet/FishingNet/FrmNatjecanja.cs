@@ -40,5 +40,13 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
+
+        private void BtnStatistika_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmStatistika forma = new FrmStatistika();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }
