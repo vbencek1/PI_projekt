@@ -16,5 +16,10 @@ namespace FishingNet
         {
             InitializeComponent();
         }
+
+        private void FrmProglasiPobjednika_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

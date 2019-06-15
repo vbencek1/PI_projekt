@@ -63,9 +63,10 @@
             this.BtnPregledNatjecanja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPregledNatjecanja.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPregledNatjecanja.ForeColor = System.Drawing.Color.White;
-            this.BtnPregledNatjecanja.Location = new System.Drawing.Point(0, 269);
+            this.BtnPregledNatjecanja.Location = new System.Drawing.Point(0, 331);
+            this.BtnPregledNatjecanja.Margin = new System.Windows.Forms.Padding(4);
             this.BtnPregledNatjecanja.Name = "BtnPregledNatjecanja";
-            this.BtnPregledNatjecanja.Size = new System.Drawing.Size(150, 31);
+            this.BtnPregledNatjecanja.Size = new System.Drawing.Size(200, 38);
             this.BtnPregledNatjecanja.TabIndex = 1;
             this.BtnPregledNatjecanja.Text = "Pregled natjecanja";
             this.BtnPregledNatjecanja.UseVisualStyleBackColor = false;
@@ -79,8 +80,9 @@
             this.PanelHeader.Controls.Add(this.LblDodavanjeNovogClana);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(784, 34);
+            this.PanelHeader.Size = new System.Drawing.Size(1045, 42);
             this.PanelHeader.TabIndex = 32;
             // 
             // BtnBack
@@ -90,10 +92,10 @@
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(9, 5);
+            this.BtnBack.Location = new System.Drawing.Point(12, 6);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(25, 25);
+            this.BtnBack.Size = new System.Drawing.Size(33, 31);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
@@ -102,9 +104,10 @@
             // 
             this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
             this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
+            this.PicMaliLogo.Location = new System.Drawing.Point(859, 6);
+            this.PicMaliLogo.Margin = new System.Windows.Forms.Padding(4);
             this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
+            this.PicMaliLogo.Size = new System.Drawing.Size(171, 32);
             this.PicMaliLogo.TabIndex = 0;
             this.PicMaliLogo.TabStop = false;
             // 
@@ -114,9 +117,10 @@
             this.LblDodavanjeNovogClana.BackColor = System.Drawing.Color.Transparent;
             this.LblDodavanjeNovogClana.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblDodavanjeNovogClana.ForeColor = System.Drawing.Color.White;
-            this.LblDodavanjeNovogClana.Location = new System.Drawing.Point(320, 5);
+            this.LblDodavanjeNovogClana.Location = new System.Drawing.Point(427, 6);
+            this.LblDodavanjeNovogClana.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDodavanjeNovogClana.Name = "LblDodavanjeNovogClana";
-            this.LblDodavanjeNovogClana.Size = new System.Drawing.Size(131, 23);
+            this.LblDodavanjeNovogClana.Size = new System.Drawing.Size(167, 28);
             this.LblDodavanjeNovogClana.TabIndex = 12;
             this.LblDodavanjeNovogClana.Text = "NATJECANJA";
             // 
@@ -125,17 +129,19 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
             this.panel1.Controls.Add(this.PicComp);
             this.panel1.Controls.Add(this.BtnPregledNatjecanja);
-            this.panel1.Location = new System.Drawing.Point(81, 91);
+            this.panel1.Location = new System.Drawing.Point(108, 112);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 300);
+            this.panel1.Size = new System.Drawing.Size(200, 369);
             this.panel1.TabIndex = 33;
             // 
             // PicComp
             // 
             this.PicComp.Image = global::FishingNet.Properties.Resources.competition_small_white;
-            this.PicComp.Location = new System.Drawing.Point(22, 83);
+            this.PicComp.Location = new System.Drawing.Point(29, 102);
+            this.PicComp.Margin = new System.Windows.Forms.Padding(4);
             this.PicComp.Name = "PicComp";
-            this.PicComp.Size = new System.Drawing.Size(103, 88);
+            this.PicComp.Size = new System.Drawing.Size(137, 108);
             this.PicComp.TabIndex = 2;
             this.PicComp.TabStop = false;
             // 
@@ -144,17 +150,19 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.panel2.Controls.Add(this.PicStats);
             this.panel2.Controls.Add(this.BtnStatistika);
-            this.panel2.Location = new System.Drawing.Point(237, 91);
+            this.panel2.Location = new System.Drawing.Point(316, 112);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 300);
+            this.panel2.Size = new System.Drawing.Size(200, 369);
             this.panel2.TabIndex = 34;
             // 
             // PicStats
             // 
             this.PicStats.Image = global::FishingNet.Properties.Resources.statistic_icon;
-            this.PicStats.Location = new System.Drawing.Point(25, 83);
+            this.PicStats.Location = new System.Drawing.Point(33, 102);
+            this.PicStats.Margin = new System.Windows.Forms.Padding(4);
             this.PicStats.Name = "PicStats";
-            this.PicStats.Size = new System.Drawing.Size(103, 88);
+            this.PicStats.Size = new System.Drawing.Size(137, 108);
             this.PicStats.TabIndex = 3;
             this.PicStats.TabStop = false;
             // 
@@ -165,29 +173,33 @@
             this.BtnStatistika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnStatistika.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnStatistika.ForeColor = System.Drawing.Color.White;
-            this.BtnStatistika.Location = new System.Drawing.Point(0, 269);
+            this.BtnStatistika.Location = new System.Drawing.Point(0, 331);
+            this.BtnStatistika.Margin = new System.Windows.Forms.Padding(4);
             this.BtnStatistika.Name = "BtnStatistika";
-            this.BtnStatistika.Size = new System.Drawing.Size(150, 31);
+            this.BtnStatistika.Size = new System.Drawing.Size(200, 38);
             this.BtnStatistika.TabIndex = 2;
             this.BtnStatistika.Text = "Statistika";
             this.BtnStatistika.UseVisualStyleBackColor = false;
+            this.BtnStatistika.Click += new System.EventHandler(this.BtnStatistika_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
             this.panel3.Controls.Add(this.PicWinner);
             this.panel3.Controls.Add(this.BtnProglasiPobjednika);
-            this.panel3.Location = new System.Drawing.Point(394, 91);
+            this.panel3.Location = new System.Drawing.Point(525, 112);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(150, 300);
+            this.panel3.Size = new System.Drawing.Size(200, 369);
             this.panel3.TabIndex = 34;
             // 
             // PicWinner
             // 
             this.PicWinner.Image = global::FishingNet.Properties.Resources.winner_icon;
-            this.PicWinner.Location = new System.Drawing.Point(33, 83);
+            this.PicWinner.Location = new System.Drawing.Point(44, 102);
+            this.PicWinner.Margin = new System.Windows.Forms.Padding(4);
             this.PicWinner.Name = "PicWinner";
-            this.PicWinner.Size = new System.Drawing.Size(86, 88);
+            this.PicWinner.Size = new System.Drawing.Size(115, 108);
             this.PicWinner.TabIndex = 4;
             this.PicWinner.TabStop = false;
             // 
@@ -198,9 +210,10 @@
             this.BtnProglasiPobjednika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnProglasiPobjednika.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProglasiPobjednika.ForeColor = System.Drawing.Color.White;
-            this.BtnProglasiPobjednika.Location = new System.Drawing.Point(0, 269);
+            this.BtnProglasiPobjednika.Location = new System.Drawing.Point(0, 331);
+            this.BtnProglasiPobjednika.Margin = new System.Windows.Forms.Padding(4);
             this.BtnProglasiPobjednika.Name = "BtnProglasiPobjednika";
-            this.BtnProglasiPobjednika.Size = new System.Drawing.Size(150, 31);
+            this.BtnProglasiPobjednika.Size = new System.Drawing.Size(200, 38);
             this.BtnProglasiPobjednika.TabIndex = 3;
             this.BtnProglasiPobjednika.Text = "Proglasi pobjednika";
             this.BtnProglasiPobjednika.UseVisualStyleBackColor = false;
@@ -210,17 +223,19 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.panel4.Controls.Add(this.PicLocationIcon);
             this.panel4.Controls.Add(this.BtnDodajLokaciju);
-            this.panel4.Location = new System.Drawing.Point(550, 91);
+            this.panel4.Location = new System.Drawing.Point(733, 112);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(150, 300);
+            this.panel4.Size = new System.Drawing.Size(200, 369);
             this.panel4.TabIndex = 35;
             // 
             // PicLocationIcon
             // 
             this.PicLocationIcon.Image = global::FishingNet.Properties.Resources.location_icon;
-            this.PicLocationIcon.Location = new System.Drawing.Point(46, 83);
+            this.PicLocationIcon.Location = new System.Drawing.Point(61, 102);
+            this.PicLocationIcon.Margin = new System.Windows.Forms.Padding(4);
             this.PicLocationIcon.Name = "PicLocationIcon";
-            this.PicLocationIcon.Size = new System.Drawing.Size(70, 88);
+            this.PicLocationIcon.Size = new System.Drawing.Size(93, 108);
             this.PicLocationIcon.TabIndex = 5;
             this.PicLocationIcon.TabStop = false;
             // 
@@ -231,9 +246,10 @@
             this.BtnDodajLokaciju.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnDodajLokaciju.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnDodajLokaciju.ForeColor = System.Drawing.Color.White;
-            this.BtnDodajLokaciju.Location = new System.Drawing.Point(0, 269);
+            this.BtnDodajLokaciju.Location = new System.Drawing.Point(0, 331);
+            this.BtnDodajLokaciju.Margin = new System.Windows.Forms.Padding(4);
             this.BtnDodajLokaciju.Name = "BtnDodajLokaciju";
-            this.BtnDodajLokaciju.Size = new System.Drawing.Size(150, 31);
+            this.BtnDodajLokaciju.Size = new System.Drawing.Size(200, 38);
             this.BtnDodajLokaciju.TabIndex = 4;
             this.BtnDodajLokaciju.Text = "Dodaj lokaciju";
             this.BtnDodajLokaciju.UseVisualStyleBackColor = false;
@@ -241,15 +257,16 @@
             // 
             // FrmNatjecanja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1045, 567);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelHeader);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmNatjecanja";
             this.Text = "FrmNatjecanja";
             this.PanelHeader.ResumeLayout(false);

@@ -202,14 +202,7 @@ namespace FishingNet
                 return true;
             }
         }
-
-        private void BtnDodajSudionika_Click(object sender, EventArgs e)
-        {
-            FrmDodajSudionika forma = new FrmDodajSudionika(odabranoNatjecanje);
-            forma.ShowDialog();
-            DohvatiSudionikeInterne(odabranoNatjecanje);
-            DohvatiSudionikeEksterne(odabranoNatjecanje);
-        }
+        
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
@@ -258,6 +251,12 @@ namespace FishingNet
             {
                 MessageBox.Show("Dozvoljen je unos samo pozitivnih vrijednosti");
             }
+        }
+
+        private void BtnZahtjevi_Click(object sender, EventArgs e)
+        {
+            FrmZahtjeviPrijava forma = new FrmZahtjeviPrijava(odabranoNatjecanje);
+            forma.ShowDialog();
         }
     }
 }
