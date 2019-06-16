@@ -30,6 +30,7 @@ namespace FishingNet
             int brojNatjecanja = 0;
             int brojLokacija = 0;
             int brojNatjecatelja = 0;
+            List<Lokacija> lokacije;
             using (var db = new FishingNetEntities())
             {
                 foreach (Natjecanje item in db.Natjecanjes)
@@ -47,8 +48,38 @@ namespace FishingNet
                 this.chartStatistika.Series["Broj natjecatelja"].Points.Add(brojNatjecatelja);
                 this.chartStatistika.Series["Broj natjecanja"].Points.Add(brojNatjecanja);
                 this.chartStatistika.Series["Broj lokacija natjecanja"].Points.Add(brojLokacija);
+                lokacije = db.Lokacijas.ToList();
             }
+            cmbStatistika.DataSource = lokacije;
+        }
 
+        private void cmbStatistika_SelectedValueChanged(object sender, EventArgs e)
+        {
+            
+            int brojNatjecanja = 0;
+            int brojNatjecatelja = 0;
+            using (var db = new FishingNetEntities())
+            {
+                
+                foreach (Natjecanje natjecanje in db.Natjecanjes)
+                {
+                    if (cmbStatistika.SelectedItem.ToString().Contains(natjecanje.lokacija.ToString()))
+                    {
+                        brojNatjecanja++;
+                    }
+                }
+                foreach (SudionikNatjecanja sudionik in db.SudionikNatjecanjas)
+                {
+                    if (cmbStatistika.SelectedItem.ToString().Contains(sudionik.natjecanje.ToString()))
+                    {
+                        brojNatjecatelja++;
+                    }
+                }
+                
+                this.chartLokacija.Series["Broj natjecanja"].Points.Add(brojNatjecanja);
+                this.chartLokacija.Series["Broj natjecatelja"].Points.Add(brojNatjecatelja);
+                chartLokacija.Update();
+            }
         }
     }
 }
