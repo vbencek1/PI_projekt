@@ -33,14 +33,22 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.PanelHeader = new System.Windows.Forms.Panel();
             this.BtnBack = new System.Windows.Forms.Button();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblStatistikaNatjecanja = new System.Windows.Forms.Label();
             this.chartStatistika = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cmbStatistika = new System.Windows.Forms.ComboBox();
+            this.chartLokacija = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistika)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLokacija)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelHeader
@@ -101,7 +109,7 @@
             this.chartStatistika.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartStatistika.Legends.Add(legend1);
-            this.chartStatistika.Location = new System.Drawing.Point(286, 92);
+            this.chartStatistika.Location = new System.Drawing.Point(0, 135);
             this.chartStatistika.Name = "chartStatistika";
             series1.ChartArea = "Statistika";
             series1.Legend = "Legend1";
@@ -115,9 +123,47 @@
             this.chartStatistika.Series.Add(series1);
             this.chartStatistika.Series.Add(series2);
             this.chartStatistika.Series.Add(series3);
-            this.chartStatistika.Size = new System.Drawing.Size(593, 407);
+            this.chartStatistika.Size = new System.Drawing.Size(538, 407);
             this.chartStatistika.TabIndex = 17;
             this.chartStatistika.Text = "chartStatistika";
+            // 
+            // cmbStatistika
+            // 
+            this.cmbStatistika.FormattingEnabled = true;
+            this.cmbStatistika.Location = new System.Drawing.Point(691, 161);
+            this.cmbStatistika.Name = "cmbStatistika";
+            this.cmbStatistika.Size = new System.Drawing.Size(217, 24);
+            this.cmbStatistika.TabIndex = 18;
+            this.cmbStatistika.SelectedValueChanged += new System.EventHandler(this.cmbStatistika_SelectedValueChanged);
+            // 
+            // chartLokacija
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartLokacija.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartLokacija.Legends.Add(legend2);
+            this.chartLokacija.Location = new System.Drawing.Point(718, 217);
+            this.chartLokacija.Name = "chartLokacija";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Broj natjecanja";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Broj natjecatelja";
+            this.chartLokacija.Series.Add(series4);
+            this.chartLokacija.Series.Add(series5);
+            this.chartLokacija.Size = new System.Drawing.Size(349, 337);
+            this.chartLokacija.TabIndex = 19;
+            this.chartLokacija.Text = "chart1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(615, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 17);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Prikaz broj natjecatelja i natjecanja po lokaciji";
             // 
             // FrmStatistika
             // 
@@ -125,6 +171,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.chartLokacija);
+            this.Controls.Add(this.cmbStatistika);
             this.Controls.Add(this.chartStatistika);
             this.Controls.Add(this.PanelHeader);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -135,7 +184,9 @@
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistika)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLokacija)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -146,5 +197,8 @@
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblStatistikaNatjecanja;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartStatistika;
+        private System.Windows.Forms.ComboBox cmbStatistika;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLokacija;
+        private System.Windows.Forms.Label label1;
     }
 }
