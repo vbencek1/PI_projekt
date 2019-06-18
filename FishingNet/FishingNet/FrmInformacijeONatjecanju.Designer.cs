@@ -44,6 +44,8 @@
             this.TxtUnosBodova = new System.Windows.Forms.TextBox();
             this.LblBodovi = new System.Windows.Forms.Label();
             this.PanelHeader = new System.Windows.Forms.Panel();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblInfoONatjecanju = new System.Windows.Forms.Label();
             this.LblSudioniciNatjecanja = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,15 +55,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DgvSudioniciExterni = new System.Windows.Forms.DataGridView();
             this.DgvSudioniciInterni = new System.Windows.Forms.DataGridView();
-            this.BtnZahtjevi = new System.Windows.Forms.Button();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.PanelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSudioniciExterni)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSudioniciInterni)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // LblNazivNatjecanja
@@ -243,6 +242,31 @@
             this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 32;
             // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
+            this.BtnBack.TabIndex = 16;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // PicMaliLogo
+            // 
+            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
+            this.PicMaliLogo.Name = "PicMaliLogo";
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
+            this.PicMaliLogo.TabIndex = 0;
+            this.PicMaliLogo.TabStop = false;
+            // 
             // LblInfoONatjecanju
             // 
             this.LblInfoONatjecanju.AutoSize = true;
@@ -269,7 +293,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel1.Controls.Add(this.BtnZahtjevi);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -345,46 +368,6 @@
             this.DgvSudioniciInterni.Size = new System.Drawing.Size(517, 102);
             this.DgvSudioniciInterni.TabIndex = 19;
             // 
-            // BtnZahtjevi
-            // 
-            this.BtnZahtjevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
-            this.BtnZahtjevi.FlatAppearance.BorderSize = 0;
-            this.BtnZahtjevi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnZahtjevi.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnZahtjevi.ForeColor = System.Drawing.Color.White;
-            this.BtnZahtjevi.Location = new System.Drawing.Point(595, 3);
-            this.BtnZahtjevi.Name = "BtnZahtjevi";
-            this.BtnZahtjevi.Size = new System.Drawing.Size(102, 23);
-            this.BtnZahtjevi.TabIndex = 40;
-            this.BtnZahtjevi.Text = "Zahtjevi prijava";
-            this.BtnZahtjevi.UseVisualStyleBackColor = false;
-            this.BtnZahtjevi.Click += new System.EventHandler(this.BtnZahtjevi_Click);
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
-            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(9, 5);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(25, 25);
-            this.BtnBack.TabIndex = 16;
-            this.BtnBack.UseVisualStyleBackColor = false;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // PicMaliLogo
-            // 
-            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
-            this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
-            this.PicMaliLogo.TabIndex = 0;
-            this.PicMaliLogo.TabStop = false;
-            // 
             // FrmInformacijeONatjecanju
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,13 +393,13 @@
             this.Load += new System.EventHandler(this.FrmInformacijeONatjecanju_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSudioniciExterni)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSudioniciInterni)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +433,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgvSudioniciExterni;
-        private System.Windows.Forms.Button BtnZahtjevi;
     }
 }

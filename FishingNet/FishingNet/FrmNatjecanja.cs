@@ -48,5 +48,13 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
+
+        private void BtnZahtjeviPrijava_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmZahtjeviPrijava forma = new FrmZahtjeviPrijava();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }

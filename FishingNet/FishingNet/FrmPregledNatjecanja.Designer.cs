@@ -40,6 +40,7 @@
             this.dgvNatjecanja = new System.Windows.Forms.DataGridView();
             this.ComboLokacije = new System.Windows.Forms.ComboBox();
             this.BtnPrikaziSve = new System.Windows.Forms.Button();
+            this.LblLokacija = new System.Windows.Forms.Label();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNatjecanja)).BeginInit();
@@ -204,12 +205,24 @@
             this.BtnPrikaziSve.UseVisualStyleBackColor = false;
             this.BtnPrikaziSve.Click += new System.EventHandler(this.BtnPrikaziSve_Click);
             // 
+            // LblLokacija
+            // 
+            this.LblLokacija.AutoSize = true;
+            this.LblLokacija.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLokacija.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblLokacija.Location = new System.Drawing.Point(221, 94);
+            this.LblLokacija.Name = "LblLokacija";
+            this.LblLokacija.Size = new System.Drawing.Size(59, 18);
+            this.LblLokacija.TabIndex = 44;
+            this.LblLokacija.Text = "Lokacija:";
+            // 
             // FrmPregledNatjecanja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.LblLokacija);
             this.Controls.Add(this.BtnPrikaziSve);
             this.Controls.Add(this.ComboLokacije);
             this.Controls.Add(this.dgvNatjecanja);
@@ -244,5 +257,6 @@
         private System.Windows.Forms.DataGridView dgvNatjecanja;
         private System.Windows.Forms.ComboBox ComboLokacije;
         private System.Windows.Forms.Button BtnPrikaziSve;
+        private System.Windows.Forms.Label LblLokacija;
     }
 }

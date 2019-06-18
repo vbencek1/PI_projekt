@@ -252,11 +252,6 @@ namespace FishingNet
                 MessageBox.Show("Dozvoljen je unos samo pozitivnih vrijednosti");
             }
         }
-
-        private void BtnZahtjevi_Click(object sender, EventArgs e)
-        {
-            FrmZahtjeviPrijava forma = new FrmZahtjeviPrijava(odabranoNatjecanje);
-            forma.ShowDialog();
-        }
+        
     }
 }

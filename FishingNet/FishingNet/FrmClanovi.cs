@@ -21,6 +21,7 @@ namespace FishingNet
         private void FrmClanovi_Load(object sender, EventArgs e)
         {
             OsvjeziClanove();
+            TxtPretraziClanove.Clear();
         }
 
         private void OsvjeziClanove()
@@ -47,7 +48,8 @@ namespace FishingNet
             List<ClanRibickogKluba> listaPretrage = new List<ClanRibickogKluba>();
             foreach (ClanRibickogKluba item in listaClanova)
             {
-                if(item.ime.ToLower()==rijec.ToLower() || item.prezime.ToLower() == rijec.ToLower())
+                string punoIme = item.ime + " " + item.prezime;
+                if(punoIme.ToLower().Contains(rijec))
                 {
                     listaPretrage.Add(item);
                 }
@@ -80,12 +82,9 @@ namespace FishingNet
         private void BtnOsvjeziListu_Click(object sender, EventArgs e)
         {
             OsvjeziClanove();
+            TxtPretraziClanove.Clear();
         }
-
-        private void BtnPretraziClanove_Click(object sender, EventArgs e)
-        {
-            PretraziClanove(TxtPretraziClanove.Text);
-        }
+        
 
         private void BtnObrisiClana_Click(object sender, EventArgs e)
         {
@@ -116,7 +115,10 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
-
+        private void TxtPretraziClanove_TextChanged(object sender, EventArgs e)
+        {
+            PretraziClanove(TxtPretraziClanove.Text);
+        }
 
         private void LblNaziv_Click(object sender, EventArgs e)
         {

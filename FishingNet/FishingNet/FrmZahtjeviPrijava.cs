@@ -13,16 +13,15 @@ namespace FishingNet
     public partial class FrmZahtjeviPrijava : Form
     {
         CsvDataReader csvDataReader = new CsvDataReader();
-        private Natjecanje odabranoNatjecanje;
-        public FrmZahtjeviPrijava(Natjecanje natjecanje)
+        public FrmZahtjeviPrijava()
         {
             InitializeComponent();
-            odabranoNatjecanje = natjecanje;
 
         }
 
         private void FrmZahtjeviPrijava_Load(object sender, EventArgs e)
         {
+            PopuniComboNatjecanja();
             PrikaziZahtjeveClanova();
             PrikaziZahtjeveEksterne();
             OznaciBojom();
@@ -56,7 +55,6 @@ namespace FishingNet
                            where 
                            z.natjecanje== n.id_natjecanje &&
                            z.clan == c.id_clana &&
-                           n.id_natjecanje == odabranoNatjecanje.id_natjecanje &&
                            s.id_odobreno_odbijeno==z.odobreno
                            select new
                            {
@@ -81,7 +79,61 @@ namespace FishingNet
                            from n in db.Natjecanjes
                            from s in db.Statuses
                            where z.natjecanje == n.id_natjecanje &&
-                           s.id_odobreno_odbijeno==z.odobreno &&
+                           s.id_odobreno_odbijeno==z.odobreno
+                           select new
+                           {
+                               Ime = z.ime,
+                               Prezime = z.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviEksterni.DataSource = upit.ToList();
+
+            }
+
+        }
+
+        private void FilterNatjecanjaPrikaziZahtjeveClanova(Natjecanje odabranoNatjecanje)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaClanas
+                           from n in db.Natjecanjes
+                           from c in db.ClanRibickogKlubas
+                           from s in db.Statuses
+                           where
+                           z.natjecanje == n.id_natjecanje &&
+                           z.clan == c.id_clana &&
+                           n.id_natjecanje == odabranoNatjecanje.id_natjecanje &&
+                           s.id_odobreno_odbijeno == z.odobreno
+                           select new
+                           {
+                               Ime = c.ime,
+                               Prezime = c.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviClanova.DataSource = upit.ToList();
+            }
+
+        }
+        private void FilterNatjecanjaPrikaziZahtjeveEksterne(Natjecanje odabranoNatjecanje)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaExternis
+                           from n in db.Natjecanjes
+                           from s in db.Statuses
+                           where z.natjecanje == n.id_natjecanje &&
+                           s.id_odobreno_odbijeno == z.odobreno &&
                            n.id_natjecanje == odabranoNatjecanje.id_natjecanje
                            select new
                            {
@@ -97,6 +149,119 @@ namespace FishingNet
             }
 
         }
+        private void FilterStatusaPrikaziZahtjeveClanova(Natjecanje odabranoNatjecanje, Status odabraniStatus)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaClanas
+                           from n in db.Natjecanjes
+                           from c in db.ClanRibickogKlubas
+                           from s in db.Statuses
+                           where
+                           z.natjecanje == n.id_natjecanje &&
+                           z.clan == c.id_clana &&
+                           n.id_natjecanje == odabranoNatjecanje.id_natjecanje &&
+                           s.id_odobreno_odbijeno == z.odobreno &&
+                           s.id_odobreno_odbijeno==odabraniStatus.id_odobreno_odbijeno
+                           select new
+                           {
+                               Ime = c.ime,
+                               Prezime = c.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviClanova.DataSource = upit.ToList();
+            }
+
+        }
+        private void FilterStatusPrikaziZahtjeveEksterne(Natjecanje odabranoNatjecanje, Status odabraniStatus)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaExternis
+                           from n in db.Natjecanjes
+                           from s in db.Statuses
+                           where z.natjecanje == n.id_natjecanje &&
+                           s.id_odobreno_odbijeno == z.odobreno &&
+                           n.id_natjecanje == odabranoNatjecanje.id_natjecanje &&
+                           s.id_odobreno_odbijeno == odabraniStatus.id_odobreno_odbijeno
+                           select new
+                           {
+                               Ime = z.ime,
+                               Prezime = z.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviEksterni.DataSource = upit.ToList();
+
+            }
+
+        }
+
+        private void PretraziZahtjeveClanova(string rijec)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaClanas
+                           from n in db.Natjecanjes
+                           from c in db.ClanRibickogKlubas
+                           from s in db.Statuses
+                           where
+                           z.natjecanje == n.id_natjecanje &&
+                           z.clan == c.id_clana &&
+                           s.id_odobreno_odbijeno == z.odobreno &&(
+                           c.ime.Contains(rijec) || c.prezime.Contains(rijec))
+                           select new
+                           {
+                               Ime = c.ime,
+                               Prezime = c.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviClanova.DataSource = upit.ToList();
+            }
+
+        }
+        private void PretraziZahtjeveEksterne(string rijec)
+        {
+
+            using (var db = new FishingNetEntities())
+            {
+                var upit =
+                           from z in db.ZahtjevZaPrijavuNatjecanjaExternis
+                           from n in db.Natjecanjes
+                           from s in db.Statuses
+                           where z.natjecanje == n.id_natjecanje &&
+                           s.id_odobreno_odbijeno == z.odobreno && (
+                           z.ime.Contains(rijec) || z.prezime.Contains(rijec))
+                           select new
+                           {
+                               Ime = z.ime,
+                               Prezime = z.prezime,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
+                               Status = s.naziv
+                           };
+                DgvZahtjeviEksterni.DataSource = upit.ToList();
+
+            }
+
+        }
+
+        
 
         private void OznaciBojom()
         {
@@ -134,6 +299,22 @@ namespace FishingNet
             }
         }
 
+        private void PopuniComboNatjecanja()
+        {
+            using(var db= new FishingNetEntities())
+            {
+                ComboOdabirNatjecanja.DataSource = db.Natjecanjes.ToList();
+            }
+        }
+
+        private void PopuniComboStatusa()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                ComboStatusa.DataSource = db.Statuses.ToList();
+            }
+        }
+
         private void BtnPreuzimiPodatke_Click(object sender, EventArgs e)
         {
             UcitajDatoteku();
@@ -150,6 +331,50 @@ namespace FishingNet
         private void BtnOdbij_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmNatjecanja forma = new FrmNatjecanja();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
+
+        private void ComboOdabirNatjecanja_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Natjecanje natjecanje = ComboOdabirNatjecanja.SelectedItem as Natjecanje;
+            FilterNatjecanjaPrikaziZahtjeveClanova(natjecanje);
+            FilterNatjecanjaPrikaziZahtjeveEksterne(natjecanje);
+            OznaciBojom();
+            PopuniComboStatusa();
+            TxtPretraziZahtjeve.Clear();
+        }
+
+        private void ComboStatusa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Natjecanje natjecanje = ComboOdabirNatjecanja.SelectedItem as Natjecanje;
+            Status status = ComboStatusa.SelectedItem as Status;
+            FilterStatusaPrikaziZahtjeveClanova(natjecanje, status);
+            FilterStatusPrikaziZahtjeveEksterne(natjecanje, status);
+            OznaciBojom();
+            TxtPretraziZahtjeve.Clear();
+        }
+
+        private void BtnPrikaziSve_Click(object sender, EventArgs e)
+        {
+            PrikaziZahtjeveClanova();
+            PrikaziZahtjeveEksterne();
+            OznaciBojom();
+            TxtPretraziZahtjeve.Clear();
+        }
+        
+
+        private void TxtPretraziZahtjeve_TextChanged(object sender, EventArgs e)
+        {
+            PretraziZahtjeveClanova(TxtPretraziZahtjeve.Text);
+            PretraziZahtjeveEksterne(TxtPretraziZahtjeve.Text);
+            OznaciBojom();
         }
     }
 }

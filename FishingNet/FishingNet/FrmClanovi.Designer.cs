@@ -36,7 +36,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtPretraziClanove = new System.Windows.Forms.TextBox();
             this.LblPretraziClanove = new System.Windows.Forms.Label();
-            this.BtnPretraziClanove = new System.Windows.Forms.Button();
             this.BtnDodajClana = new System.Windows.Forms.Button();
             this.BtnAzurirajClana = new System.Windows.Forms.Button();
             this.BtnObrisiClana = new System.Windows.Forms.Button();
@@ -127,6 +126,7 @@
             this.TxtPretraziClanove.Name = "TxtPretraziClanove";
             this.TxtPretraziClanove.Size = new System.Drawing.Size(217, 20);
             this.TxtPretraziClanove.TabIndex = 18;
+            this.TxtPretraziClanove.TextChanged += new System.EventHandler(this.TxtPretraziClanove_TextChanged);
             // 
             // LblPretraziClanove
             // 
@@ -135,26 +135,10 @@
             this.LblPretraziClanove.ForeColor = System.Drawing.Color.Black;
             this.LblPretraziClanove.Location = new System.Drawing.Point(538, 84);
             this.LblPretraziClanove.Name = "LblPretraziClanove";
-            this.LblPretraziClanove.Size = new System.Drawing.Size(144, 15);
+            this.LblPretraziClanove.Size = new System.Drawing.Size(211, 15);
             this.LblPretraziClanove.TabIndex = 17;
-            this.LblPretraziClanove.Text = "Pretraži članove po OIB-u:";
+            this.LblPretraziClanove.Text = "Pretraži članove po imenu i prezimenu:";
             this.LblPretraziClanove.Click += new System.EventHandler(this.LblNaziv_Click);
-            // 
-            // BtnPretraziClanove
-            // 
-            this.BtnPretraziClanove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
-            this.BtnPretraziClanove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnPretraziClanove.FlatAppearance.BorderSize = 0;
-            this.BtnPretraziClanove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnPretraziClanove.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPretraziClanove.ForeColor = System.Drawing.Color.White;
-            this.BtnPretraziClanove.Location = new System.Drawing.Point(657, 133);
-            this.BtnPretraziClanove.Name = "BtnPretraziClanove";
-            this.BtnPretraziClanove.Size = new System.Drawing.Size(100, 30);
-            this.BtnPretraziClanove.TabIndex = 20;
-            this.BtnPretraziClanove.Text = "Pretraži";
-            this.BtnPretraziClanove.UseVisualStyleBackColor = true;
-            this.BtnPretraziClanove.Click += new System.EventHandler(this.BtnPretraziClanove_Click);
             // 
             // BtnDodajClana
             // 
@@ -241,7 +225,6 @@
             this.Controls.Add(this.BtnObrisiClana);
             this.Controls.Add(this.BtnAzurirajClana);
             this.Controls.Add(this.BtnDodajClana);
-            this.Controls.Add(this.BtnPretraziClanove);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TxtPretraziClanove);
             this.Controls.Add(this.LblPretraziClanove);
@@ -267,7 +250,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtPretraziClanove;
         private System.Windows.Forms.Label LblPretraziClanove;
-        private System.Windows.Forms.Button BtnPretraziClanove;
         private System.Windows.Forms.Button BtnDodajClana;
         private System.Windows.Forms.Button BtnAzurirajClana;
         private System.Windows.Forms.Button BtnObrisiClana;
