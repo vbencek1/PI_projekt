@@ -267,8 +267,9 @@
             this.BtnUnosPodataka.Name = "BtnUnosPodataka";
             this.BtnUnosPodataka.Size = new System.Drawing.Size(150, 30);
             this.BtnUnosPodataka.TabIndex = 14;
-            this.BtnUnosPodataka.Text = "Unesi podatke\r\n";
+            this.BtnUnosPodataka.Text = "Ažuriraj podatke\r\n";
             this.BtnUnosPodataka.UseVisualStyleBackColor = false;
+            this.BtnUnosPodataka.Click += new System.EventHandler(this.BtnUnosPodataka_Click);
             // 
             // PanelHeader
             // 
@@ -349,6 +350,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmRibickiKlub";
             this.Text = "Ribički Klub";
+            this.Load += new System.EventHandler(this.FrmRibickiKlub_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();

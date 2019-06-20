@@ -12,7 +12,6 @@ namespace FishingNet
 {
     public partial class FrmPocetna : Form
     {
-        
         public FrmPocetna()
         {
             InitializeComponent();
@@ -55,6 +54,14 @@ namespace FishingNet
         {
             Hide();
             FrmRibickiKlubPocetna forma = new FrmRibickiKlubPocetna();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
+
+        private void btnStatistika_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmStatistika forma = new FrmStatistika();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }

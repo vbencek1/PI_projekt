@@ -38,8 +38,10 @@
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblProglašenjePobjednika = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboImePrez = new System.Windows.Forms.ComboBox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblOdabirNatjecanja
@@ -48,10 +50,9 @@
             this.LblOdabirNatjecanja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.LblOdabirNatjecanja.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblOdabirNatjecanja.ForeColor = System.Drawing.Color.White;
-            this.LblOdabirNatjecanja.Location = new System.Drawing.Point(401, 213);
-            this.LblOdabirNatjecanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblOdabirNatjecanja.Location = new System.Drawing.Point(301, 173);
             this.LblOdabirNatjecanja.Name = "LblOdabirNatjecanja";
-            this.LblOdabirNatjecanja.Size = new System.Drawing.Size(148, 21);
+            this.LblOdabirNatjecanja.Size = new System.Drawing.Size(111, 15);
             this.LblOdabirNatjecanja.TabIndex = 1;
             this.LblOdabirNatjecanja.Text = "Odaberi natjecanje:";
             // 
@@ -61,11 +62,11 @@
             this.ComboOdabirNatjecanja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComboOdabirNatjecanja.ForeColor = System.Drawing.Color.White;
             this.ComboOdabirNatjecanja.FormattingEnabled = true;
-            this.ComboOdabirNatjecanja.Location = new System.Drawing.Point(405, 233);
-            this.ComboOdabirNatjecanja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboOdabirNatjecanja.Location = new System.Drawing.Point(304, 189);
             this.ComboOdabirNatjecanja.Name = "ComboOdabirNatjecanja";
-            this.ComboOdabirNatjecanja.Size = new System.Drawing.Size(224, 24);
+            this.ComboOdabirNatjecanja.Size = new System.Drawing.Size(169, 21);
             this.ComboOdabirNatjecanja.TabIndex = 2;
+            this.ComboOdabirNatjecanja.SelectedIndexChanged += new System.EventHandler(this.ComboOdabirNatjecanja_SelectedIndexChanged);
             // 
             // LblOdaberiPobjednika
             // 
@@ -73,10 +74,9 @@
             this.LblOdaberiPobjednika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.LblOdaberiPobjednika.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblOdaberiPobjednika.ForeColor = System.Drawing.Color.White;
-            this.LblOdaberiPobjednika.Location = new System.Drawing.Point(401, 287);
-            this.LblOdaberiPobjednika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblOdaberiPobjednika.Location = new System.Drawing.Point(301, 233);
             this.LblOdaberiPobjednika.Name = "LblOdaberiPobjednika";
-            this.LblOdaberiPobjednika.Size = new System.Drawing.Size(152, 21);
+            this.LblOdaberiPobjednika.Size = new System.Drawing.Size(116, 15);
             this.LblOdaberiPobjednika.TabIndex = 3;
             this.LblOdaberiPobjednika.Text = "Odaberi pobjednika:";
             // 
@@ -86,11 +86,11 @@
             this.ComboOdaberiPobjednika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComboOdaberiPobjednika.ForeColor = System.Drawing.Color.White;
             this.ComboOdaberiPobjednika.FormattingEnabled = true;
-            this.ComboOdaberiPobjednika.Location = new System.Drawing.Point(405, 306);
-            this.ComboOdaberiPobjednika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ComboOdaberiPobjednika.Location = new System.Drawing.Point(304, 249);
             this.ComboOdaberiPobjednika.Name = "ComboOdaberiPobjednika";
-            this.ComboOdaberiPobjednika.Size = new System.Drawing.Size(224, 24);
+            this.ComboOdaberiPobjednika.Size = new System.Drawing.Size(169, 21);
             this.ComboOdaberiPobjednika.TabIndex = 4;
+            this.ComboOdaberiPobjednika.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.ComboOdaberiPobjednika_Format);
             // 
             // BtnObavijestiPobjednika
             // 
@@ -99,13 +99,13 @@
             this.BtnObavijestiPobjednika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnObavijestiPobjednika.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnObavijestiPobjednika.ForeColor = System.Drawing.Color.White;
-            this.BtnObavijestiPobjednika.Location = new System.Drawing.Point(405, 390);
-            this.BtnObavijestiPobjednika.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnObavijestiPobjednika.Location = new System.Drawing.Point(304, 317);
             this.BtnObavijestiPobjednika.Name = "BtnObavijestiPobjednika";
-            this.BtnObavijestiPobjednika.Size = new System.Drawing.Size(225, 37);
+            this.BtnObavijestiPobjednika.Size = new System.Drawing.Size(169, 30);
             this.BtnObavijestiPobjednika.TabIndex = 5;
             this.BtnObavijestiPobjednika.Text = "Obavijesti pobjednika";
             this.BtnObavijestiPobjednika.UseVisualStyleBackColor = false;
+            this.BtnObavijestiPobjednika.Click += new System.EventHandler(this.BtnObavijestiPobjednika_Click);
             // 
             // PanelHeader
             // 
@@ -115,9 +115,8 @@
             this.PanelHeader.Controls.Add(this.LblProglašenjePobjednika);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1045, 42);
+            this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 16;
             // 
             // BtnBack
@@ -127,10 +126,10 @@
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(12, 6);
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(33, 31);
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
             // 
@@ -138,10 +137,9 @@
             // 
             this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
             this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(859, 6);
-            this.PicMaliLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
             this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(171, 32);
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
             this.PicMaliLogo.TabIndex = 0;
             this.PicMaliLogo.TabStop = false;
             // 
@@ -151,28 +149,38 @@
             this.LblProglašenjePobjednika.BackColor = System.Drawing.Color.Transparent;
             this.LblProglašenjePobjednika.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblProglašenjePobjednika.ForeColor = System.Drawing.Color.White;
-            this.LblProglašenjePobjednika.Location = new System.Drawing.Point(341, 6);
-            this.LblProglašenjePobjednika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblProglašenjePobjednika.Location = new System.Drawing.Point(256, 5);
             this.LblProglašenjePobjednika.Name = "LblProglašenjePobjednika";
-            this.LblProglašenjePobjednika.Size = new System.Drawing.Size(327, 28);
+            this.LblProglašenjePobjednika.Size = new System.Drawing.Size(259, 23);
             this.LblProglašenjePobjednika.TabIndex = 12;
             this.LblProglašenjePobjednika.Text = "PROGLAŠENJE POBJEDNIKA\r\n";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel1.Location = new System.Drawing.Point(359, 180);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Controls.Add(this.comboImePrez);
+            this.panel1.Location = new System.Drawing.Point(269, 146);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(316, 188);
+            this.panel1.Size = new System.Drawing.Size(237, 153);
             this.panel1.TabIndex = 17;
+            // 
+            // comboImePrez
+            // 
+            this.comboImePrez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.comboImePrez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboImePrez.ForeColor = System.Drawing.Color.White;
+            this.comboImePrez.FormattingEnabled = true;
+            this.comboImePrez.Location = new System.Drawing.Point(35, 129);
+            this.comboImePrez.Name = "comboImePrez";
+            this.comboImePrez.Size = new System.Drawing.Size(169, 21);
+            this.comboImePrez.TabIndex = 18;
             // 
             // FrmProglasiPobjednika
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1045, 567);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.BtnObavijestiPobjednika);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.ComboOdaberiPobjednika);
@@ -180,13 +188,13 @@
             this.Controls.Add(this.ComboOdabirNatjecanja);
             this.Controls.Add(this.LblOdabirNatjecanja);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmProglasiPobjednika";
             this.Text = "FrmProglasiPobjednika";
             this.Load += new System.EventHandler(this.FrmProglasiPobjednika_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +211,6 @@
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblProglašenjePobjednika;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboImePrez;
     }
 }

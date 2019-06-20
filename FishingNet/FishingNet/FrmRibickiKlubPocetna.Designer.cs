@@ -46,9 +46,9 @@
             this.LblNazivNaslov = new System.Windows.Forms.Label();
             this.btnDodajModeratora = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboModerator = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboModerator = new System.Windows.Forms.ComboBox();
             this.btnPodaci = new System.Windows.Forms.Button();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblDatumNaslov = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 
@@ -262,6 +263,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodaj moderatora:";
             // 
+            // comboModerator
+            // 
+            this.comboModerator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboModerator.FormattingEnabled = true;
+            this.comboModerator.Location = new System.Drawing.Point(19, 56);
+            this.comboModerator.Name = "comboModerator";
+            this.comboModerator.Size = new System.Drawing.Size(216, 23);
+            this.comboModerator.TabIndex = 32;
+            this.comboModerator.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboModerator_Format);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
@@ -280,16 +291,6 @@
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "Moderator:";
-            // 
-            // comboModerator
-            // 
-            this.comboModerator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboModerator.FormattingEnabled = true;
-            this.comboModerator.Location = new System.Drawing.Point(19, 56);
-            this.comboModerator.Name = "comboModerator";
-            this.comboModerator.Size = new System.Drawing.Size(216, 23);
-            this.comboModerator.TabIndex = 32;
-            this.comboModerator.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboModerator_Format);
             // 
             // btnPodaci
             // 
