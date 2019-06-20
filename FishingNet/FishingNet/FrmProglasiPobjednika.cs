@@ -21,5 +21,10 @@ namespace FishingNet
         {
 
         }
+
+        private void BtnObavijestiPobjednika_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
