@@ -19,6 +19,8 @@ namespace FishingNet
 
         private void FrmPocetna_Load(object sender, EventArgs e)
         {
+            AktivniKorisnik aktivni = new AktivniKorisnik();
+            MessageBox.Show(aktivni.DohvatiImeAktivnogKorisnika());
         }
 
         private void BtnClanovi_Click(object sender, EventArgs e)

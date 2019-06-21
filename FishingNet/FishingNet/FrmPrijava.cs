@@ -46,11 +46,7 @@ namespace FishingNet
             }
             return autentifikacija;
         }
-
-        private void PrikaziFormu()
-        {
-            
-        }
+        
         
         public void BtnPrijava_Click(object sender, EventArgs e)
         {
@@ -59,7 +55,8 @@ namespace FishingNet
             {
                 string korIme = TxtKorisnickoIme.Text;
                 PrijaviKorisnika(korIme);
-                MessageBox.Show(PrijavljeniKorisnik.korisnicko_ime);
+                AktivniKorisnik aktivni = new AktivniKorisnik();
+                aktivni.PrijaviKorisnika(korIme);
                 Hide();
                 FrmPocetna forma = new FrmPocetna();
                 forma.Closed += (s, args) => this.Close();

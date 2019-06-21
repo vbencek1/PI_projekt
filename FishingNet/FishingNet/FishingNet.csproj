@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AktivniKorisnik.cs" />
     <Compile Include="ClanRibickogKluba.cs">
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
@@ -125,6 +126,12 @@
     </Compile>
     <Compile Include="FrmInformacijeONatjecanju.Designer.cs">
       <DependentUpon>FrmInformacijeONatjecanju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPopisModeratora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPopisModeratora.Designer.cs">
+      <DependentUpon>FrmPopisModeratora.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPregledNatjecanja.cs">
       <SubType>Form</SubType>
@@ -232,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNatjecanja.resx">
       <DependentUpon>FrmNatjecanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPopisModeratora.resx">
+      <DependentUpon>FrmPopisModeratora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPregledNatjecanja.resx">
       <DependentUpon>FrmPregledNatjecanja.cs</DependentUpon>

@@ -44,43 +44,43 @@ namespace FishingNet
 
         private void PrikaziZahtjeveClanova()
         {
-            
-            using(var db= new FishingNetEntities())
+
+            using (var db = new FishingNetEntities())
             {
-                var upit = 
+                var upit =
                            from z in db.ZahtjevZaPrijavuNatjecanjaClanas
                            from n in db.Natjecanjes
                            from c in db.ClanRibickogKlubas
                            from s in db.Statuses
-                           where 
-                           z.natjecanje== n.id_natjecanje &&
+                           where
+                           z.natjecanje == n.id_natjecanje &&
                            z.clan == c.id_clana &&
-                           s.id_odobreno_odbijeno==z.odobreno
+                           s.id_odobreno_odbijeno == z.odobreno
                            select new
                            {
                                Id = z.id_zahtjev_za_prijavu_na_natjecanje,
                                Ime = c.ime,
                                Prezime = c.prezime,
-                               Opis= z.opis_prijave,
-                               Datum=z.datum_prijave,
-                               Natjecanje =n.naziv,
+                               Opis = z.opis_prijave,
+                               Datum = z.datum_prijave,
+                               Natjecanje = n.naziv,
                                Status = s.naziv
                            };
                 DgvZahtjeviClanova.DataSource = upit.ToList();
             }
-            
+
         }
         private void PrikaziZahtjeveEksterne()
         {
 
             using (var db = new FishingNetEntities())
             {
-                var upit = 
+                var upit =
                            from z in db.ZahtjevZaPrijavuNatjecanjaExternis
                            from n in db.Natjecanjes
                            from s in db.Statuses
                            where z.natjecanje == n.id_natjecanje &&
-                           s.id_odobreno_odbijeno==z.odobreno
+                           s.id_odobreno_odbijeno == z.odobreno
                            select new
                            {
                                Id = z.id_eksterni,
@@ -168,7 +168,7 @@ namespace FishingNet
                            z.clan == c.id_clana &&
                            n.id_natjecanje == odabranoNatjecanje.id_natjecanje &&
                            s.id_odobreno_odbijeno == z.odobreno &&
-                           s.id_odobreno_odbijeno==odabraniStatus.id_odobreno_odbijeno
+                           s.id_odobreno_odbijeno == odabraniStatus.id_odobreno_odbijeno
                            select new
                            {
                                Id = z.id_zahtjev_za_prijavu_na_natjecanje,
@@ -225,7 +225,7 @@ namespace FishingNet
                            where
                            z.natjecanje == n.id_natjecanje &&
                            z.clan == c.id_clana &&
-                           s.id_odobreno_odbijeno == z.odobreno &&(
+                           s.id_odobreno_odbijeno == z.odobreno && (
                            c.ime.Contains(rijec) || c.prezime.Contains(rijec))
                            select new
                            {
@@ -269,11 +269,11 @@ namespace FishingNet
 
         }
 
-        
+
 
         private void OznaciBojom()
         {
-            for(int i = 0; i< DgvZahtjeviClanova.Rows.Count; i++)
+            for (int i = 0; i < DgvZahtjeviClanova.Rows.Count; i++)
             {
                 if (DgvZahtjeviClanova.Rows[i].Cells[6].Value.ToString()=="odbijeno")
                 {
@@ -309,7 +309,7 @@ namespace FishingNet
 
         private void PopuniComboNatjecanja()
         {
-            using(var db= new FishingNetEntities())
+            using (var db = new FishingNetEntities())
             {
                 ComboOdabirNatjecanja.DataSource = db.Natjecanjes.ToList();
             }
@@ -538,7 +538,7 @@ namespace FishingNet
             OznaciBojom();
             TxtPretraziZahtjeve.Clear();
         }
-        
+
 
         private void TxtPretraziZahtjeve_TextChanged(object sender, EventArgs e)
         {
