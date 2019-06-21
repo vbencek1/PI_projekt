@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.PanelHeader = new System.Windows.Forms.Panel();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblKlubInfo = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblEmailNaslov = new System.Windows.Forms.Label();
@@ -52,9 +50,12 @@
             this.btnPodaci = new System.Windows.Forms.Button();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblDatumNaslov = new System.Windows.Forms.Label();
+            this.BtnPopisModeratora = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
+            this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.PanelHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelHeader
@@ -65,34 +66,10 @@
             this.PanelHeader.Controls.Add(this.LblKlubInfo);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(800, 34);
+            this.PanelHeader.Size = new System.Drawing.Size(1067, 42);
             this.PanelHeader.TabIndex = 16;
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
-            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(9, 5);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(25, 25);
-            this.BtnBack.TabIndex = 16;
-            this.BtnBack.UseVisualStyleBackColor = false;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // PicMaliLogo
-            // 
-            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
-            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
-            this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
-            this.PicMaliLogo.TabIndex = 0;
-            this.PicMaliLogo.TabStop = false;
             // 
             // LblKlubInfo
             // 
@@ -100,9 +77,10 @@
             this.LblKlubInfo.BackColor = System.Drawing.Color.Transparent;
             this.LblKlubInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblKlubInfo.ForeColor = System.Drawing.Color.White;
-            this.LblKlubInfo.Location = new System.Drawing.Point(297, 5);
+            this.LblKlubInfo.Location = new System.Drawing.Point(396, 6);
+            this.LblKlubInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblKlubInfo.Name = "LblKlubInfo";
-            this.LblKlubInfo.Size = new System.Drawing.Size(167, 23);
+            this.LblKlubInfo.Size = new System.Drawing.Size(210, 28);
             this.LblKlubInfo.TabIndex = 12;
             this.LblKlubInfo.Text = "PODACI O KLUBU\r\n";
             // 
@@ -110,9 +88,10 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(251, 167);
+            this.lblEmail.Location = new System.Drawing.Point(335, 206);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(136, 15);
+            this.lblEmail.Size = new System.Drawing.Size(169, 21);
             this.lblEmail.TabIndex = 29;
             this.lblEmail.Text = "ribicki_klub@mail.com\r\n";
             // 
@@ -121,9 +100,10 @@
             this.lblEmailNaslov.AutoSize = true;
             this.lblEmailNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmailNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.lblEmailNaslov.Location = new System.Drawing.Point(251, 145);
+            this.lblEmailNaslov.Location = new System.Drawing.Point(335, 178);
+            this.lblEmailNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailNaslov.Name = "lblEmailNaslov";
-            this.lblEmailNaslov.Size = new System.Drawing.Size(44, 18);
+            this.lblEmailNaslov.Size = new System.Drawing.Size(56, 23);
             this.lblEmailNaslov.TabIndex = 28;
             this.lblEmailNaslov.Text = "Email:";
             this.lblEmailNaslov.Click += new System.EventHandler(this.LblEmail_Click);
@@ -132,9 +112,10 @@
             // 
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefon.Location = new System.Drawing.Point(251, 118);
+            this.lblTelefon.Location = new System.Drawing.Point(335, 145);
+            this.lblTelefon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(86, 15);
+            this.lblTelefon.Size = new System.Drawing.Size(112, 21);
             this.lblTelefon.TabIndex = 27;
             this.lblTelefon.Text = "01 923 23 000\r\n";
             // 
@@ -143,9 +124,10 @@
             this.lblTelefonNaslov.AutoSize = true;
             this.lblTelefonNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefonNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.lblTelefonNaslov.Location = new System.Drawing.Point(251, 96);
+            this.lblTelefonNaslov.Location = new System.Drawing.Point(335, 118);
+            this.lblTelefonNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefonNaslov.Name = "lblTelefonNaslov";
-            this.lblTelefonNaslov.Size = new System.Drawing.Size(55, 18);
+            this.lblTelefonNaslov.Size = new System.Drawing.Size(70, 23);
             this.lblTelefonNaslov.TabIndex = 26;
             this.lblTelefonNaslov.Text = "Telefon:";
             // 
@@ -153,9 +135,10 @@
             // 
             this.lblWeb.AutoSize = true;
             this.lblWeb.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeb.Location = new System.Drawing.Point(59, 263);
+            this.lblWeb.Location = new System.Drawing.Point(79, 324);
+            this.lblWeb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeb.Name = "lblWeb";
-            this.lblWeb.Size = new System.Drawing.Size(95, 15);
+            this.lblWeb.Size = new System.Drawing.Size(119, 21);
             this.lblWeb.TabIndex = 25;
             this.lblWeb.Text = "Link na stranicu";
             // 
@@ -164,9 +147,10 @@
             this.LblWebNaslov.AutoSize = true;
             this.LblWebNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblWebNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.LblWebNaslov.Location = new System.Drawing.Point(59, 241);
+            this.LblWebNaslov.Location = new System.Drawing.Point(79, 297);
+            this.LblWebNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblWebNaslov.Name = "LblWebNaslov";
-            this.LblWebNaslov.Size = new System.Drawing.Size(82, 18);
+            this.LblWebNaslov.Size = new System.Drawing.Size(105, 23);
             this.LblWebNaslov.TabIndex = 24;
             this.LblWebNaslov.Text = "Web adresa:";
             // 
@@ -174,9 +158,10 @@
             // 
             this.lblPredsjednik.AutoSize = true;
             this.lblPredsjednik.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPredsjednik.Location = new System.Drawing.Point(59, 215);
+            this.lblPredsjednik.Location = new System.Drawing.Point(79, 265);
+            this.lblPredsjednik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPredsjednik.Name = "lblPredsjednik";
-            this.lblPredsjednik.Size = new System.Drawing.Size(155, 15);
+            this.lblPredsjednik.Size = new System.Drawing.Size(197, 21);
             this.lblPredsjednik.TabIndex = 23;
             this.lblPredsjednik.Text = "Ime i prezime predsjednika\r\n";
             // 
@@ -185,9 +170,10 @@
             this.LblPredsjednikNaslov.AutoSize = true;
             this.LblPredsjednikNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPredsjednikNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.LblPredsjednikNaslov.Location = new System.Drawing.Point(59, 193);
+            this.LblPredsjednikNaslov.Location = new System.Drawing.Point(79, 238);
+            this.LblPredsjednikNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPredsjednikNaslov.Name = "LblPredsjednikNaslov";
-            this.LblPredsjednikNaslov.Size = new System.Drawing.Size(82, 18);
+            this.LblPredsjednikNaslov.Size = new System.Drawing.Size(103, 23);
             this.LblPredsjednikNaslov.TabIndex = 22;
             this.LblPredsjednikNaslov.Text = "Predsjednik:\r\n";
             // 
@@ -195,9 +181,10 @@
             // 
             this.lblAdresa.AutoSize = true;
             this.lblAdresa.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdresa.Location = new System.Drawing.Point(59, 167);
+            this.lblAdresa.Location = new System.Drawing.Point(79, 206);
+            this.lblAdresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdresa.Name = "lblAdresa";
-            this.lblAdresa.Size = new System.Drawing.Size(79, 15);
+            this.lblAdresa.Size = new System.Drawing.Size(100, 21);
             this.lblAdresa.TabIndex = 21;
             this.lblAdresa.Text = "Adresa kluba\r\n";
             // 
@@ -206,9 +193,10 @@
             this.lblAdresaNaslov.AutoSize = true;
             this.lblAdresaNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdresaNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.lblAdresaNaslov.Location = new System.Drawing.Point(59, 145);
+            this.lblAdresaNaslov.Location = new System.Drawing.Point(79, 178);
+            this.lblAdresaNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdresaNaslov.Name = "lblAdresaNaslov";
-            this.lblAdresaNaslov.Size = new System.Drawing.Size(53, 18);
+            this.lblAdresaNaslov.Size = new System.Drawing.Size(68, 23);
             this.lblAdresaNaslov.TabIndex = 20;
             this.lblAdresaNaslov.Text = "Adresa:\n";
             // 
@@ -216,9 +204,10 @@
             // 
             this.lblNaziv.AutoSize = true;
             this.lblNaziv.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNaziv.Location = new System.Drawing.Point(59, 119);
+            this.lblNaziv.Location = new System.Drawing.Point(79, 146);
+            this.lblNaziv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNaziv.Name = "lblNaziv";
-            this.lblNaziv.Size = new System.Drawing.Size(71, 15);
+            this.lblNaziv.Size = new System.Drawing.Size(90, 21);
             this.lblNaziv.TabIndex = 19;
             this.lblNaziv.Text = "Naziv kluba\r\n";
             // 
@@ -227,9 +216,10 @@
             this.LblNazivNaslov.AutoSize = true;
             this.LblNazivNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNazivNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.LblNazivNaslov.Location = new System.Drawing.Point(59, 97);
+            this.LblNazivNaslov.Location = new System.Drawing.Point(79, 119);
+            this.LblNazivNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNazivNaslov.Name = "LblNazivNaslov";
-            this.LblNazivNaslov.Size = new System.Drawing.Size(45, 18);
+            this.LblNazivNaslov.Size = new System.Drawing.Size(55, 23);
             this.LblNazivNaslov.TabIndex = 18;
             this.LblNazivNaslov.Text = "Naziv:";
             // 
@@ -240,9 +230,10 @@
             this.btnDodajModeratora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDodajModeratora.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajModeratora.ForeColor = System.Drawing.Color.White;
-            this.btnDodajModeratora.Location = new System.Drawing.Point(614, 215);
+            this.btnDodajModeratora.Location = new System.Drawing.Point(819, 265);
+            this.btnDodajModeratora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDodajModeratora.Name = "btnDodajModeratora";
-            this.btnDodajModeratora.Size = new System.Drawing.Size(150, 30);
+            this.btnDodajModeratora.Size = new System.Drawing.Size(200, 37);
             this.btnDodajModeratora.TabIndex = 31;
             this.btnDodajModeratora.Text = "Dodaj moderatora";
             this.btnDodajModeratora.UseVisualStyleBackColor = false;
@@ -256,9 +247,11 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(511, 102);
+            this.groupBox1.Location = new System.Drawing.Point(681, 126);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(253, 97);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(337, 119);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dodaj moderatora:";
@@ -267,18 +260,20 @@
             // 
             this.comboModerator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboModerator.FormattingEnabled = true;
-            this.comboModerator.Location = new System.Drawing.Point(19, 56);
+            this.comboModerator.Location = new System.Drawing.Point(25, 69);
+            this.comboModerator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboModerator.Name = "comboModerator";
-            this.comboModerator.Size = new System.Drawing.Size(216, 23);
+            this.comboModerator.Size = new System.Drawing.Size(287, 27);
             this.comboModerator.TabIndex = 32;
             this.comboModerator.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboModerator_Format);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(168)))), ((int)(((byte)(244)))));
-            this.panel1.Location = new System.Drawing.Point(19, 82);
+            this.panel1.Location = new System.Drawing.Point(25, 101);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 1);
+            this.panel1.Size = new System.Drawing.Size(289, 1);
             this.panel1.TabIndex = 15;
             // 
             // label5
@@ -286,9 +281,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(16, 38);
+            this.label5.Location = new System.Drawing.Point(21, 47);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.Size = new System.Drawing.Size(92, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Moderator:";
             // 
@@ -299,9 +295,10 @@
             this.btnPodaci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPodaci.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPodaci.ForeColor = System.Drawing.Color.White;
-            this.btnPodaci.Location = new System.Drawing.Point(614, 251);
+            this.btnPodaci.Location = new System.Drawing.Point(542, 450);
+            this.btnPodaci.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPodaci.Name = "btnPodaci";
-            this.btnPodaci.Size = new System.Drawing.Size(150, 30);
+            this.btnPodaci.Size = new System.Drawing.Size(200, 37);
             this.btnPodaci.TabIndex = 32;
             this.btnPodaci.Text = "Podaci o klubu";
             this.btnPodaci.UseVisualStyleBackColor = false;
@@ -311,9 +308,10 @@
             // 
             this.lblDatum.AutoSize = true;
             this.lblDatum.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(252, 215);
+            this.lblDatum.Location = new System.Drawing.Point(336, 265);
+            this.lblDatum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(72, 15);
+            this.lblDatum.Size = new System.Drawing.Size(94, 21);
             this.lblDatum.TabIndex = 34;
             this.lblDatum.Text = "01.01.2019.";
             // 
@@ -322,18 +320,62 @@
             this.lblDatumNaslov.AutoSize = true;
             this.lblDatumNaslov.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatumNaslov.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.lblDatumNaslov.Location = new System.Drawing.Point(252, 193);
+            this.lblDatumNaslov.Location = new System.Drawing.Point(336, 238);
+            this.lblDatumNaslov.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatumNaslov.Name = "lblDatumNaslov";
-            this.lblDatumNaslov.Size = new System.Drawing.Size(108, 18);
+            this.lblDatumNaslov.Size = new System.Drawing.Size(138, 23);
             this.lblDatumNaslov.TabIndex = 33;
             this.lblDatumNaslov.Text = "Datum kreiranja:";
             // 
+            // BtnPopisModeratora
+            // 
+            this.BtnPopisModeratora.BackColor = System.Drawing.Color.SlateGray;
+            this.BtnPopisModeratora.FlatAppearance.BorderSize = 0;
+            this.BtnPopisModeratora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPopisModeratora.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPopisModeratora.ForeColor = System.Drawing.Color.White;
+            this.BtnPopisModeratora.Location = new System.Drawing.Point(800, 324);
+            this.BtnPopisModeratora.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnPopisModeratora.Name = "BtnPopisModeratora";
+            this.BtnPopisModeratora.Size = new System.Drawing.Size(243, 37);
+            this.BtnPopisModeratora.TabIndex = 35;
+            this.BtnPopisModeratora.Text = "Popis svih moderatora";
+            this.BtnPopisModeratora.UseVisualStyleBackColor = false;
+            this.BtnPopisModeratora.Click += new System.EventHandler(this.BtnPopisModeratora_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.BackgroundImage = global::FishingNet.Properties.Resources.back_button;
+            this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Location = new System.Drawing.Point(12, 6);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(33, 31);
+            this.BtnBack.TabIndex = 16;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // PicMaliLogo
+            // 
+            this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
+            this.PicMaliLogo.Location = new System.Drawing.Point(859, 6);
+            this.PicMaliLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.PicMaliLogo.Name = "PicMaliLogo";
+            this.PicMaliLogo.Size = new System.Drawing.Size(171, 32);
+            this.PicMaliLogo.TabIndex = 0;
+            this.PicMaliLogo.TabStop = false;
+            // 
             // FrmRibickiKlubPocetna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.BtnPopisModeratora);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblDatumNaslov);
             this.Controls.Add(this.btnPodaci);
@@ -352,14 +394,15 @@
             this.Controls.Add(this.lblAdresa);
             this.Controls.Add(this.lblPredsjednik);
             this.Controls.Add(this.LblPredsjednikNaslov);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRibickiKlubPocetna";
             this.Text = "FrmRibickiKlubPocetna";
             this.Load += new System.EventHandler(this.FrmRibickiKlubPocetna_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +434,6 @@
         private System.Windows.Forms.Button btnPodaci;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblDatumNaslov;
+        private System.Windows.Forms.Button BtnPopisModeratora;
     }
 }

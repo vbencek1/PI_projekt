@@ -174,5 +174,13 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
+
+        private void BtnPopisModeratora_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmPopisModeratora forma = new FrmPopisModeratora();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }
