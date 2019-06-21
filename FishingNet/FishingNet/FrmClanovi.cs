@@ -22,6 +22,25 @@ namespace FishingNet
         {
             OsvjeziClanove();
             TxtPretraziClanove.Clear();
+            if (DohvatiAktivnogKorisnika().uloga != 1)
+            {
+                BtnAzurirajClana.Enabled = false;
+                BtnDodajClana.Enabled = false;
+                BtnObrisiClana.Enabled = false;
+            }
+        }
+
+        private PrijavljeniKorisnik DohvatiAktivnogKorisnika()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                foreach (var item in db.PrijavljeniKorisniks)
+                {
+                    return item;
+
+                }
+            }
+            return null;
         }
 
         private void OsvjeziClanove()
@@ -90,6 +109,7 @@ namespace FishingNet
         {
             if (dgvPopisClanova.Rows.Count > 0)
             {
+               
                 ClanRibickogKluba odabraniClan = dgvPopisClanova.CurrentRow.DataBoundItem as ClanRibickogKluba;
                 ObrisiClana(odabraniClan);
                 OsvjeziClanove();

@@ -24,7 +24,7 @@ namespace FishingNet
 
         private void FrmPrijava_Load(object sender, EventArgs e)
         {
-          
+            OcistiTablicuPrijavljenih();
         }
 
         private bool Autentifikacija()
@@ -81,8 +81,30 @@ namespace FishingNet
             if (PrijavljeniKorisnik != null)
             {
                 PrijavljeniKorisnik = null;
+                using (var db = new FishingNetEntities())
+                {
+                    foreach (var item in db.PrijavljeniKorisniks)
+                    {
+                        db.PrijavljeniKorisniks.Remove(item);
+                       
+                    }
+                    db.SaveChanges();
+                }
             }
 
+        }
+
+        private void OcistiTablicuPrijavljenih()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                foreach (var item in db.PrijavljeniKorisniks)
+                {
+                    db.PrijavljeniKorisniks.Remove(item);
+
+                }
+                db.SaveChanges();
+            }
         }
 
         public void PrijaviKorisnika(string korisnickoIme)
@@ -92,7 +114,12 @@ namespace FishingNet
                 PrijavljeniKorisnik = listaKorisnika.First(k => k.korisnicko_ime == korisnickoIme);
                 using(var db= new FishingNetEntities())
                 {
-
+                    PrijavljeniKorisnik korisnik = new PrijavljeniKorisnik();
+                    korisnik.korisnicko_ime = PrijavljeniKorisnik.korisnicko_ime;
+                    korisnik.id = PrijavljeniKorisnik.id_korisnika;
+                    korisnik.uloga = PrijavljeniKorisnik.uloga_id_uloga;
+                    db.PrijavljeniKorisniks.Add(korisnik);
+                    db.SaveChanges();
                 }
             }
         }

@@ -17,9 +17,21 @@ namespace FishingNet
             InitializeComponent();
         }
 
+        private PrijavljeniKorisnik DohvatiAktivnogKorisnika()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                foreach (var item in db.PrijavljeniKorisniks)
+                {
+                    return item;
+
+                }
+            }return null;
+        }
+
         private void FrmPocetna_Load(object sender, EventArgs e)
         {
-            
+            lblKorisnik.Text = "Prijavljeni ste kao: "+ DohvatiAktivnogKorisnika().korisnicko_ime;
         }
 
         private void BtnClanovi_Click(object sender, EventArgs e)
@@ -34,6 +46,7 @@ namespace FishingNet
         {
             Hide();
             FrmPrijava forma = new FrmPrijava();
+            forma.Odjava();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
