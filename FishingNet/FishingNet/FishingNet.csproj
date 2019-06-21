@@ -64,7 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AktivniKorisnik.cs" />
     <Compile Include="ClanRibickogKluba.cs">
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
@@ -194,6 +193,9 @@
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Natjecanje.cs">
+      <DependentUpon>FishingNetModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrijavljeniKorisnik.cs">
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

@@ -35,5 +35,6 @@ namespace FishingNet
         public virtual DbSet<Uloga> Ulogas { get; set; }
         public virtual DbSet<ZahtjevZaPrijavuNatjecanjaClana> ZahtjevZaPrijavuNatjecanjaClanas { get; set; }
         public virtual DbSet<ZahtjevZaPrijavuNatjecanjaExterni> ZahtjevZaPrijavuNatjecanjaExternis { get; set; }
+        public virtual DbSet<PrijavljeniKorisnik> PrijavljeniKorisniks { get; set; }
     }
 }

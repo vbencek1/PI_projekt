@@ -55,8 +55,6 @@ namespace FishingNet
             {
                 string korIme = TxtKorisnickoIme.Text;
                 PrijaviKorisnika(korIme);
-                AktivniKorisnik aktivni = new AktivniKorisnik();
-                aktivni.PrijaviKorisnika(korIme);
                 Hide();
                 FrmPocetna forma = new FrmPocetna();
                 forma.Closed += (s, args) => this.Close();
@@ -92,6 +90,10 @@ namespace FishingNet
             if (Autentifikacija())
             {
                 PrijavljeniKorisnik = listaKorisnika.First(k => k.korisnicko_ime == korisnickoIme);
+                using(var db= new FishingNetEntities())
+                {
+
+                }
             }
         }
 

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ClanRibickogKlubas">
           <Key>
             <PropertyRef Name="id_clana" />
@@ -58,6 +58,14 @@
           <Property Name="lokacija" Type="int" Nullable="false" />
           <Property Name="moderator" Type="int" Nullable="false" />
           <Property Name="pobjednik" Type="int" />
+        </EntityType>
+        <EntityType Name="PrijavljeniKorisniks">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="korisnicko_ime" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="uloga" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="RibickiKlubs">
           <Key>
@@ -337,6 +345,7 @@
           <EntitySet Name="Korisniks" EntityType="Self.Korisniks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Lokacijas" EntityType="Self.Lokacijas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Natjecanjes" EntityType="Self.Natjecanjes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrijavljeniKorisniks" EntityType="Self.PrijavljeniKorisniks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RibickiKlubs" EntityType="Self.RibickiKlubs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Statuses" EntityType="Self.Statuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SudionikNatjecanjas" EntityType="Self.SudionikNatjecanjas" Schema="dbo" store:Type="Tables" />
@@ -412,8 +421,7 @@
             <End Role="ZahtjevZaPrijavuNatjecanjaClanas" EntitySet="ZahtjevZaPrijavuNatjecanjaClanas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -857,7 +865,16 @@
             <End Role="ZahtjevZaPrijavuNatjecanjaExternis" EntitySet="ZahtjevZaPrijavuNatjecanjaExternis" />
             <End Role="SudionikNatjecanjas" EntitySet="SudionikNatjecanjas" />
           </AssociationSet>
+          <EntitySet Name="PrijavljeniKorisniks" EntityType="DBModel.PrijavljeniKorisnik" />
         </EntityContainer>
+        <EntityType Name="PrijavljeniKorisnik">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="korisnicko_ime" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="uloga" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -994,6 +1011,15 @@
                 <ScalarProperty Name="odobreno" ColumnName="odobreno" />
                 <ScalarProperty Name="natjecanje" ColumnName="natjecanje" />
                 <ScalarProperty Name="moderator" ColumnName="moderator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrijavljeniKorisniks">
+            <EntityTypeMapping TypeName="DBModel.PrijavljeniKorisnik">
+              <MappingFragment StoreEntitySet="PrijavljeniKorisniks">
+                <ScalarProperty Name="uloga" ColumnName="uloga" />
+                <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
