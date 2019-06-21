@@ -42,6 +42,9 @@
             this.lblKorisnik = new System.Windows.Forms.Label();
             this.BtnBack = new System.Windows.Forms.Button();
             this.LblPocetnaStranica = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnStatistika = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicRibickiKlubIkona)).BeginInit();
             this.panel3.SuspendLayout();
@@ -50,6 +53,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.PanelHeader.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnClanovi
@@ -89,7 +94,7 @@
             this.BtnRibickiKlub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRibickiKlub.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRibickiKlub.ForeColor = System.Drawing.Color.White;
-            this.BtnRibickiKlub.Location = new System.Drawing.Point(416, 109);
+            this.BtnRibickiKlub.Location = new System.Drawing.Point(189, 119);
             this.BtnRibickiKlub.Name = "BtnRibickiKlub";
             this.BtnRibickiKlub.Size = new System.Drawing.Size(134, 31);
             this.BtnRibickiKlub.TabIndex = 0;
@@ -100,17 +105,17 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
-            this.panel2.Controls.Add(this.PicRibickiKlubIkona);
             this.panel2.Controls.Add(this.BtnRibickiKlub);
-            this.panel2.Location = new System.Drawing.Point(111, 293);
+            this.panel2.Controls.Add(this.PicRibickiKlubIkona);
+            this.panel2.Location = new System.Drawing.Point(111, 287);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(550, 140);
+            this.panel2.Size = new System.Drawing.Size(323, 150);
             this.panel2.TabIndex = 7;
             // 
             // PicRibickiKlubIkona
             // 
             this.PicRibickiKlubIkona.Image = global::FishingNet.Properties.Resources.small_fish_icon;
-            this.PicRibickiKlubIkona.Location = new System.Drawing.Point(46, 39);
+            this.PicRibickiKlubIkona.Location = new System.Drawing.Point(71, 33);
             this.PicRibickiKlubIkona.Name = "PicRibickiKlubIkona";
             this.PicRibickiKlubIkona.Size = new System.Drawing.Size(103, 72);
             this.PicRibickiKlubIkona.TabIndex = 10;
@@ -215,12 +220,48 @@
             this.LblPocetnaStranica.TabIndex = 13;
             this.LblPocetnaStranica.Text = "POČETNA STRANICA\r\n";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.btnStatistika);
+            this.panel1.Location = new System.Drawing.Point(440, 287);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(221, 150);
+            this.panel1.TabIndex = 12;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::FishingNet.Properties.Resources.statistic_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(71, 29);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(92, 72);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btnStatistika
+            // 
+            this.btnStatistika.BackColor = System.Drawing.Color.SlateGray;
+            this.btnStatistika.FlatAppearance.BorderSize = 0;
+            this.btnStatistika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistika.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistika.ForeColor = System.Drawing.Color.White;
+            this.btnStatistika.Location = new System.Drawing.Point(87, 119);
+            this.btnStatistika.Name = "btnStatistika";
+            this.btnStatistika.Size = new System.Drawing.Size(134, 31);
+            this.btnStatistika.TabIndex = 1;
+            this.btnStatistika.Text = "Statistika";
+            this.btnStatistika.UseVisualStyleBackColor = false;
+            this.btnStatistika.Click += new System.EventHandler(this.btnStatistika_Click);
+            // 
             // FrmPocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PanelHeader);
@@ -237,6 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +300,8 @@
         private System.Windows.Forms.Label LblPocetnaStranica;
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.Label lblKorisnik;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnStatistika;
     }
 }

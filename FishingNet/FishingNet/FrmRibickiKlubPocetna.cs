@@ -14,19 +14,45 @@ namespace FishingNet
             InitializeComponent();
         }
 
+        public bool ProvjeraKorisnika(string ime, string prezime)
+        {
+            using (var db = new FishingNetEntities())
+            {
+                var query = from k in db.Korisniks select k;
+                foreach (var item in query)
+                {
+                    if (item.ime == ime && item.prezime == prezime)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         private void PopuniCombo()
         {
             using(var db = new FishingNetEntities())
             {
                 var query = from c in db.ClanRibickogKlubas select c;
                 List<ClanRibickogKluba> listaModeratora = new List<ClanRibickogKluba>();
-                listaModeratora = query.ToList();
+                string ime = "";
+                string prezime = "";
+                foreach (var item in query)
+                {
+                    ime = item.ime;
+                    prezime = item.prezime;
+                    if (!ProvjeraKorisnika(ime, prezime))
+                    {
+                        listaModeratora.Add(item);
+                    }
+                }
                 comboModerator.DataSource = listaModeratora;
                 comboModerator.DisplayMember = "prezime";
             }
         }
 
-        private void PopuniInformacije()
+        public void PopuniInformacije()
         {
             using (var db = new FishingNetEntities())
             {
@@ -140,6 +166,13 @@ namespace FishingNet
                 db.SaveChanges();
             }
         }
-    
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmPocetna forma = new FrmPocetna();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }

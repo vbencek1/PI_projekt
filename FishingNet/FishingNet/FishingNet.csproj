@@ -68,6 +68,7 @@
       <DependentUpon>FishingNetModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CsvDataReader.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="FishingNetModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -349,6 +350,7 @@
       <DependentUpon>FishingNetModel.edmx</DependentUpon>
       <LastGenOutput>FishingNetModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\prijava_na_natjecanje.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

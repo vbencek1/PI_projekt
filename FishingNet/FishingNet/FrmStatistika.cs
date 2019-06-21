@@ -94,7 +94,7 @@ namespace FishingNet
         private void BtnBack_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmNatjecanja forma = new FrmNatjecanja();
+            FrmPocetna forma = new FrmPocetna();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }

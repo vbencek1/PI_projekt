@@ -124,6 +124,9 @@
   <data name="small_logo_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small_logo_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="location_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\location_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="back_button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back_button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,7 +169,7 @@
   <data name="fish_icon_120" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fish_icon_120.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="location_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\location_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="prijava_na_natjecanje" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prijava_na_natjecanje.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

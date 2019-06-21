@@ -59,9 +59,8 @@
             this.PanelHeader.Controls.Add(this.LblStatistikaNatjecanja);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1067, 42);
+            this.PanelHeader.Size = new System.Drawing.Size(800, 34);
             this.PanelHeader.TabIndex = 16;
             // 
             // BtnBack
@@ -71,10 +70,10 @@
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(12, 6);
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(33, 31);
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
@@ -83,10 +82,9 @@
             // 
             this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
             this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(859, 6);
-            this.PicMaliLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
             this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(171, 32);
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
             this.PicMaliLogo.TabIndex = 0;
             this.PicMaliLogo.TabStop = false;
             // 
@@ -96,12 +94,11 @@
             this.LblStatistikaNatjecanja.BackColor = System.Drawing.Color.Transparent;
             this.LblStatistikaNatjecanja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblStatistikaNatjecanja.ForeColor = System.Drawing.Color.White;
-            this.LblStatistikaNatjecanja.Location = new System.Drawing.Point(359, 6);
-            this.LblStatistikaNatjecanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblStatistikaNatjecanja.Location = new System.Drawing.Point(258, 5);
             this.LblStatistikaNatjecanja.Name = "LblStatistikaNatjecanja";
-            this.LblStatistikaNatjecanja.Size = new System.Drawing.Size(293, 28);
+            this.LblStatistikaNatjecanja.Size = new System.Drawing.Size(259, 23);
             this.LblStatistikaNatjecanja.TabIndex = 12;
-            this.LblStatistikaNatjecanja.Text = "STATISTIKA NATJECANJA";
+            this.LblStatistikaNatjecanja.Text = "STATISTIKE RIBIČKOG KLUBA";
             // 
             // chartStatistika
             // 
@@ -109,7 +106,8 @@
             this.chartStatistika.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartStatistika.Legends.Add(legend1);
-            this.chartStatistika.Location = new System.Drawing.Point(0, 135);
+            this.chartStatistika.Location = new System.Drawing.Point(0, 110);
+            this.chartStatistika.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartStatistika.Name = "chartStatistika";
             series1.ChartArea = "Statistika";
             series1.Legend = "Legend1";
@@ -123,16 +121,17 @@
             this.chartStatistika.Series.Add(series1);
             this.chartStatistika.Series.Add(series2);
             this.chartStatistika.Series.Add(series3);
-            this.chartStatistika.Size = new System.Drawing.Size(538, 407);
+            this.chartStatistika.Size = new System.Drawing.Size(404, 331);
             this.chartStatistika.TabIndex = 17;
             this.chartStatistika.Text = "chartStatistika";
             // 
             // cmbStatistika
             // 
             this.cmbStatistika.FormattingEnabled = true;
-            this.cmbStatistika.Location = new System.Drawing.Point(691, 161);
+            this.cmbStatistika.Location = new System.Drawing.Point(518, 131);
+            this.cmbStatistika.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStatistika.Name = "cmbStatistika";
-            this.cmbStatistika.Size = new System.Drawing.Size(217, 24);
+            this.cmbStatistika.Size = new System.Drawing.Size(164, 21);
             this.cmbStatistika.TabIndex = 18;
             this.cmbStatistika.SelectedValueChanged += new System.EventHandler(this.cmbStatistika_SelectedValueChanged);
             // 
@@ -142,7 +141,8 @@
             this.chartLokacija.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartLokacija.Legends.Add(legend2);
-            this.chartLokacija.Location = new System.Drawing.Point(718, 217);
+            this.chartLokacija.Location = new System.Drawing.Point(538, 176);
+            this.chartLokacija.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartLokacija.Name = "chartLokacija";
             series4.ChartArea = "ChartArea1";
             series4.Legend = "Legend1";
@@ -152,31 +152,31 @@
             series5.Name = "Broj natjecatelja";
             this.chartLokacija.Series.Add(series4);
             this.chartLokacija.Series.Add(series5);
-            this.chartLokacija.Size = new System.Drawing.Size(349, 337);
+            this.chartLokacija.Size = new System.Drawing.Size(262, 274);
             this.chartLokacija.TabIndex = 19;
             this.chartLokacija.Text = "chart1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(615, 107);
+            this.label1.Location = new System.Drawing.Point(461, 87);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 17);
+            this.label1.Size = new System.Drawing.Size(220, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Prikaz broj natjecatelja i natjecanja po lokaciji";
             // 
             // FrmStatistika
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartLokacija);
             this.Controls.Add(this.cmbStatistika);
             this.Controls.Add(this.chartStatistika);
             this.Controls.Add(this.PanelHeader);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmStatistika";
             this.Text = "FrmStatistika";
             this.Load += new System.EventHandler(this.FrmStatistika_Load);

@@ -38,8 +38,10 @@
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblProglašenjePobjednika = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboImePrez = new System.Windows.Forms.ComboBox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblOdabirNatjecanja
@@ -64,6 +66,7 @@
             this.ComboOdabirNatjecanja.Name = "ComboOdabirNatjecanja";
             this.ComboOdabirNatjecanja.Size = new System.Drawing.Size(169, 21);
             this.ComboOdabirNatjecanja.TabIndex = 2;
+            this.ComboOdabirNatjecanja.SelectedIndexChanged += new System.EventHandler(this.ComboOdabirNatjecanja_SelectedIndexChanged);
             // 
             // LblOdaberiPobjednika
             // 
@@ -87,6 +90,7 @@
             this.ComboOdaberiPobjednika.Name = "ComboOdaberiPobjednika";
             this.ComboOdaberiPobjednika.Size = new System.Drawing.Size(169, 21);
             this.ComboOdaberiPobjednika.TabIndex = 4;
+            this.ComboOdaberiPobjednika.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.ComboOdaberiPobjednika_Format);
             // 
             // BtnObavijestiPobjednika
             // 
@@ -159,6 +163,17 @@
             this.panel1.Size = new System.Drawing.Size(237, 153);
             this.panel1.TabIndex = 17;
             // 
+            // comboImePrez
+            // 
+            this.comboImePrez.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.comboImePrez.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboImePrez.ForeColor = System.Drawing.Color.White;
+            this.comboImePrez.FormattingEnabled = true;
+            this.comboImePrez.Location = new System.Drawing.Point(35, 129);
+            this.comboImePrez.Name = "comboImePrez";
+            this.comboImePrez.Size = new System.Drawing.Size(169, 21);
+            this.comboImePrez.TabIndex = 18;
+            // 
             // FrmProglasiPobjednika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +193,7 @@
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +210,6 @@
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblProglašenjePobjednika;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboImePrez;
     }
 }

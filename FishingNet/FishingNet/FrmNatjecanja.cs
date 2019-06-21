@@ -56,5 +56,13 @@ namespace FishingNet
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
+
+        private void BtnProglasiPobjednika_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmProglasiPobjednika forma = new FrmProglasiPobjednika();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }

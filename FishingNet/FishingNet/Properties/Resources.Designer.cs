@@ -193,6 +193,16 @@ namespace FishingNet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prijava_na_natjecanje {
+            get {
+                object obj = ResourceManager.GetObject("prijava_na_natjecanje", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_fish_icon {
             get {
                 object obj = ResourceManager.GetObject("small_fish_icon", resourceCulture);

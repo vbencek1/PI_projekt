@@ -13,13 +13,14 @@ namespace FishingNet
     public partial class FrmPrijava : Form
     {
         private List<Korisnik> listaKorisnika {get;set;}
-        //public Korisnik PrijavljeniKorisnik { get; set; }
+        public Korisnik PrijavljeniKorisnik { get; set; }
 
         public FrmPrijava()
         {
             InitializeComponent();
 
         }
+
 
         private void FrmPrijava_Load(object sender, EventArgs e)
         {
@@ -50,12 +51,15 @@ namespace FishingNet
         {
             
         }
-
-        private void BtnPrijava_Click(object sender, EventArgs e)
+        
+        public void BtnPrijava_Click(object sender, EventArgs e)
         {
 
             if (Autentifikacija())
             {
+                string korIme = TxtKorisnickoIme.Text;
+                PrijaviKorisnika(korIme);
+                MessageBox.Show(PrijavljeniKorisnik.korisnicko_ime);
                 Hide();
                 FrmPocetna forma = new FrmPocetna();
                 forma.Closed += (s, args) => this.Close();
@@ -77,23 +81,22 @@ namespace FishingNet
             }
         }
 
-        //public void Odjava()
-        //{
-        //    if (PrijavljeniKorisnik != null)
-        //    {
-        //        PrijavljeniKorisnik = null;
-        //    }
+        public void Odjava()
+        {
+            if (PrijavljeniKorisnik != null)
+            {
+                PrijavljeniKorisnik = null;
+            }
 
-        //}
+        }
 
-        //public void PrijaviKorisnika()
-        //{
-        //    if (Autentifikacija())
-        //    {
-        //        PrijavljeniKorisnik = new Korisnik();
-        //        PrijavljeniKorisnik = listaKorisnika.First(k => k.korisnicko_ime == "admin");
-        //    }
-        //}
+        public void PrijaviKorisnika(string korisnickoIme)
+        {
+            if (Autentifikacija())
+            {
+                PrijavljeniKorisnik = listaKorisnika.First(k => k.korisnicko_ime == korisnickoIme);
+            }
+        }
 
     }
 }
