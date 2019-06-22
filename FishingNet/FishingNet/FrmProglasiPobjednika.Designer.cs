@@ -39,9 +39,9 @@
             this.LblProglašenjePobjednika = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboImePrez = new System.Windows.Forms.ComboBox();
+            this.TxtImeSudionika = new System.Windows.Forms.TextBox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblOdabirNatjecanja
@@ -132,6 +132,7 @@
             this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // PicMaliLogo
             // 
@@ -174,12 +175,21 @@
             this.comboImePrez.Size = new System.Drawing.Size(169, 21);
             this.comboImePrez.TabIndex = 18;
             // 
+            // TxtImeSudionika
+            // 
+            this.TxtImeSudionika.Location = new System.Drawing.Point(512, 218);
+            this.TxtImeSudionika.Multiline = true;
+            this.TxtImeSudionika.Name = "TxtImeSudionika";
+            this.TxtImeSudionika.Size = new System.Drawing.Size(152, 81);
+            this.TxtImeSudionika.TabIndex = 18;
+            // 
             // FrmProglasiPobjednika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.TxtImeSudionika);
             this.Controls.Add(this.BtnObavijestiPobjednika);
             this.Controls.Add(this.PanelHeader);
             this.Controls.Add(this.ComboOdaberiPobjednika);
@@ -193,7 +203,6 @@
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,5 +220,6 @@
         private System.Windows.Forms.Label LblProglašenjePobjednika;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboImePrez;
+        private System.Windows.Forms.TextBox TxtImeSudionika;
     }
 }

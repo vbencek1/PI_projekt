@@ -41,13 +41,7 @@ namespace FishingNet
             forma.ShowDialog();
         }
 
-        private void BtnStatistika_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmStatistika forma = new FrmStatistika();
-            forma.Closed += (s, args) => this.Close();
-            forma.ShowDialog();
-        }
+        
 
         private void BtnZahtjeviPrijava_Click(object sender, EventArgs e)
         {
@@ -63,6 +57,11 @@ namespace FishingNet
             FrmProglasiPobjednika forma = new FrmProglasiPobjednika();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
+        }
+
+        private void FrmNatjecanja_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -197,7 +197,7 @@
             this.BtnOsvjeziListu.Size = new System.Drawing.Size(75, 23);
             this.BtnOsvjeziListu.TabIndex = 7;
             this.BtnOsvjeziListu.Text = "Osvježi";
-            this.BtnOsvjeziListu.UseVisualStyleBackColor = true;
+            this.BtnOsvjeziListu.UseVisualStyleBackColor = false;
             this.BtnOsvjeziListu.Click += new System.EventHandler(this.BtnOsvjeziListu_Click);
             // 
             // dgvPopisClanova

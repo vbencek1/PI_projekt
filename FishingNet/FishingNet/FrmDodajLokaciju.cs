@@ -32,10 +32,30 @@ namespace FishingNet
             }
         }
 
+        private PrijavljeniKorisnik DohvatiAktivnogKorisnika()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                foreach (var item in db.PrijavljeniKorisniks)
+                {
+                    return item;
+
+                }
+            }
+            return null;
+        }
+
         private void FrmDodajLokaciju_Load(object sender, EventArgs e)
         {
             DohvatiLokacije();
             TxtNazivRijeke.Focus();
+            if (DohvatiAktivnogKorisnika().uloga != 1)
+            {
+                BtnDodajLokaciju.Enabled = false;
+                btnAzurirajLokaciju.Enabled = false;
+                BtnObrisiLokaciju.Enabled = false;
+            }
+
         }
 
         private void btnAzurirajLokaciju_Click(object sender, EventArgs e)

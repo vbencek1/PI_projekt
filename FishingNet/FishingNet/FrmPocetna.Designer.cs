@@ -186,10 +186,11 @@
             // lblKorisnik
             // 
             this.lblKorisnik.AutoSize = true;
+            this.lblKorisnik.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic);
             this.lblKorisnik.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblKorisnik.Location = new System.Drawing.Point(48, 11);
             this.lblKorisnik.Name = "lblKorisnik";
-            this.lblKorisnik.Size = new System.Drawing.Size(35, 13);
+            this.lblKorisnik.Size = new System.Drawing.Size(40, 15);
             this.lblKorisnik.TabIndex = 10;
             this.lblKorisnik.Text = "label1";
             // 

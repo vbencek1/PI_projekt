@@ -79,6 +79,40 @@ namespace FishingNet
                 }
                 ComboOdaberiPobjednika.DataSource = listaFinal;
                 ComboOdaberiPobjednika.DisplayMember = "id_sudionika";
+
+                TxtImeSudionika.Clear();
+                foreach(var item in listaFinal)
+                {
+                    if (item.prijava_clan != null)
+                    {
+                        foreach (var zahtjevClana in db.ZahtjevZaPrijavuNatjecanjaClanas)
+                        {
+                            if (zahtjevClana.id_zahtjev_za_prijavu_na_natjecanje == item.prijava_clan)
+                            {
+                                foreach(var clan in db.ClanRibickogKlubas)
+                                {
+                                    if (clan.id_clana == zahtjevClana.clan)
+                                    {
+                                        TxtImeSudionika.Text +=item.id_sudionika+"= "+ clan.ime + " " + clan.prezime+Environment.NewLine;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (item.prijava_eksterni != null)
+                    {
+                        foreach(var zahtjevEksterni in db.ZahtjevZaPrijavuNatjecanjaExternis)
+                        {
+                            if (zahtjevEksterni.id_eksterni == item.prijava_eksterni)
+                            {
+                                TxtImeSudionika.Text += item.id_sudionika + "= " + zahtjevEksterni.ime + " " + zahtjevEksterni.prezime + Environment.NewLine;
+                            }
+                        }
+                    }
+                   
+                }
+
+
             }
         }
 
@@ -140,5 +174,12 @@ namespace FishingNet
 
         }
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmNatjecanja forma = new FrmNatjecanja();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
     }
 }
