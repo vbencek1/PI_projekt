@@ -30,14 +30,17 @@ namespace FishingNet
                         var values = csvParser.ReadFields();
                         if (values[2] == "Da")
                         {
-                            ZahtjevZaPrijavuNatjecanjaClana zahtjev = new ZahtjevZaPrijavuNatjecanjaClana();
-                            zahtjev.datum_prijave = DateTime.Now;
-                            zahtjev.clan = DohvatiClana(int.Parse(values[3])).id_clana;
-                            zahtjev.opis_prijave = values[12];
-                            zahtjev.natjecanje = DohvatiNatjecanje(values[1]).id_natjecanje;
-                            zahtjev.odobreno = 3;
-                            db.ZahtjevZaPrijavuNatjecanjaClanas.Add(zahtjev);
-                            db.SaveChanges();
+                            if (DohvatiClana(int.Parse(values[3])) != null)
+                            {
+                                ZahtjevZaPrijavuNatjecanjaClana zahtjev = new ZahtjevZaPrijavuNatjecanjaClana();
+                                zahtjev.datum_prijave = DateTime.Now;
+                                zahtjev.clan = DohvatiClana(int.Parse(values[3])).id_clana;
+                                zahtjev.opis_prijave = values[12];
+                                zahtjev.natjecanje = DohvatiNatjecanje(values[1]).id_natjecanje;
+                                zahtjev.odobreno = 3;
+                                db.ZahtjevZaPrijavuNatjecanjaClanas.Add(zahtjev);
+                                db.SaveChanges();
+                            }
                         }
                         if (values[2] == "Ne")
                         {

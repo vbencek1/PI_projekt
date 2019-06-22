@@ -89,10 +89,28 @@ namespace FishingNet
             forma.ShowDialog();
         }
 
+        private PrijavljeniKorisnik DohvatiAktivnogKorisnika()
+        {
+            using (var db = new FishingNetEntities())
+            {
+                foreach (var item in db.PrijavljeniKorisniks)
+                {
+                    return item;
+
+                }
+            }
+            return null;
+        }
+
         private void FrmRibickiKlubPocetna_Load(object sender, EventArgs e)
         {
             PopuniCombo();
             PopuniInformacije();
+            if (DohvatiAktivnogKorisnika().uloga != 1)
+            {
+                btnDodajModeratora.Enabled = false;
+                btnPodaci.Enabled = false;
+            }
         }
 
         private void comboModerator_Format(object sender, ListControlConvertEventArgs e)
@@ -171,6 +189,14 @@ namespace FishingNet
         {
             Hide();
             FrmPocetna forma = new FrmPocetna();
+            forma.Closed += (s, args) => this.Close();
+            forma.ShowDialog();
+        }
+
+        private void BtnPopisModeratora_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmPopisModeratora forma = new FrmPopisModeratora();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }

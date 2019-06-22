@@ -134,5 +134,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PrijavljeniKorisniks">
+      <EntityTypeMapping TypeName="DBModel.PrijavljeniKorisnik">
+        <MappingFragment StoreEntitySet="PrijavljeniKorisniks">
+          <ScalarProperty Name="uloga" ColumnName="uloga" />
+          <ScalarProperty Name="korisnicko_ime" ColumnName="korisnicko_ime" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

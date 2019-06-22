@@ -52,6 +52,7 @@
             this.btnPodaci = new System.Windows.Forms.Button();
             this.lblDatum = new System.Windows.Forms.Label();
             this.lblDatumNaslov = new System.Windows.Forms.Label();
+            this.BtnPopisModeratora = new System.Windows.Forms.Button();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -240,7 +241,7 @@
             this.btnDodajModeratora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDodajModeratora.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajModeratora.ForeColor = System.Drawing.Color.White;
-            this.btnDodajModeratora.Location = new System.Drawing.Point(614, 215);
+            this.btnDodajModeratora.Location = new System.Drawing.Point(614, 234);
             this.btnDodajModeratora.Name = "btnDodajModeratora";
             this.btnDodajModeratora.Size = new System.Drawing.Size(150, 30);
             this.btnDodajModeratora.TabIndex = 31;
@@ -299,7 +300,7 @@
             this.btnPodaci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPodaci.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPodaci.ForeColor = System.Drawing.Color.White;
-            this.btnPodaci.Location = new System.Drawing.Point(614, 251);
+            this.btnPodaci.Location = new System.Drawing.Point(62, 335);
             this.btnPodaci.Name = "btnPodaci";
             this.btnPodaci.Size = new System.Drawing.Size(150, 30);
             this.btnPodaci.TabIndex = 32;
@@ -328,12 +329,28 @@
             this.lblDatumNaslov.TabIndex = 33;
             this.lblDatumNaslov.Text = "Datum kreiranja:";
             // 
+            // BtnPopisModeratora
+            // 
+            this.BtnPopisModeratora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.BtnPopisModeratora.FlatAppearance.BorderSize = 0;
+            this.BtnPopisModeratora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPopisModeratora.Font = new System.Drawing.Font("Calibri", 9.75F);
+            this.BtnPopisModeratora.ForeColor = System.Drawing.Color.White;
+            this.BtnPopisModeratora.Location = new System.Drawing.Point(614, 73);
+            this.BtnPopisModeratora.Name = "BtnPopisModeratora";
+            this.BtnPopisModeratora.Size = new System.Drawing.Size(150, 23);
+            this.BtnPopisModeratora.TabIndex = 35;
+            this.BtnPopisModeratora.Text = "Popis svih moderatora";
+            this.BtnPopisModeratora.UseVisualStyleBackColor = false;
+            this.BtnPopisModeratora.Click += new System.EventHandler(this.BtnPopisModeratora_Click);
+            // 
             // FrmRibickiKlubPocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnPopisModeratora);
             this.Controls.Add(this.lblDatum);
             this.Controls.Add(this.lblDatumNaslov);
             this.Controls.Add(this.btnPodaci);
@@ -391,5 +408,6 @@
         private System.Windows.Forms.Button btnPodaci;
         private System.Windows.Forms.Label lblDatum;
         private System.Windows.Forms.Label lblDatumNaslov;
+        private System.Windows.Forms.Button BtnPopisModeratora;
     }
 }

@@ -59,11 +59,12 @@
             // 
             this.DgvZahtjeviClanova.AllowUserToAddRows = false;
             this.DgvZahtjeviClanova.AllowUserToDeleteRows = false;
-            this.DgvZahtjeviClanova.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvZahtjeviClanova.Location = new System.Drawing.Point(3, 21);
+            this.DgvZahtjeviClanova.Location = new System.Drawing.Point(6, 21);
             this.DgvZahtjeviClanova.Name = "DgvZahtjeviClanova";
             this.DgvZahtjeviClanova.ReadOnly = true;
-            this.DgvZahtjeviClanova.Size = new System.Drawing.Size(660, 166);
+            this.DgvZahtjeviClanova.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvZahtjeviClanova.ShowCellErrors = false;
+            this.DgvZahtjeviClanova.Size = new System.Drawing.Size(761, 166);
             this.DgvZahtjeviClanova.TabIndex = 20;
             // 
             // DgvZahtjeviEksterni
@@ -71,10 +72,10 @@
             this.DgvZahtjeviEksterni.AllowUserToAddRows = false;
             this.DgvZahtjeviEksterni.AllowUserToDeleteRows = false;
             this.DgvZahtjeviEksterni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvZahtjeviEksterni.Location = new System.Drawing.Point(3, 213);
+            this.DgvZahtjeviEksterni.Location = new System.Drawing.Point(6, 212);
             this.DgvZahtjeviEksterni.Name = "DgvZahtjeviEksterni";
             this.DgvZahtjeviEksterni.ReadOnly = true;
-            this.DgvZahtjeviEksterni.Size = new System.Drawing.Size(660, 166);
+            this.DgvZahtjeviEksterni.Size = new System.Drawing.Size(761, 166);
             this.DgvZahtjeviEksterni.TabIndex = 21;
             // 
             // BtnPreuzimiPodatke
@@ -99,7 +100,7 @@
             this.btnOdobri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobri.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdobri.ForeColor = System.Drawing.Color.White;
-            this.btnOdobri.Location = new System.Drawing.Point(489, 385);
+            this.btnOdobri.Location = new System.Drawing.Point(592, 384);
             this.btnOdobri.Name = "btnOdobri";
             this.btnOdobri.Size = new System.Drawing.Size(84, 23);
             this.btnOdobri.TabIndex = 42;
@@ -114,7 +115,7 @@
             this.BtnOdbij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOdbij.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOdbij.ForeColor = System.Drawing.Color.White;
-            this.BtnOdbij.Location = new System.Drawing.Point(579, 385);
+            this.BtnOdbij.Location = new System.Drawing.Point(683, 384);
             this.BtnOdbij.Name = "BtnOdbij";
             this.BtnOdbij.Size = new System.Drawing.Size(84, 23);
             this.BtnOdbij.TabIndex = 43;
@@ -133,7 +134,7 @@
             this.panel1.Controls.Add(this.DgvZahtjeviClanova);
             this.panel1.Location = new System.Drawing.Point(22, 118);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(676, 417);
+            this.panel1.Size = new System.Drawing.Size(781, 417);
             this.panel1.TabIndex = 44;
             // 
             // label2
@@ -250,7 +251,7 @@
             this.BtnPrikaziSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPrikaziSve.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrikaziSve.ForeColor = System.Drawing.Color.White;
-            this.BtnPrikaziSve.Location = new System.Drawing.Point(614, 91);
+            this.BtnPrikaziSve.Location = new System.Drawing.Point(719, 89);
             this.BtnPrikaziSve.Name = "BtnPrikaziSve";
             this.BtnPrikaziSve.Size = new System.Drawing.Size(84, 23);
             this.BtnPrikaziSve.TabIndex = 44;
