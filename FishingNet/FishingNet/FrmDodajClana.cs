@@ -23,6 +23,20 @@ namespace FishingNet
             InitializeComponent();
             odabraniClan = clan;
         }
+
+        private bool ProvjeraOIB(int oib)
+        {
+            using(var db = new FishingNetEntities())
+            {
+                foreach (var item in db.ClanRibickogKlubas)
+                {
+                    if (item.OIB == oib)
+                        return true;
+                }
+            }
+            return false;
+        }
+
         private void FrmDodajClana_Load(object sender, EventArgs e)
         {
             if (odabraniClan != null)
@@ -30,6 +44,7 @@ namespace FishingNet
                 TxtImeClana.Text = odabraniClan.ime;
                 TxtPrezimeClana.Text = odabraniClan.prezime;
                 TxtOIBClana.Text = odabraniClan.OIB.ToString();
+                TxtOIBClana.Enabled = false;
                 TxtDrzavljanstvoClana.Text = odabraniClan.drzavljanstvo;
                 TxtMjestoRodenjaClana.Text = odabraniClan.mjesto_rodenja;
                 TxtAdresaClana.Text = odabraniClan.adresa;
@@ -58,8 +73,15 @@ namespace FishingNet
                     noviClan.datum_upisa = DateTime.Now;
                     noviClan.ribicki_klub = 1;
                     noviClan.administrator = 1;
-                    db.ClanRibickogKlubas.Add(noviClan);
-                    db.SaveChanges();
+                    if (!ProvjeraOIB(noviClan.OIB))
+                    {
+                        db.ClanRibickogKlubas.Add(noviClan);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Član s upisanim OIB-om već postoji!");
+                    }
                 }
                 else
                 {

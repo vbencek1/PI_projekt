@@ -17,7 +17,7 @@ namespace FishingNet
             InitializeComponent();
         }
 
-        private void btnPodaciLokacija_Click(object sender, EventArgs e)
+        private void btnPodaciLokacija_Click_1(object sender, EventArgs e)
         {
             Hide();
             FrmStatistika forma = new FrmStatistika();
@@ -46,23 +46,44 @@ namespace FishingNet
         {
             PopuniComboNatjecanjima();
         }
+        
+
         private void PrikaziStatistikuZahtjeva(Natjecanje odabranoNatjecanje)
         {
-            int brojOdobrenihZahjteva = 0;
+            int brojOdobrenihZahtjeva = 0;
             int brojOdbijenihZahtjeva = 0;
             int brojNepregledanihZahtjeva = 0;
             using (var db = new FishingNetEntities())
             {
-
-                foreach (SudionikNatjecanja sudionik in db.SudionikNatjecanjas)
+                foreach (var item in db.ZahtjevZaPrijavuNatjecanjaClanas)
                 {
-                  
+                    if (item.odobreno == 1)
+                        brojOdobrenihZahtjeva++;
+                    else if (item.odobreno == 2)
+                        brojOdbijenihZahtjeva++;
+                    else
+                        brojNepregledanihZahtjeva++;
+                }
+                foreach (var item in db.ZahtjevZaPrijavuNatjecanjaExternis)
+                {
+                    if (item.odobreno == 1)
+                        brojOdobrenihZahtjeva++;
+                    else if (item.odobreno == 2)
+                        brojOdbijenihZahtjeva++;
+                    else
+                        brojNepregledanihZahtjeva++;
                 }
             }
+
         }
         private void cmbPopisNatjecanja_SelectedValueChanged(object sender, EventArgs e)
         {
             Natjecanje natjecanje = cmbPopisNatjecanja.SelectedItem as Natjecanje;
+        }
+
+        private void chartZahtjevi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

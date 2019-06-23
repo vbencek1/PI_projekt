@@ -37,12 +37,14 @@
             this.BtnBack = new System.Windows.Forms.Button();
             this.PicMaliLogo = new System.Windows.Forms.PictureBox();
             this.LblStatistikaNatjecanja = new System.Windows.Forms.Label();
-            this.btnPodaciLokacija = new System.Windows.Forms.Button();
             this.cmbPopisNatjecanja = new System.Windows.Forms.ComboBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartZahtjevi = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnPodaciLokacija = new System.Windows.Forms.Button();
+            this.LblPocetakNatjecanja = new System.Windows.Forms.Label();
+            this.LblStatus = new System.Windows.Forms.Label();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZahtjevi)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelHeader
@@ -53,9 +55,8 @@
             this.PanelHeader.Controls.Add(this.LblStatistikaNatjecanja);
             this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.PanelHeader.Margin = new System.Windows.Forms.Padding(4);
             this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(1001, 42);
+            this.PanelHeader.Size = new System.Drawing.Size(784, 34);
             this.PanelHeader.TabIndex = 17;
             // 
             // BtnBack
@@ -65,10 +66,10 @@
             this.BtnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnBack.FlatAppearance.BorderSize = 0;
             this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Location = new System.Drawing.Point(12, 6);
+            this.BtnBack.Location = new System.Drawing.Point(9, 5);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(0);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(33, 31);
+            this.BtnBack.Size = new System.Drawing.Size(25, 25);
             this.BtnBack.TabIndex = 16;
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
@@ -77,10 +78,9 @@
             // 
             this.PicMaliLogo.BackColor = System.Drawing.Color.Transparent;
             this.PicMaliLogo.Image = global::FishingNet.Properties.Resources.logo_small;
-            this.PicMaliLogo.Location = new System.Drawing.Point(859, 6);
-            this.PicMaliLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.PicMaliLogo.Location = new System.Drawing.Point(644, 5);
             this.PicMaliLogo.Name = "PicMaliLogo";
-            this.PicMaliLogo.Size = new System.Drawing.Size(171, 32);
+            this.PicMaliLogo.Size = new System.Drawing.Size(128, 26);
             this.PicMaliLogo.TabIndex = 0;
             this.PicMaliLogo.TabStop = false;
             // 
@@ -90,40 +90,31 @@
             this.LblStatistikaNatjecanja.BackColor = System.Drawing.Color.Transparent;
             this.LblStatistikaNatjecanja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblStatistikaNatjecanja.ForeColor = System.Drawing.Color.White;
-            this.LblStatistikaNatjecanja.Location = new System.Drawing.Point(344, 6);
-            this.LblStatistikaNatjecanja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblStatistikaNatjecanja.Location = new System.Drawing.Point(258, 5);
             this.LblStatistikaNatjecanja.Name = "LblStatistikaNatjecanja";
-            this.LblStatistikaNatjecanja.Size = new System.Drawing.Size(334, 28);
+            this.LblStatistikaNatjecanja.Size = new System.Drawing.Size(263, 23);
             this.LblStatistikaNatjecanja.TabIndex = 12;
             this.LblStatistikaNatjecanja.Text = "STATISTIKA RIBIČKOG KLUBA";
-            // 
-            // btnPodaciLokacija
-            // 
-            this.btnPodaciLokacija.Location = new System.Drawing.Point(743, 438);
-            this.btnPodaciLokacija.Name = "btnPodaciLokacija";
-            this.btnPodaciLokacija.Size = new System.Drawing.Size(178, 47);
-            this.btnPodaciLokacija.TabIndex = 18;
-            this.btnPodaciLokacija.Text = "Podaci o lokacijama";
-            this.btnPodaciLokacija.UseVisualStyleBackColor = true;
-            this.btnPodaciLokacija.Click += new System.EventHandler(this.btnPodaciLokacija_Click);
             // 
             // cmbPopisNatjecanja
             // 
             this.cmbPopisNatjecanja.FormattingEnabled = true;
-            this.cmbPopisNatjecanja.Location = new System.Drawing.Point(142, 110);
+            this.cmbPopisNatjecanja.Location = new System.Drawing.Point(26, 121);
+            this.cmbPopisNatjecanja.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPopisNatjecanja.Name = "cmbPopisNatjecanja";
-            this.cmbPopisNatjecanja.Size = new System.Drawing.Size(121, 24);
+            this.cmbPopisNatjecanja.Size = new System.Drawing.Size(170, 21);
             this.cmbPopisNatjecanja.TabIndex = 19;
             this.cmbPopisNatjecanja.SelectedValueChanged += new System.EventHandler(this.cmbPopisNatjecanja_SelectedValueChanged);
             // 
-            // chart1
+            // chartZahtjevi
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartZahtjevi.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(37, 174);
-            this.chart1.Name = "chart1";
+            this.chartZahtjevi.Legends.Add(legend1);
+            this.chartZahtjevi.Location = new System.Drawing.Point(26, 155);
+            this.chartZahtjevi.Margin = new System.Windows.Forms.Padding(2);
+            this.chartZahtjevi.Name = "chartZahtjevi";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
@@ -136,30 +127,71 @@
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
             series3.Name = "Nepregledani zahtjevi";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
-            this.chart1.TabIndex = 20;
-            this.chart1.Text = "chartZahtjevi";
+            this.chartZahtjevi.Series.Add(series1);
+            this.chartZahtjevi.Series.Add(series2);
+            this.chartZahtjevi.Series.Add(series3);
+            this.chartZahtjevi.Size = new System.Drawing.Size(306, 244);
+            this.chartZahtjevi.TabIndex = 20;
+            this.chartZahtjevi.Text = "chartZahtjevi";
+            this.chartZahtjevi.Click += new System.EventHandler(this.chartZahtjevi_Click);
+            // 
+            // btnPodaciLokacija
+            // 
+            this.btnPodaciLokacija.BackColor = System.Drawing.Color.SlateGray;
+            this.btnPodaciLokacija.FlatAppearance.BorderSize = 0;
+            this.btnPodaciLokacija.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPodaciLokacija.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPodaciLokacija.ForeColor = System.Drawing.Color.White;
+            this.btnPodaciLokacija.Location = new System.Drawing.Point(589, 67);
+            this.btnPodaciLokacija.Name = "btnPodaciLokacija";
+            this.btnPodaciLokacija.Size = new System.Drawing.Size(170, 30);
+            this.btnPodaciLokacija.TabIndex = 32;
+            this.btnPodaciLokacija.Text = "Podaci o lokacijama\r\n";
+            this.btnPodaciLokacija.UseVisualStyleBackColor = false;
+            this.btnPodaciLokacija.Click += new System.EventHandler(this.btnPodaciLokacija_Click_1);
+            // 
+            // LblPocetakNatjecanja
+            // 
+            this.LblPocetakNatjecanja.AutoSize = true;
+            this.LblPocetakNatjecanja.Font = new System.Drawing.Font("Calibri Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPocetakNatjecanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
+            this.LblPocetakNatjecanja.Location = new System.Drawing.Point(23, 61);
+            this.LblPocetakNatjecanja.Name = "LblPocetakNatjecanja";
+            this.LblPocetakNatjecanja.Size = new System.Drawing.Size(202, 36);
+            this.LblPocetakNatjecanja.TabIndex = 33;
+            this.LblPocetakNatjecanja.Text = "Broj odobrenih/odbijenih prijava\r\npo natjecanju:\r\n";
+            // 
+            // LblStatus
+            // 
+            this.LblStatus.AutoSize = true;
+            this.LblStatus.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStatus.Location = new System.Drawing.Point(23, 104);
+            this.LblStatus.Name = "LblStatus";
+            this.LblStatus.Size = new System.Drawing.Size(116, 15);
+            this.LblStatus.TabIndex = 34;
+            this.LblStatus.Text = "Odaberi natjecanje:\r\n";
             // 
             // FrmStatistikaPocetna
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 509);
-            this.Controls.Add(this.chart1);
-            this.Controls.Add(this.cmbPopisNatjecanja);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.LblStatus);
+            this.Controls.Add(this.LblPocetakNatjecanja);
             this.Controls.Add(this.btnPodaciLokacija);
+            this.Controls.Add(this.chartZahtjevi);
+            this.Controls.Add(this.cmbPopisNatjecanja);
             this.Controls.Add(this.PanelHeader);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStatistikaPocetna";
             this.Text = "FrmStatistikaPocetna";
             this.Load += new System.EventHandler(this.FrmStatistikaPocetna_Load);
             this.PanelHeader.ResumeLayout(false);
             this.PanelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicMaliLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartZahtjevi)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -169,8 +201,10 @@
         private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.PictureBox PicMaliLogo;
         private System.Windows.Forms.Label LblStatistikaNatjecanja;
-        private System.Windows.Forms.Button btnPodaciLokacija;
         private System.Windows.Forms.ComboBox cmbPopisNatjecanja;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartZahtjevi;
+        private System.Windows.Forms.Button btnPodaciLokacija;
+        private System.Windows.Forms.Label LblPocetakNatjecanja;
+        private System.Windows.Forms.Label LblStatus;
     }
 }

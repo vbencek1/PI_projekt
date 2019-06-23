@@ -64,7 +64,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = c.email
                            };
                 DgvZahtjeviClanova.DataSource = upit.ToList();
             }
@@ -89,7 +90,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = z.email
                            };
                 DgvZahtjeviEksterni.DataSource = upit.ToList();
 
@@ -120,7 +122,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = c.email
                            };
                 DgvZahtjeviClanova.DataSource = upit.ToList();
             }
@@ -146,7 +149,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = z.email
                            };
                 DgvZahtjeviEksterni.DataSource = upit.ToList();
 
@@ -177,7 +181,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = c.email
                            };
                 DgvZahtjeviClanova.DataSource = upit.ToList();
             }
@@ -204,7 +209,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = z.email,
                            };
                 DgvZahtjeviEksterni.DataSource = upit.ToList();
 
@@ -235,7 +241,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = c.email,
                            };
                 DgvZahtjeviClanova.DataSource = upit.ToList();
             }
@@ -261,7 +268,8 @@ namespace FishingNet
                                Opis = z.opis_prijave,
                                Datum = z.datum_prijave,
                                Natjecanje = n.naziv,
-                               Status = s.naziv
+                               Status = s.naziv,
+                               Email = z.email,
                            };
                 DgvZahtjeviEksterni.DataSource = upit.ToList();
 
@@ -436,12 +444,18 @@ namespace FishingNet
                     DodajSudionikaNatjecanjaClana(zahtjevClana.id_zahtjev_za_prijavu_na_natjecanje, DohvatiNatjecanje(idNatjecanja));
                     PrikaziZahtjeveClanova();
                     OznaciBojom();
-
+                    Email email = new Email();
+                    string primatelj = DgvZahtjeviClanova.CurrentRow.Cells[7].Value.ToString();
+                    string natjecanje = DgvZahtjeviClanova.CurrentRow.Cells[5].Value.ToString();
+                    string poruka = "Vasa prijava na natjecanje " + natjecanje + " je odobrena!";
+                    email.PosaljiEmail(primatelj, natjecanje, poruka);
+                    
                 }
                 else
                 {
                     MessageBox.Show("Prijava je već pregledana");
                 }
+                DgvZahtjeviClanova.ClearSelection();
             }
             if (DgvZahtjeviEksterni.SelectedRows.Count > 0)
             {
@@ -455,12 +469,18 @@ namespace FishingNet
                     DodajSudionikaNatjecanjaEksterni(zahtjevExterni.id_eksterni, DohvatiNatjecanje(idNatjecanja));
                     PrikaziZahtjeveEksterne();
                     OznaciBojom();
-
+                    Email email = new Email();
+                    string primatelj = DgvZahtjeviClanova.CurrentRow.Cells[7].Value.ToString();
+                    string natjecanje = DgvZahtjeviClanova.CurrentRow.Cells[5].Value.ToString();
+                    string poruka = "Vasa prijava na natjecanje " + natjecanje + " je odobrena!";
+                    email.PosaljiEmail(primatelj, natjecanje, poruka);
+                    
                 }
                 else
                 {
                     MessageBox.Show("Prijava je već pregledana");
                 }
+                DgvZahtjeviEksterni.ClearSelection();
             }
 
         }
@@ -477,12 +497,18 @@ namespace FishingNet
                     OdobriIliOdbijPrijavuClana(zahtjevClana, 2);
                     PrikaziZahtjeveClanova();
                     OznaciBojom();
-
+                    Email email = new Email();
+                    string primatelj = DgvZahtjeviClanova.CurrentRow.Cells[7].Value.ToString();
+                    string natjecanje = DgvZahtjeviClanova.CurrentRow.Cells[5].Value.ToString();
+                    string poruka = "Vasa prijava na natjecanje " + natjecanje + " je odbijena!";
+                    email.PosaljiEmail(primatelj, natjecanje, poruka);
+                    
                 }
                 else
                 {
                     MessageBox.Show("Prijava je već pregledana");
                 }
+                DgvZahtjeviClanova.ClearSelection();
             }
             if (DgvZahtjeviEksterni.SelectedRows.Count > 0)
             {
@@ -494,12 +520,18 @@ namespace FishingNet
                     OdobriIliOdbijPrijavuExternog(zahtjevExterni, 2);
                     PrikaziZahtjeveEksterne();
                     OznaciBojom();
-
+                    Email email = new Email();
+                    string primatelj = DgvZahtjeviClanova.CurrentRow.Cells[7].Value.ToString();
+                    string natjecanje = DgvZahtjeviClanova.CurrentRow.Cells[5].Value.ToString();
+                    string poruka = "Vasa prijava na natjecanje " + natjecanje + " je odbijena!";
+                    email.PosaljiEmail(primatelj, natjecanje, poruka);
+                    
                 }
                 else
                 {
                     MessageBox.Show("Prijava je već pregledana");
                 }
+                DgvZahtjeviEksterni.ClearSelection();
             }
         }
 

@@ -9,20 +9,22 @@ namespace FishingNet
 {
     class Email
     {
-        public void PosaljiEmail(string primatelj, string natjecanje)
+        public void PosaljiEmail(string primatelj, string natjecanje, string poruka)
         {
             string posiljatelj = "fishnet.projekt@gmail.com";
             MailMessage message = new MailMessage();
             SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
             message.From = new MailAddress(posiljatelj);
             message.To.Add(primatelj);
-            message.Subject = "Obavijest o proglašenju pobjednika";
-            message.Body = "Čestitamo, pobjednik ste natjecanja " + natjecanje + ".";
+            message.Subject = "FishNet obavijest";
+            message.Body = poruka;
             SmtpServer.Port = 587;
             string lozinka = "1234fish";
             SmtpServer.Credentials = new System.Net.NetworkCredential(posiljatelj, lozinka);
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(message);
         }
+
+        
     }
 }

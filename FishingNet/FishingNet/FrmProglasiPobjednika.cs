@@ -156,7 +156,8 @@ namespace FishingNet
                 }
                 Natjecanje n = ComboOdabirNatjecanja.SelectedItem as Natjecanje;
                 natjecanje = n.naziv;
-                email.PosaljiEmail(primatelj, natjecanje);
+                string poruka = "Čestitamo, pobjednik ste natjecanja " + natjecanje + "!";
+                email.PosaljiEmail(primatelj, natjecanje, poruka);
                 MessageBox.Show("Uspješno ste poslali email!");
 
                 var listaNatjecanja = from nat in db.Natjecanjes where n.id_natjecanje == n.id_natjecanje select n;
