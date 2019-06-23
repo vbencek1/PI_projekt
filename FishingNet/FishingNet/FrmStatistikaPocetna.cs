@@ -57,33 +57,42 @@ namespace FishingNet
             {
                 foreach (var item in db.ZahtjevZaPrijavuNatjecanjaClanas)
                 {
-                    if (item.odobreno == 1)
-                        brojOdobrenihZahtjeva++;
-                    else if (item.odobreno == 2)
-                        brojOdbijenihZahtjeva++;
-                    else
-                        brojNepregledanihZahtjeva++;
+                    if (item.natjecanje == odabranoNatjecanje.id_natjecanje)
+                    {
+                        if (item.odobreno == 1)
+                            brojOdobrenihZahtjeva++;
+                        else if (item.odobreno == 2)
+                            brojOdbijenihZahtjeva++;
+                        else
+                            brojNepregledanihZahtjeva++;
+                    }
                 }
                 foreach (var item in db.ZahtjevZaPrijavuNatjecanjaExternis)
                 {
-                    if (item.odobreno == 1)
-                        brojOdobrenihZahtjeva++;
-                    else if (item.odobreno == 2)
-                        brojOdbijenihZahtjeva++;
-                    else
-                        brojNepregledanihZahtjeva++;
+                    if (item.natjecanje == odabranoNatjecanje.id_natjecanje)
+                    {
+                        if (item.odobreno == 1)
+                            brojOdobrenihZahtjeva++;
+                        else if (item.odobreno == 2)
+                            brojOdbijenihZahtjeva++;
+                        else
+                            brojNepregledanihZahtjeva++;
+                    }
                 }
             }
+            this.chartZahtjevi.Series["pie"].IsValueShownAsLabel = true;
+            this.chartZahtjevi.Series["pie"].Points.Clear();
+            this.chartZahtjevi.Series["pie"].Points.AddXY("Odbijeni zahtjevi", brojOdbijenihZahtjeva);
+            this.chartZahtjevi.Series["pie"].Points.AddXY("Odobreni zahtjevi", brojOdobrenihZahtjeva);
+            this.chartZahtjevi.Series["pie"].Points.AddXY("Nepregledani zahtjevi", brojNepregledanihZahtjeva);
+            chartZahtjevi.Update();
 
         }
         private void cmbPopisNatjecanja_SelectedValueChanged(object sender, EventArgs e)
         {
             Natjecanje natjecanje = cmbPopisNatjecanja.SelectedItem as Natjecanje;
+            PrikaziStatistikuZahtjeva(natjecanje);
         }
 
-        private void chartZahtjevi_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
