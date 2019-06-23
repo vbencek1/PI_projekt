@@ -75,7 +75,7 @@ namespace FishingNet
         private void btnStatistika_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmStatistika forma = new FrmStatistika();
+            FrmStatistikaPocetna forma = new FrmStatistikaPocetna();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }

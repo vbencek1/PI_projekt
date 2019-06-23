@@ -180,6 +180,12 @@
     <Compile Include="FrmStatistika.Designer.cs">
       <DependentUpon>FrmStatistika.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStatistikaPocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistikaPocetna.Designer.cs">
+      <DependentUpon>FrmStatistikaPocetna.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmZahtjeviPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStatistika.resx">
       <DependentUpon>FrmStatistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistikaPocetna.resx">
+      <DependentUpon>FrmStatistikaPocetna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmZahtjeviPrijava.resx">
       <DependentUpon>FrmZahtjeviPrijava.cs</DependentUpon>

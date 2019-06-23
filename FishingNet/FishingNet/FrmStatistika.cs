@@ -94,7 +94,7 @@ namespace FishingNet
         private void BtnBack_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmPocetna forma = new FrmPocetna();
+            FrmStatistikaPocetna forma = new FrmStatistikaPocetna();
             forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
@@ -103,8 +103,7 @@ namespace FishingNet
         private void cmbStatistika_SelectedValueChanged(object sender, EventArgs e)
         {
             Lokacija lokacija = cmbStatistika.SelectedItem as Lokacija;
-            PrikaziStatistikuLokacija(lokacija);
-            
+            PrikaziStatistikuLokacija(lokacija);   
         }
     }
 }
