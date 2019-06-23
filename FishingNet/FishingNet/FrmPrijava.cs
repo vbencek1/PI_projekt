@@ -107,7 +107,7 @@ namespace FishingNet
             }
         }
 
-        public void PrijaviKorisnika(string korisnickoIme)
+        private void PrijaviKorisnika(string korisnickoIme)
         {
             if (Autentifikacija())
             {

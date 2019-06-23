@@ -350,8 +350,10 @@
             // 
             this.DgvSudioniciExterni.AllowUserToAddRows = false;
             this.DgvSudioniciExterni.AllowUserToDeleteRows = false;
+            this.DgvSudioniciExterni.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DgvSudioniciExterni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvSudioniciExterni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvSudioniciExterni.Location = new System.Drawing.Point(12, 141);
+            this.DgvSudioniciExterni.Location = new System.Drawing.Point(12, 143);
             this.DgvSudioniciExterni.Name = "DgvSudioniciExterni";
             this.DgvSudioniciExterni.ReadOnly = true;
             this.DgvSudioniciExterni.Size = new System.Drawing.Size(517, 107);
@@ -361,11 +363,13 @@
             // 
             this.DgvSudioniciInterni.AllowUserToAddRows = false;
             this.DgvSudioniciInterni.AllowUserToDeleteRows = false;
+            this.DgvSudioniciInterni.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DgvSudioniciInterni.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvSudioniciInterni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvSudioniciInterni.Location = new System.Drawing.Point(12, 18);
             this.DgvSudioniciInterni.Name = "DgvSudioniciInterni";
             this.DgvSudioniciInterni.ReadOnly = true;
-            this.DgvSudioniciInterni.Size = new System.Drawing.Size(517, 102);
+            this.DgvSudioniciInterni.Size = new System.Drawing.Size(517, 107);
             this.DgvSudioniciInterni.TabIndex = 19;
             // 
             // FrmInformacijeONatjecanju

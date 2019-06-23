@@ -574,3 +574,4 @@ C:\Users\Tomislav\Documents\r19027\FishingNet\FishingNet\obj\Debug\FishingNet.ex
 C:\Users\Tomislav\Documents\r19027\FishingNet\FishingNet\obj\Debug\FishingNet.pdb
 C:\Users\Tomislav\Documents\r19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPopisModeratora.resources
 C:\Users\Tino\Downloads\Desktop\6. semestar\PI\PI_projekt\Local_rep_19027\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPopisModeratora.resources
+D:\uni shit\3 god\PI\PI_Projekt_Tim27\FishingNet\FishingNet\obj\Debug\FishingNet.FrmPopisModeratora.resources
