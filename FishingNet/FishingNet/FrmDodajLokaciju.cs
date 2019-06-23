@@ -62,6 +62,7 @@ namespace FishingNet
         {
             FrmAzurirajLokaciju forma = new FrmAzurirajLokaciju(dgvLokacije.CurrentRow.DataBoundItem as Lokacija);
             forma.ShowDialog();
+            DohvatiLokacije();
 
         }
 

@@ -21,6 +21,7 @@ namespace FishingNet
         {
             Hide();
             FrmStatistika forma = new FrmStatistika();
+            forma.Closed += (s, args) => this.Close();
             forma.ShowDialog();
         }
 

@@ -100,12 +100,38 @@ namespace FishingNet
             }
         }
 
-        
+        private bool ProvjeraIspravnosti()
+        {
+            if(TxtAdresaClana.Text=="" &&
+                TxtDrzavljanstvoClana.Text==""
+                && txtEmailClana.Text==""
+                && TxtImeClana.Text==""
+                && TxtMjestoRodenjaClana.Text==""
+                && TxtOIBClana.Text==""
+                && TxtPrezimeClana.Text==""
+                && TxtTelefonClana.Text==""
+                )
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         private void BtnDodajClana_Click_1(object sender, EventArgs e)
         {
-            UnesiClana();
-            Close();
+            if (ProvjeraIspravnosti())
+            {
+                UnesiClana();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Molimo ispunite sve podatke!");
+            }
+            
         }
 
         private void BtnBack_Click(object sender, EventArgs e)

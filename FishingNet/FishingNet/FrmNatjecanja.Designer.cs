@@ -175,7 +175,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(64)))), ((int)(((byte)(105)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(112)))), ((int)(((byte)(177)))));
             this.panel4.Controls.Add(this.PicLocationIcon);
             this.panel4.Controls.Add(this.BtnDodajLokaciju);
             this.panel4.Location = new System.Drawing.Point(563, 91);

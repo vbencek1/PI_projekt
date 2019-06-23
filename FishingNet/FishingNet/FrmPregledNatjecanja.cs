@@ -22,7 +22,9 @@ namespace FishingNet
         private void FrmPregledNatjecanja_Load(object sender, EventArgs e)
         {
             PrikaziNatjecanja();
+            
         }
+        
 
         private void PrikaziNatjecanja()
         {
@@ -204,6 +206,11 @@ namespace FishingNet
         private void BtnPrikaziSve_Click(object sender, EventArgs e)
         {
             PrikaziNatjecanja();
+        }
+
+        private void dgvNatjecanja_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            
         }
     }
 }

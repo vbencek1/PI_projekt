@@ -159,11 +159,14 @@ namespace FishingNet
                 string poruka = "Čestitamo, pobjednik ste natjecanja " + natjecanje + "!";
                 email.PosaljiEmail(primatelj, natjecanje, poruka);
                 MessageBox.Show("Uspješno ste poslali email!");
-
-                var listaNatjecanja = from nat in db.Natjecanjes where n.id_natjecanje == n.id_natjecanje select n;
-                foreach (var nat in listaNatjecanja)
+                
+                foreach (var nat in db.Natjecanjes)
                 {
-                    nat.pobjednik = sudionik.id_sudionika;
+                    if (nat.id_natjecanje == n.id_natjecanje)
+                    {
+                        nat.pobjednik = sudionik.id_sudionika;
+                    }
+                    
                 }
                 db.SaveChanges();
                 PopuniComboNatjecanja();

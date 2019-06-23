@@ -179,6 +179,7 @@
             this.dgvNatjecanja.ReadOnly = true;
             this.dgvNatjecanja.Size = new System.Drawing.Size(540, 265);
             this.dgvNatjecanja.TabIndex = 32;
+            this.dgvNatjecanja.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvNatjecanja_DataBindingComplete);
             // 
             // ComboLokacije
             // 
